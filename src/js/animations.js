@@ -5,26 +5,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function initializeAnimations() {
   // Hero section reveal animations
-  const heroTl = gsap.timeline({ defaults: { ease: 'power4.out' } });
+  const heroTl = gsap.timeline({ defaults: { ease: 'power2.out' } });
   
   heroTl.to('.line-inner', {
     y: '0%',
-    duration: 1.2,
-    stagger: 0.15,
+    duration: 1.4,
+    stagger: 0.1,
     delay: 0.2
   })
   .to('.reveal-text', {
     opacity: 1,
     y: 0,
-    duration: 1
+    duration: 1.2
   }, "-=0.8")
   .to('.reveal-opacity', {
     opacity: 1,
-    duration: 1
-  }, "-=0.6");
+    duration: 1.2
+  }, "-=0.6")
+  .to('#hero-marquee', {
+    opacity: 1,
+    duration: 1.2,
+    ease: 'power1.inOut'
+  }, "-=0.8");
 
   // Fade up animations for sections
-  const fadeElements = document.querySelectorAll('.section-title, .section-subtitle, .about-headline, .about-points li, .service-card, .work-card, .process-step');
+  const fadeElements = document.querySelectorAll('.section-title, .section-subtitle, .about-headline, .about-points li, .service-card, .work-card, .process-step, .trusted-by');
   
   fadeElements.forEach((el) => {
     gsap.fromTo(el, {

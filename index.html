@@ -3,14 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ninety5 | Creative Design & Marketing Agency</title>
-    <meta name="description" content="Ninety5 is a creative design and marketing agency focused on building bold brand identities, modern visual systems, and impactful digital experiences." />
+    <title>Ninety5 | A Multi-Division Creative Ecosystem</title>
+    <meta name="description" content="Ninety5 is a world-class creative ecosystem architecting the future of design, marketing, and technology through specialized divisions." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="keywords" content="creative design agency, branding agency, graphic design studio, marketing and branding agency" />
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ninety5.com/" />
+    <meta property="og:title" content="Ninety5 | A Multi-Division Creative Ecosystem" />
+    <meta property="og:description" content="Driving innovation in visual identity, digital strategy, emerging technology, and design education." />
+    <!-- Placeholder for social image -->
+    <meta property="og:image" content="https://ninety5.com/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ninety5 | A Multi-Division Creative Ecosystem" />
+    <meta name="twitter:description" content="Driving innovation in visual identity, digital strategy, emerging technology, and design education." />
+    <meta name="twitter:image" content="https://ninety5.com/og-image.jpg" />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/src/css/variables.css" />
@@ -19,24 +36,29 @@
     <link rel="stylesheet" href="/src/css/sections.css" />
   </head>
   <body>
-    <!-- Custom Cursor (optional, common for agencies) -->
-    <div class="cursor"></div>
+    <!-- Cinematic Noise Overlay -->
+    <div class="noise-overlay"></div>
 
+    <!-- Preloader -->
+    <div class="preloader">
+      <img src="/src/assets/png/white/Asset 7.png" alt="Loading..." class="preloader-logo">
+    </div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    
     <!-- Navigation -->
     <header class="header">
       <div class="header-container">
         <a href="/" class="logo" aria-label="Ninety5 Home">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" rx="4" fill="var(--color-black)"/>
-            <path d="M10 30V10L30 30V10" stroke="var(--color-white)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="wordmark">Ninety5</span>
+          <img src="/src/assets/png/white/Asset 7.png" alt="Ninety5 Logo" style="height: 24px; width: auto;" />
         </a>
         <nav class="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
-          <a href="#process">Process</a>
+          <a href="/src/pages/studio.html">Studio</a>
+          <a href="/src/pages/labs.html">Labs</a>
+          <a href="/src/pages/marketing.html">Marketing</a>
+          <a href="/src/pages/academy.html">Academy</a>
+          <a href="/src/pages/about.html">About</a>
         </nav>
         <a href="#contact" class="btn btn-primary btn-sm">Start a Project</a>
         <button class="mobile-menu-btn" aria-label="Toggle menu">
@@ -51,16 +73,52 @@
       <section class="hero padding-section" id="home">
         <div class="container hero-container">
           <h1 class="hero-title">
-            <span class="line-wrap"><span class="line-inner">Design.</span></span>
+            <span class="line-wrap"><span class="line-inner">Vision.</span></span>
             <span class="line-wrap"><span class="line-inner">Strategy.</span></span>
-            <span class="line-wrap"><span class="line-inner accent-text">Impact.</span></span>
+            <span class="line-wrap"><span class="line-inner font-serif accent-text" style="font-style: italic;">Execution.</span></span>
           </h1>
           <p class="hero-desc reveal-text">
-            We are a creative studio building bold brand identities, modern visual systems, and impactful digital experiences that help you stand out.
+            A premium multi-division creative ecosystem driving global innovation across visual identity, digital growth, emerging technology, and design education.
           </p>
           <div class="hero-cta reveal-opacity">
             <a href="#contact" class="btn btn-primary btn-lg">Start a Project</a>
-            <a href="#work" class="btn btn-outline btn-lg">View Our Work</a>
+          </div>
+        </div>
+        <div class="marquee-container" style="opacity: 0;" id="hero-marquee">
+          <div class="marquee-content">
+            <span>Brand Identity</span><span>•</span>
+            <span>Digital Growth</span><span>•</span>
+            <span>Emerging Tech</span><span>•</span>
+            <span>Design Education</span><span>•</span>
+            <span>Innovation</span><span>•</span>
+            <span>Brand Identity</span><span>•</span>
+            <span>Digital Growth</span><span>•</span>
+            <span>Emerging Tech</span><span>•</span>
+            <span>Design Education</span><span>•</span>
+            <span>Innovation</span><span>•</span>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Ecosystem Banner Image -->
+      <section class="image-banner-section">
+        <div class="container">
+          <div class="image-banner">
+            <!-- Unsplash: Abstract Architecture / Dark Minimalist -->
+            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=2000&auto=format&fit=crop" alt="Ninety5 Ecosystem Architecture">
+          </div>
+        </div>
+      </section>
+
+      <!-- Ecosystem Divisions Section -->
+      <section class="trusted-by padding-section" style="padding-top: 2rem; padding-bottom: 4rem;">
+        <div class="container">
+          <p style="text-align: center; font-family: var(--font-mono); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 2rem;">The Ninety5 Ecosystem Architecture</p>
+          <div style="display: flex; gap: 4rem; justify-content: center; align-items: center; opacity: 0.7; flex-wrap: wrap;">
+            <img src="/src/assets/png/Divisions/Asset 11.png" style="height: 32px;" alt="Ninety5 Studio Logo">
+            <img src="/src/assets/png/Divisions/Asset 14.png" style="height: 32px;" alt="Ninety5 Labs Logo">
+            <img src="/src/assets/png/Divisions/Asset 13.png" style="height: 32px;" alt="Ninety5 Marketing Logo">
+            <img src="/src/assets/png/Divisions/Asset 12.png" style="height: 32px;" alt="Ninety5 Academy Logo">
           </div>
         </div>
       </section>
@@ -69,154 +127,210 @@
       <section class="about padding-section" id="about">
         <div class="container">
           <div class="about-grid">
-            <h2 class="section-title">01 — About</h2>
+            <div class="section-header">
+              <span class="badge-outline">About Us</span>
+              <h2 class="section-title" style="color: var(--color-white)">01 — About</h2>
+            </div>
             <div class="about-content">
-              <h3 class="about-headline">We believe in making things bold, clear, and perfectly designed.</h3>
-              <p>Ninety5 approaches every project with strategic thinking. We don't just beautify; we ensure every visual decision communicates your authentic brand philosophy.</p>
-              <ul class="about-points">
-                <li><span class="highlight">Brand Identity</span></li>
-                <li><span class="highlight">Creative Strategy</span></li>
-                <li><span class="highlight">Modern Design Thinking</span></li>
+              <h3 class="about-headline">More than an agency. A complete creative ecosystem.</h3>
+              <p>We believe in the power of specialization. By organizing our premier expertise into focused divisions, we deliver unparalleled depth in design, technology, strategy, and education while maintaining a unified, premium standard across all touchpoints.</p>
+              <p style="margin-top: 1rem;">At Ninety5, we don't just build standalone products; we architect scalable brand ecosystems. The seamless collaboration between our Studio, Labs, and Marketing divisions creates a compounding effect, allowing us to take a raw concept, forge its identity, build its technological foundation, and hyper-scale its reach—all under one roof.</p>
+              <ul class="about-points" style="margin-top: 1.5rem;">
+                <li><span class="highlight">Visual Systems</span></li>
+                <li><span class="highlight">Digital Growth</span></li>
+                <li><span class="highlight">Emerging Tech</span></li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Services Section -->
-      <section class="services padding-section bg-secondary" id="services">
+      <!-- Divisions Section -->
+      <section class="services padding-section bg-secondary" id="divisions">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">02 — Services</h2>
-            <p class="section-subtitle">Comprehensive design systems for ambitious brands.</p>
+            <span class="badge-outline">Our Ecosystem</span>
+            <h2 class="section-title">02 — Divisions</h2>
+            <p class="section-subtitle" style="color: var(--color-white);">Four specialized branches united by one creative vision.</p>
           </div>
           <div class="services-grid">
-            <div class="service-card">
-              <h4>Brand Identity Design</h4>
-              <p>We craft complete visual identities from logos and typography to color palettes and brand voice, establishing a memorable foundation for your business.</p>
+            <div class="service-card divisions-card">
+              <img src="/src/assets/png/Divisions/Asset 11.png" alt="Ninety5 Studio Logo" class="division-logo">
+              <p>The core creative division responsible for crafting visionary branding, systematic graphic design, and premium visual identities that define industry leaders.</p>
+              <a href="/src/pages/studio.html" class="division-link">Explore Studio →</a>
             </div>
-            <div class="service-card">
-              <h4>Graphic Design</h4>
-              <p>Impactful visual materials for print and digital, communicating your ideas clearly while maintaining absolute aesthetic quality.</p>
+            <div class="service-card divisions-card">
+              <img src="/src/assets/png/Divisions/Asset 14.png" alt="Ninety5 Labs Logo" class="division-logo">
+              <p>Our experimental hub dedicated to developing innovative digital products, exploring emerging creative technologies, and redefining modern workflows.</p>
+              <a href="/src/pages/labs.html" class="division-link">Explore Labs →</a>
             </div>
-            <div class="service-card">
-              <h4>Marketing Strategy</h4>
-              <p>Positioning and messaging frameworks that differentiate you in the market and ensure your creative assets achieve business goals.</p>
+            <div class="service-card divisions-card">
+              <img src="/src/assets/png/Divisions/Asset 13.png" alt="Ninety5 Marketing Logo" class="division-logo">
+              <p>The strategic growth engine focused on positioning brands effectively, executing high-impact campaigns, and connecting deeply with global audiences.</p>
+              <a href="/src/pages/marketing.html" class="division-link">Explore Marketing →</a>
             </div>
-            <div class="service-card">
-              <h4>Social Media Design</h4>
-              <p>Engaging, platform-optimized visuals and templates to build your audience and maintain consistency across digital touchpoints.</p>
-            </div>
-            <div class="service-card">
-              <h4>Digital Design</h4>
-              <p>Stunning, user-centric web and application interfaces that leave a lasting impression while remaining incredibly intuitive.</p>
-            </div>
-            <div class="service-card">
-              <h4>Creative Consulting</h4>
-              <p>Expert guidance to elevate your internal design processes, refine existing assets, and push your brand execution to the highest standard.</p>
+            <div class="service-card divisions-card">
+              <img src="/src/assets/png/Divisions/Asset 12.png" alt="Ninety5 Academy Logo" class="division-logo">
+              <p>Our educational initiative built to empower the next generation of creatives through specialized workshops, industry insights, and comprehensive resources.</p>
+              <a href="/src/pages/academy.html" class="division-link">Explore Academy →</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Portfolio / Work Section -->
-      <section class="work padding-section" id="work">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">03 — Selected Work</h2>
-            <p class="section-subtitle">A glimpse into our recent impact.</p>
-          </div>
-          <div class="work-grid">
-            <!-- Project 1 -->
-            <a href="#" class="work-card">
-              <div class="work-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&q=80&w=1200" alt="Project 1" loading="lazy" />
-              </div>
-              <div class="work-info">
-                <h3>Aero Digital</h3>
-                <span>Brand Identity & Web</span>
-              </div>
-            </a>
-            <!-- Project 2 -->
-            <a href="#" class="work-card">
-              <div class="work-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1542744094-24638ea0b35a?auto=format&fit=crop&q=80&w=1200" alt="Project 2" loading="lazy" />
-              </div>
-              <div class="work-info">
-                <h3>Lumina Framework</h3>
-                <span>Digital Design</span>
-              </div>
-            </a>
-            <!-- Project 3 -->
-            <a href="#" class="work-card">
-              <div class="work-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=80&w=1200" alt="Project 3" loading="lazy" />
-              </div>
-              <div class="work-info">
-                <h3>Vanguard Coffee</h3>
-                <span>Marketing & Strategy</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+
 
       <!-- Process Section -->
       <section class="process padding-section bg-secondary" id="process">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">04 — Process</h2>
-            <p class="section-subtitle">How we get from concept to reality.</p>
+            <span class="badge-outline">Our Process</span>
+            <h2 class="section-title">03 — Process</h2>
+            <p class="section-subtitle" style="color: var(--color-white);">How we get from concept to reality.</p>
           </div>
           <div class="process-timeline">
             <div class="process-step">
               <div class="step-num">01</div>
               <div class="step-content">
-                <h4>Discover</h4>
-                <p>We immerse ourselves in your world, uncovering the core challenges, analyzing the landscape, and clearly defining the strategic objectives.</p>
+                <h4>Discovery</h4>
+                <p>A deep dive into your core objectives, market positioning, and the unique challenges your brand faces.</p>
+                <p style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;">We begin with rigorous stakeholder interviews and market audits. Our strategists align your business goals with user needs to define a crystal-clear problem statement before any creative work begins.</p>
               </div>
             </div>
             <div class="process-step">
               <div class="step-num">02</div>
               <div class="step-content">
-                <h4>Design</h4>
-                <p>Translating strategy into visuals. We ideate, experiment, and build comprehensive design systems that speak your brand's unique language.</p>
+                <h4>Strategy</h4>
+                <p>Architecting a comprehensive, data-driven roadmap tailored to your goals, selecting the right divisions to execute.</p>
+                <p style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;">Whether you need a brand overhaul from Ninety5 Studio or a custom digital tool from Labs, we outline the exact technical stack, communication frameworks, and milestones required for successful deployment.</p>
               </div>
             </div>
             <div class="process-step">
               <div class="step-num">03</div>
               <div class="step-content">
-                <h4>Refine</h4>
-                <p>Collaborative iterations. We hone the details, test the deliverables, and polish the aesthetics until everything feels perfect.</p>
+                <h4>Execution</h4>
+                <p>Translating strategy into world-class deliverables, from premium visual systems and digital products to high-impact campaigns.</p>
+                <p style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;">This is where our specialized talent shines. Our multidisciplinary teams work in agile sprints, maintaining continuous feedback loops to ensure the final output isn't just beautiful, but perfectly engineered.</p>
               </div>
             </div>
             <div class="process-step">
               <div class="step-num">04</div>
               <div class="step-content">
-                <h4>Launch</h4>
-                <p>Delivering final assets with meticulous documentation, ready to be implemented and make an immediate impact on your audience.</p>
+                <h4>Growth</h4>
+                <p>Launching with absolute precision, measuring the impact, and continuously optimizing for long-term brand success.</p>
+                <p style="margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;">Post-launch, Ninety5 Marketing takes the helm. We analyze user data, run A/B testing on live assets, and implement growth hacks to guarantee an exponential return on your creative investment.</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats padding-section" id="impact">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item reveal-text">
+              <span class="stat-value">500+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat-item reveal-text">
+              <span class="stat-value">4</span>
+              <span class="stat-label">Specialized Divisions</span>
+            </div>
+            <div class="stat-item reveal-text">
+              <span class="stat-value">15+</span>
+              <span class="stat-label">Global Awards</span>
+            </div>
+            <div class="stat-item reveal-text">
+              <span class="stat-value">1</span>
+              <span class="stat-label">Unified Vision</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials padding-section bg-secondary" id="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge-outline">Partnerships</span>
+            <h2 class="section-title">04 — Voices</h2>
+            <p class="section-subtitle" style="color: var(--color-white);">Words from the leaders who define our ecosystem.</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card reveal-opacity">
+              <p class="testimonial-text">"Ninety5 didn't just build a brand; they engineered a digital legacy. The synergy between Studio and Labs is unlike anything else in the industry."</p>
+              <div class="testimonial-author">
+                <span class="testimonial-name">Sarah Chen</span>
+                <span class="testimonial-role">CEO, NeuraLink Systems</span>
+              </div>
+            </div>
+            <div class="testimonial-card reveal-opacity">
+              <p class="testimonial-text">"The strategic depth provided by Ninety5 Marketing transformed our market positioning in less than six months. Absolute precision."</p>
+              <div class="testimonial-author">
+                <span class="testimonial-name">Marcus Thorne</span>
+                <span class="testimonial-role">Founder, Quantum Venture Group</span>
+              </div>
+            </div>
+            <div class="testimonial-card reveal-opacity">
+              <p class="testimonial-text">"As a graduate of Ninety5 Academy, I can testify to the elite level of training. My career trajectory was fundamentally reset."</p>
+              <div class="testimonial-author">
+                <span class="testimonial-name">Elena Rodriguez</span>
+                <span class="testimonial-role">Senior Product Designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq padding-section" id="faq">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge-outline">Information</span>
+            <h2 class="section-title">05 — Queries</h2>
+            <p class="section-subtitle" style="color: var(--color-white);">Essential insights into our collaborative model.</p>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item reveal-opacity">
+              <div class="faq-question">How do the divisions collaborate on a single project?</div>
+              <div class="faq-answer">Our ecosystem is built on a shared metadata layer. If you start with Studio for branding, Labs is automatically briefed on technical constraints, and Marketing begins mapping growth patterns from Day 1.</div>
+            </div>
+            <div class="faq-item reveal-opacity">
+              <div class="faq-question">Can I engage a single division independently?</div>
+              <div class="faq-answer">Absolutely. While the ecosystem provides maximum value when integrated, each division is a world-class leader in its own right and can be engaged for specialized needs.</div>
+            </div>
+            <div class="faq-item reveal-opacity">
+              <div class="faq-question">What is the usual timeline for an ecosystem-wide project?</div>
+              <div class="faq-answer">Phase-shifted projects typically span 12-24 weeks depending on complexity. We prioritize long-term brand equity over hurried launches.</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Contact CTA Section -->
-      <section class="contact padding-section" id="contact">
+      <section class="contact padding-section bg-secondary" id="contact">
         <div class="container contact-container">
-          <h2 class="contact-title">Let's build something <span class="accent-text">bold</span> together.</h2>
-          <p class="contact-desc">Ready to stand out? We're taking on new projects and would love to hear about yours.</p>
-          <form class="contact-form" onsubmit="event.preventDefault();">
-            <div class="form-group">
-              <input type="text" placeholder="Your Name" required />
+          <h2 class="contact-title">Let's build something <span class="accent-text">extraordinary.</span></h2>
+          <p class="contact-desc">Ready to leverage the full power of the Ninety5 ecosystem? We are currently selectively taking on new partnerships.</p>
+          <form class="contact-form" action="https://forms-backend.coeffx.tech/api/v1/submit/8fc70538-36ee-4aff-bc24-8b1a52112ee4" method="POST">
+            <div class="form-group floating-label-group">
+              <input type="text" name="name" id="name" required />
+              <label class="floating-label" for="name">Your Name</label>
             </div>
-            <div class="form-group">
-              <input type="email" placeholder="Email Address" required />
+            <div class="form-group floating-label-group">
+              <input type="email" name="email" id="email" required />
+              <label class="floating-label" for="email">Email Address</label>
             </div>
-            <div class="form-group">
-              <textarea placeholder="Tell us about your project" rows="4" required></textarea>
+            <div class="form-group floating-label-group">
+              <textarea name="message" id="message" rows="4" required></textarea>
+              <label class="floating-label" for="message">Tell us about your project</label>
             </div>
-            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-full submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loader" style="display: none;">Wait...</span>
+            </button>
+            <div class="form-success-msg" style="display: none;">Message Sent Successfully! Welcome to the ecosystem.</div>
           </form>
         </div>
       </section>
@@ -225,38 +339,50 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-brand">
-          <a href="/" class="logo" aria-label="Ninety5 Home">
-            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="40" rx="4" fill="var(--color-white)"/>
-              <path d="M10 30V10L30 30V10" stroke="var(--color-black)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="wordmark-footer">Ninety5</span>
+          <a href="/" class="logo" aria-label="Ninety5 Home" style="color: white; margin-bottom: 1rem;">
+            <img src="/src/assets/png/white/Asset 7.png" alt="Ninety5 Logo" style="height: 48px; width: auto;" />
           </a>
-          <p class="philosophy">Create Bold. Stay Modern.</p>
+          <p class="footer-vision">Architecting the next generation of creative ecosystems through specialized divisions and unified strategic vision.</p>
         </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <h5>Navigation</h5>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#work">Work</a>
-          </div>
-          <div class="footer-col">
-            <h5>Social</h5>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Behance</a>
-            <a href="#">Dribbble</a>
-          </div>
-          <div class="footer-col">
-            <h5>Contact</h5>
-            <a href="mailto:hello@ninety5.com">hello@ninety5.com</a>
-            <span>San Francisco, CA</span>
+        
+        <div class="footer-col">
+          <h5>Company</h5>
+          <div class="footer-col-links">
+            <a href="/src/pages/about.html">About</a>
+            <a href="/#process">Process</a>
+            <a href="/#faq">FAQ</a>
+            <a href="/#contact">Contact</a>
           </div>
         </div>
+
+        <div class="footer-col">
+          <h5>Ecosystem</h5>
+          <div class="footer-col-links">
+            <a href="/src/pages/studio.html">Ninety5 Studio</a>
+            <a href="/src/pages/labs.html">Ninety5 Labs</a>
+            <a href="/src/pages/marketing.html">Ninety5 Marketing</a>
+            <a href="/src/pages/academy.html">Ninety5 Academy</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <span class="contact-label">Headquarters</span>
+              <span class="contact-value">Chennai, IN<br>Global Remote</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
         <div class="footer-bottom">
-          <p>&copy; 2026 Ninety5 Creative Agency. All rights reserved.</p>
+          <p class="copyright">&copy; 2026 Ninety5 Ecosystem. All rights reserved.</p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>

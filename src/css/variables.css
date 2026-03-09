@@ -1,20 +1,24 @@
 :root {
   /* Color System */
-  --color-black: #0F0F0F;
+  --color-black: #0F0F0F; /* Jet Black */
   --color-white: #FFFFFF;
-  --color-gray: #6B7280;
-  --color-blue: #3B82F6;
+  --color-gray: #6B7280; /* Neutral Gray */
+  --color-blue: #3B82F6; /* Electric Blue */
+  --color-blue-hover: #2563EB;
   
   --bg-primary: var(--color-black);
-  --bg-secondary: #161616;
+  --bg-secondary: var(--color-black);
+  --bg-dark: var(--color-black);
   
   --text-primary: var(--color-white);
   --text-secondary: var(--color-gray);
   --text-accent: var(--color-blue);
   
   /* Typography */
-  --font-heading: 'Space Grotesk', sans-serif;
+  --font-heading: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-serif: 'DM Serif Display', serif;
   
   /* Spacing */
   --space-xs: 0.5rem;

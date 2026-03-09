@@ -7,6 +7,16 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        about: 'src/pages/about.html',
+        studio: 'src/pages/studio.html',
+        labs: 'src/pages/labs.html',
+        marketing: 'src/pages/marketing.html',
+        academy: 'src/pages/academy.html'
+      }
+    }
   }
 });
