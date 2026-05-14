@@ -1,0 +1,370 @@
+/* ServicePage.module.css
+   Shared CSS module for all /services/* sub-pages
+   ─────────────────────────────────────────────── */
+
+.page {
+  background: var(--color-white);
+  min-height: 100vh;
+}
+
+/* ── PAGE HERO (grid-texture + eyebrow + title) ── */
+.hero {
+  background: var(--color-white);
+  border-bottom: 4px solid var(--color-dark);
+  padding-top: 120px;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.heroInner {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.eyebrowLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-brand-blue);
+  flex-shrink: 0;
+}
+
+.eyebrowText {
+  font-family: monospace;
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+}
+
+.titleBlock {
+  border-bottom: 8px solid var(--color-dark);
+  padding-bottom: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  word-break: break-word;
+}
+
+.lead {
+  font-family: var(--font-body);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-brand-blue);
+  max-width: 760px;
+  line-height: 1.45;
+  margin-bottom: 2rem;
+}
+
+.body {
+  border-left: 4px solid var(--color-brand-orange);
+  padding-left: 1.75rem;
+  max-width: 760px;
+}
+
+.bodyText {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--color-dark);
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* ── CAPABILITIES GRID ── */
+.capabilitiesSection {
+  padding: 5rem 0;
+  background: var(--color-bg-alt);
+  border-bottom: 4px solid var(--color-dark);
+}
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.sectionLabelLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-brand-blue);
+}
+
+.sectionLabelText {
+  font-family: monospace;
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+
+.capGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.capCard {
+  border: 4px solid var(--color-dark);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: var(--color-white);
+  box-shadow: 8px 8px 0 var(--color-dark);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+}
+
+.capCard:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 var(--color-brand-blue);
+}
+
+.capCardAlt:hover {
+  box-shadow: 12px 12px 0 var(--color-brand-orange);
+}
+
+.capIcon {
+  font-size: 2rem;
+  width: 52px;
+  height: 52px;
+  background: var(--color-brand-blue);
+  color: var(--color-white);
+  border: 2px solid var(--color-dark);
+  box-shadow: 4px 4px 0 var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.capCardAlt .capIcon {
+  background: var(--color-brand-orange);
+}
+
+.capTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  border-bottom: 4px solid var(--color-dark);
+  padding-bottom: 0.875rem;
+}
+
+.capBody {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ── DELIVERABLES ── */
+.deliverablesSection {
+  background: var(--color-brand-blue);
+  border-top: 4px solid var(--color-dark);
+  border-bottom: 4px solid var(--color-dark);
+  padding: 4rem 0;
+}
+
+.deliverablesTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-white);
+  letter-spacing: -0.03em;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.deliverablesList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border: 4px solid var(--color-dark);
+  box-shadow: 12px 12px 0 var(--color-brand-orange);
+}
+
+.deliverableItem {
+  padding: 1.75rem 1.5rem;
+  border-right: 4px solid var(--color-dark);
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.deliverableItem:last-child { border-right: none; }
+
+.deliverableItem:hover { background: var(--color-bg-alt); }
+
+.deliverableItemTitle {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  letter-spacing: -0.01em;
+}
+
+.deliverableItemSub {
+  font-family: monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── PROCESS STRIP ── */
+.processSection {
+  padding: 5rem 0;
+  background: var(--color-dark);
+  border-bottom: 4px solid var(--color-dark);
+}
+
+.processTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-white);
+  letter-spacing: -0.03em;
+  margin-bottom: 3rem;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 1rem;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.processStep {
+  padding: 2rem 1.75rem;
+  border-right: 4px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: background 0.2s ease;
+}
+
+.processStep:last-child { border-right: none; }
+
+.processStep:hover { background: rgba(255, 255, 255, 0.05); }
+
+.processStepNum {
+  font-family: monospace;
+  font-size: 0.6rem;
+  font-weight: 900;
+  color: var(--color-brand-orange);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.processStepTitle {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+}
+
+.processStepDesc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.65;
+}
+
+/* ── CTA ── */
+.ctaSection {
+  padding: 5rem 0;
+}
+
+.ctaStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: 3rem;
+  background: var(--color-brand-orange);
+  border: 4px solid var(--color-dark);
+  box-shadow: 12px 12px 0 var(--color-dark);
+  flex-wrap: wrap;
+}
+
+.ctaStripTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-white);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.ctaStripSub {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 0.375rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .deliverablesList { grid-template-columns: repeat(3, 1fr); }
+  .processSteps { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .capGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .deliverablesList { grid-template-columns: 1fr 1fr; }
+  .ctaStrip { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .deliverablesList { grid-template-columns: 1fr; }
+  .deliverableItem { border-right: none; border-bottom: 4px solid var(--color-dark); }
+  .deliverableItem:last-child { border-bottom: none; }
+  .processSteps { grid-template-columns: 1fr; }
+  .processStep { border-right: none; border-bottom: 4px solid rgba(255, 255, 255, 0.1); }
+}
