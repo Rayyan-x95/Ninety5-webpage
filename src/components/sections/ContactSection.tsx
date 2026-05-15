@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./ContactSection.module.css";
 
 const INFO = [
-  { label: "UPLINK", value: "hello@ninety5.studio", href: "mailto:hello@ninety5.studio", live: false },
+  { label: "UPLINK", value: "hello@ninety5.studio", href: "mailto:ninety5.designs.95@gmail.com", live: false },
   { label: "AVAILABILITY", value: "OPEN — MAY 2026", href: null, live: true },
   { label: "RESPONSE", value: "Within 24 hours", href: null, live: false },
   { label: "LOCATION", value: "Chennai, India (Remote)", href: null, live: false },

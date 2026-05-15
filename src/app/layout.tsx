@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "Ninety5",
   ],
   authors: [{ name: "Ninety5 Studio" }],
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Ninety5 — Design & Development Studio",
     description:

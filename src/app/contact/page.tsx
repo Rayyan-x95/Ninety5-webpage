@@ -11,11 +11,11 @@ const INFO_CARDS = [
     value: "hello@ninety5.studio",
     sub: "For project inquiries and general questions.",
     isLink: true,
-    href: "mailto:hello@ninety5.studio",
+    href: "mailto:ninety5.designs.95@gmail.com",
   },
   {
     label: "Locations",
-    value: "Hyderabad · Bangalore · Dubai",
+    value: "Chennai, India",
     sub: "Global client base across all timezones.",
     isLink: false,
   },
@@ -253,7 +253,7 @@ export default function ContactPage() {
             <div className={styles.ctaInner}>
               <h2 className={styles.ctaTitle}>Or email us directly.</h2>
               <a
-                href="mailto:hello@ninety5.studio"
+                href="mailto:ninety5.designs.95@gmail.com"
                 className="btn btn-secondary"
                 id="contact-email-cta-btn"
                 style={{

@@ -137,7 +137,7 @@ export default function CookiePolicyPage() {
                 <div className={styles.ctaTitle}>Cookie questions?</div>
                 <p className={styles.ctaSub}>We'll respond within 72 hours.</p>
               </div>
-              <a href="mailto:hello@ninety5.studio" className="btn btn-primary" id="cookie-cta-btn"
+              <a href="mailto:ninety5.designs.95@gmail.com" className="btn btn-primary" id="cookie-cta-btn"
                 style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "8px 8px 0 var(--color-brand-orange)" }}>
                 Contact Us ↗
               </a>

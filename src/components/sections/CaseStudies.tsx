@@ -3,54 +3,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./CaseStudies.module.css";
 
-const PROJECTS = [
-  {
-    id: "atlas",
-    category: "SaaS Platform",
-    title: "Atlas — B2B Analytics Dashboard",
-    description: "End-to-end product design for a data analytics platform serving 200+ enterprise clients.",
-    metric: "+280%",
-    metricLabel: "User retention",
-    color: "#0C0C0A",
-    accent: "#1B4FFF",
-    span: "large",
-  },
-  {
-    id: "bloom",
-    category: "Mobile App",
-    title: "Bloom — Wellness App",
-    description: "Holistic wellness app with personalised AI coaching. Shipped from 0 to 50k users in 3 months.",
-    metric: "4.9 ★",
-    metricLabel: "App Store rating",
-    color: "#0A1628",
-    accent: "#60A5FA",
-    span: "small",
-    orange: true,
-  },
-  {
-    id: "forge",
-    category: "Brand Identity",
-    title: "Forge — Developer Tools",
-    description: "Complete brand overhaul for an open-source developer toolchain with 80k+ GitHub stars.",
-    metric: "3.2×",
-    metricLabel: "Conversion uplift",
-    color: "#1A0828",
-    accent: "#A78BFA",
-    span: "small",
-  },
-  {
-    id: "orbit",
-    category: "Web App",
-    title: "Orbit — Project Management",
-    description: "A modular project management suite built for async, remote-first engineering teams.",
-    metric: "2.1s",
-    metricLabel: "Core Web Vitals",
-    color: "#0A1A10",
-    accent: "#34D399",
-    span: "large",
-    orange: true,
-  },
-];
+import { PROJECTS } from "@/data/projects";
 
 export default function CaseStudies() {
   const ref = useRef<HTMLElement>(null);
@@ -123,7 +76,7 @@ export default function CaseStudies() {
                 <h3 className={styles.cardTitle}>{p.title}</h3>
                 <p className={styles.cardDesc}>{p.description}</p>
                 <a
-                  href="/work"
+                  href={`/work/${p.id}`}
                   className={styles.cardLink}
                   id={`view-project-${p.id}`}
                 >

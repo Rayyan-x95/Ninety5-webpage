@@ -22,7 +22,7 @@ const SECTIONS = [
     num: "01",
     id: "acceptance",
     title: "Acceptance of Terms",
-    body: "By engaging Ninety5 Studio (registered in Hyderabad, India) for any service — whether through a signed proposal, email confirmation, or payment — you agree to be bound by these Terms of Service. If you do not agree, you must not engage our services.",
+    body: "By engaging Ninety5 Studio (registered in Chennai, India) for any service — whether through a signed proposal, email confirmation, or payment — you agree to be bound by these Terms of Service. If you do not agree, you must not engage our services.",
     items: [],
   },
   {
@@ -146,7 +146,7 @@ export default function TermsOfServicePage() {
                 <div className={styles.ctaTitle}>Questions about our terms?</div>
                 <p className={styles.ctaSub}>We're happy to clarify anything before you engage.</p>
               </div>
-              <a href="mailto:hello@ninety5.studio" className="btn btn-primary" id="terms-cta-btn"
+              <a href="mailto:ninety5.designs.95@gmail.com" className="btn btn-primary" id="terms-cta-btn"
                 style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "8px 8px 0 var(--color-brand-orange)" }}>
                 Contact Us ↗
               </a>

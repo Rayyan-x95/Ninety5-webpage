@@ -92,7 +92,7 @@ const pageData = [
       { title: 'OUR FOUNDER', text: 'Mohammed Rayyan established Ninety5 with a vision to strip away the unnecessary and build digital experiences with raw, unapologetic impact.' },
       { title: 'TRACK RECORD', text: 'Since our inception, we have successfully delivered over 400+ high-fidelity designs and engineered products for 100+ satisfied clients.' },
       { title: 'OUR CULTURE', text: 'We value execution over talk. We ship fast, iterate relentlessly, and demand absolute excellence from ourselves and our partners.' },
-      { title: 'GLOBAL REACH', text: 'Operating primarily from Hyderabad, Bangalore, and Dubai, with a worldwide client base spanning multiple timezones.' }
+      { title: 'LOCATION', text: 'Operating primarily from Chennai, with a worldwide client base spanning multiple timezones.' }
     ],
     deliverables: ['Integrity', 'Velocity', 'Excellence', 'Transparency', 'Impact']
   },
@@ -154,7 +154,7 @@ const pageData = [
     intro: 'Whether you are a funded startup looking to disrupt an industry or an enterprise looking to modernize a legacy system, we are ready to execute. Reach out with your brief, and we will get back to you immediately.',
     blocks: [
       { title: 'EMAIL', text: 'hello@ninety5.studio' },
-      { title: 'LOCATIONS', text: 'Hyderabad · Bangalore · Dubai' },
+      { title: 'LOCATIONS', text: 'Chennai, India' },
       { title: 'RESPONSE TIME', text: 'We typically respond to all inquiries within 24 hours with actionable feedback on your request.' },
       { title: 'NEW BUSINESS', text: 'Currently accepting select projects for the upcoming quarter. Slots are highly limited.' }
     ]

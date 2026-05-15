@@ -325,10 +325,20 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .inner { grid-template-columns: 1fr; gap: 3rem; }
+  .inner { grid-template-columns: 1fr; gap: 3.5rem; }
+  .left { padding-top: 0; }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    padding-bottom: 1rem;
+  }
+  .section {
+    padding: 3.5rem 0;
+  }
 }
 
 @media (max-width: 640px) {
   .formRow { grid-template-columns: 1fr; }
-  .title { font-size: 2.75rem; }
 }

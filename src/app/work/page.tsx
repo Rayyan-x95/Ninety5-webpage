@@ -5,52 +5,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "./page.module.css";
 import { useState } from "react";
 
-const PROJECTS = [
-  {
-    num: "01",
-    title: "Fintech Platform",
-    desc: "A complete overhaul of a legacy banking interface resulting in 300% increased conversion and a 50% drop in support tickets.",
-    metric: "+300%",
-    metricLabel: "Conversion",
-    tags: ["Fintech", "UX/UI", "React"],
-    tagStyle: ["", styles.projectTagBlue, ""],
-    bg: "linear-gradient(135deg, #0C0C0A 0%, #1B4FFF 100%)",
-    linkHref: "#",
-  },
-  {
-    num: "02",
-    title: "E-Commerce Flagship",
-    desc: "A headless Shopify build pushing the boundaries of web performance, resulting in a perfect 100 Lighthouse score.",
-    metric: "100",
-    metricLabel: "Lighthouse",
-    tags: ["E-Commerce", "Shopify", "Headless"],
-    tagStyle: [styles.projectTagOrange, "", ""],
-    bg: "linear-gradient(135deg, #FF5B00 0%, #0C0C0A 100%)",
-    linkHref: "#",
-  },
-  {
-    num: "03",
-    title: "SaaS Dashboard",
-    desc: "A complex data visualization tool engineered for extreme usability, currently utilized by over 10,000 daily active users.",
-    metric: "10K+",
-    metricLabel: "Daily Users",
-    tags: ["SaaS", "Data Viz", "Next.js"],
-    tagStyle: [styles.projectTagBlue, "", ""],
-    bg: "linear-gradient(135deg, #7C3AED 0%, #1B4FFF 100%)",
-    linkHref: "#",
-  },
-  {
-    num: "04",
-    title: "Brand Identity System",
-    desc: "A brutalist identity system for a disruptive AI startup that helped secure their Series A funding.",
-    metric: "Series A",
-    metricLabel: "Secured",
-    tags: ["Branding", "Design System", "Motion"],
-    tagStyle: [styles.projectTagOrange, "", ""],
-    bg: "linear-gradient(135deg, #059669 0%, #0C0C0A 100%)",
-    linkHref: "#",
-  },
-];
+import { PROJECTS } from "@/data/projects";
 
 const DELIVERABLES = [
   { title: "Case Studies", sub: "Full write-ups" },
@@ -128,13 +83,13 @@ export default function WorkPage() {
             </div>
             <h2 className={styles.sectionTitle}>Featured Projects</h2>
             <div className={styles.projectGrid}>
-              {PROJECTS.map((p) => (
+              {PROJECTS.map((p, i) => (
                 <div
-                  key={p.num}
-                  className={`${styles.projectCard} ${p.num === "02" || p.num === "04" ? styles.projectCardAlt : ""}`}
+                  key={p.id}
+                  className={`${styles.projectCard} ${i % 2 !== 0 ? styles.projectCardAlt : ""}`}
                 >
-                  <div className={styles.projectVisual} style={{ background: p.bg }}>
-                    <span className={styles.projectNum}>{p.num}</span>
+                  <div className={styles.projectVisual} style={{ background: p.color }}>
+                    <span className={styles.projectNum}>0{i + 1}</span>
                     <div className={styles.projectMetric}>
                       <span className={styles.projectMetricVal}>{p.metric}</span>
                       <span className={styles.projectMetricLabel}>{p.metricLabel}</span>
@@ -142,15 +97,12 @@ export default function WorkPage() {
                   </div>
                   <div className={styles.projectBody}>
                     <div className={styles.projectTags}>
-                      {p.tags.map((tag, i) => (
-                        <span key={tag} className={`${styles.projectTag} ${p.tagStyle[i] || ""}`}>
-                          {tag}
-                        </span>
-                      ))}
+                      <span className={styles.projectTag}>{p.category}</span>
+                      <span className={`${styles.projectTag} ${styles.projectTagBlue}`}>Built in {p.year}</span>
                     </div>
                     <h3 className={styles.projectTitle}>{p.title}</h3>
-                    <p className={styles.projectDesc}>{p.desc}</p>
-                    <a href={p.linkHref} className={styles.projectLink}>
+                    <p className={styles.projectDesc}>{p.description}</p>
+                    <a href={`/work/${p.id}`} className={styles.projectLink}>
                       View Case Study ↗
                     </a>
                   </div>

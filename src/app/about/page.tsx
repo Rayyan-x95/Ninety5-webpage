@@ -17,7 +17,7 @@ const CAPABILITIES = [
   {
     num: "100+",
     title: "Global Clients",
-    body: "Operating across Hyderabad, Bangalore, and Dubai, with a worldwide client base spanning fintech, SaaS, e-commerce, and more.",
+    body: "Operating out of Chennai, with a worldwide client base spanning fintech, SaaS, e-commerce, and more.",
     alt: true,
   },
   {

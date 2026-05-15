@@ -205,9 +205,23 @@
   .panels { grid-template-columns: 1fr; }
   .panel { border-right: none; border-bottom: 4px solid var(--color-dark); }
   .panel:last-child { border-bottom: none; }
-  .header { grid-template-columns: 1fr; gap: 2rem; }
+  .header { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
 @media (max-width: 768px) {
-  .cta { flex-direction: column; align-items: flex-start; }
+  .title {
+    font-size: clamp(2.25rem, 10vw, 3.5rem);
+  }
+  .sub {
+    max-width: none;
+  }
+  .cta { 
+    flex-direction: column; 
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .section {
+    padding: 3.5rem 0;
+  }
 }
