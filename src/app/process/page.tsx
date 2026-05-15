@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Our Process — Ninety5 Studio",
+  title: "Our Process",
   description: "A systematic, battle-tested methodology for delivering exceptional digital products at incredible speed.",
 };
 

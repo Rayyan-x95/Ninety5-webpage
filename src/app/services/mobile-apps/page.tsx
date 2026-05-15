@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "../ServicePage.module.css";
 
 export const metadata = {
-  title: "Mobile Apps — Ninety5 Studio",
+  title: "Mobile Apps",
   description: "Cross-platform mobile applications engineered for performance, retention, and scale.",
 };
 

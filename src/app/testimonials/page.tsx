@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Testimonials — Ninety5 Studio",
+  title: "Testimonials",
   description: "What industry leaders say about partnering with Ninety5 Studio.",
 };
 

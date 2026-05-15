@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "../LegalPage.module.css";
 
 export const metadata = {
-  title: "Privacy Policy — Ninety5 Studio",
+  title: "Privacy Policy",
   description: "How Ninety5 Studio collects, uses, and protects your personal data.",
 };
 

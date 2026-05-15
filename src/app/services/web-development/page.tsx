@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "../ServicePage.module.css";
 
 export const metadata = {
-  title: "Web Development — Ninety5 Studio",
+  title: "Web Development",
   description: "Production-grade web engineering built on Next.js, React, and the modern stack — fast, scalable, and maintainable.",
 };
 

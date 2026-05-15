@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "../LegalPage.module.css";
 
 export const metadata = {
-  title: "Terms of Service — Ninety5 Studio",
+  title: "Terms of Service",
   description: "The terms and conditions governing your engagement with Ninety5 Studio.",
 };
 

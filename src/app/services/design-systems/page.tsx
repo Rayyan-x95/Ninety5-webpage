@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "../ServicePage.module.css";
 
 export const metadata = {
-  title: "Design Systems — Ninety5 Studio",
+  title: "Design Systems",
   description: "Building the infrastructure of design — scalable, token-driven systems that eliminate inconsistency at scale.",
 };
 

@@ -1,11 +1,13 @@
-"use client";
-
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "./page.module.css";
-import { useState } from "react";
-
 import { PROJECTS } from "@/data/projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Selected Work",
+  description: "A curated archive of our most impactful digital products and brand systems — from complex enterprise software to disruptive consumer branding.",
+};
 
 const DELIVERABLES = [
   { title: "Case Studies", sub: "Full write-ups" },

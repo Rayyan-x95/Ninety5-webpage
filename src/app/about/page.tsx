@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "About — Ninety5 Studio",
+  title: "About",
   description: "Ninety5 is a brutalist design and engineering collective. We deliver high-performance digital products with raw execution and extreme velocity.",
 };
 

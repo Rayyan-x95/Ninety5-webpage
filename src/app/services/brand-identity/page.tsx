@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "../ServicePage.module.css";
 
 export const metadata = {
-  title: "Brand Identity — Ninety5 Studio",
+  title: "Brand Identity",
   description: "Forging iconic visual systems that resonate and dominate in crowded markets.",
 };
 

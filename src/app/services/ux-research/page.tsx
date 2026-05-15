@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "../ServicePage.module.css";
 
 export const metadata = {
-  title: "UX Research — Ninety5 Studio",
+  title: "UX Research",
   description: "Data-driven user research that eliminates guesswork and de-risks every product decision.",
 };
 

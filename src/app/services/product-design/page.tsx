@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import styles from "../ServicePage.module.css";
 
 export const metadata = {
-  title: "Product Design — Ninety5 Studio",
+  title: "Product Design",
   description: "End-to-end product design that transforms complex problems into elegant, high-converting digital experiences.",
 };
 

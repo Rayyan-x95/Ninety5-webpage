@@ -1,14 +1,36 @@
-"use client";
-
-import { useParams, notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { PROJECTS } from "@/data/projects";
 import styles from "../CaseStudy.module.css";
+import { Metadata } from "next";
 
-export default function CaseStudyPage() {
-  const params = useParams();
-  const slug = params?.slug as string;
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const project = PROJECTS.find((p) => p.id === params.slug);
+  
+  if (!project) {
+    return {
+      title: "Project Not Found",
+    };
+  }
+
+  return {
+    title: `${project.title}`,
+    description: project.description,
+    openGraph: {
+      title: `${project.title} — Ninety5 Case Study`,
+      description: project.description,
+      type: "article",
+    },
+  };
+}
+
+export default function CaseStudyPage({ params }: Props) {
+  const slug = params.slug;
   const project = PROJECTS.find((p) => p.id === slug);
 
   if (!project) {

@@ -1,6 +1,12 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "@/components/sections/ServicesSection.module.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description: "End-to-end design and engineering solutions for the world's most ambitious brands. Product Design, Brand Identity, and Scalable Web Development.",
+};
 
 const DESIGN_SERVICES = [
   {
