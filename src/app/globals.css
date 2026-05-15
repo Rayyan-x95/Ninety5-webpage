@@ -343,11 +343,6 @@ button {
   box-shadow: var(--shadow-glass);
 }
 
-/* ── Grid Stagger ────────────────────────────────────────── */
-.grid-stagger {
-  /* Handled by GSAP in SmoothScroll */
-}
-
 /* ── Scroll Reveal ───────────────────────────────────────── */
 .reveal {
   opacity: 0;
