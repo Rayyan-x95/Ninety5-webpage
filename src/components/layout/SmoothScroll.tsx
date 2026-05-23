@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+  const progressRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Initialize Lenis
     const lenis = new Lenis({
@@ -19,14 +21,29 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     // Sync ScrollTrigger with Lenis
     lenis.on("scroll", ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
+    // Store callback ref so cleanup can remove the same function
+    const rafCallback = (time: number) => {
       lenis.raf(time * 1000);
-    });
-
+    };
+    gsap.ticker.add(rafCallback);
     gsap.ticker.lagSmoothing(0);
 
     // Global Scroll Reveals using GSAP
     gsap.registerPlugin(ScrollTrigger);
+
+    // Scroll progress bar (cross-browser — replaces animation-timeline: scroll())
+    if (progressRef.current) {
+      gsap.to(progressRef.current, {
+        scaleX: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: document.documentElement,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 0.1,
+        },
+      });
+    }
 
     // Staggered reveals for grids
     const grids = document.querySelectorAll(".grid-stagger");
@@ -49,7 +66,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     // Parallax for ambient glows
     gsap.to(".glow-blue", {
-      y: (i, target) => -window.innerHeight * 0.2,
+      y: () => -window.innerHeight * 0.2,
       ease: "none",
       scrollTrigger: {
         trigger: "body",
@@ -60,7 +77,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     });
 
     gsap.to(".glow-orange", {
-      y: (i, target) => -window.innerHeight * 0.4,
+      y: () => -window.innerHeight * 0.4,
       ease: "none",
       scrollTrigger: {
         trigger: "body",
@@ -95,24 +112,33 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       );
     });
 
-    // Cleanup
+    // Cleanup — remove the same callback reference to prevent memory leak
     return () => {
       lenis.destroy();
-      gsap.ticker.remove(() => {});
+      gsap.ticker.remove(rafCallback);
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
 
   return (
     <>
-      {/* Scroll Progress Indicator */}
-      <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "4px", background: "var(--color-dark)", zIndex: 10000, transform: "scaleX(0)", transformOrigin: "left", animation: "scrollProgress linear both", animationTimeline: "scroll()" }}></div>
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes scrollProgress {
-          to { transform: scaleX(1); }
-        }
-      `}} />
+      {/* Scroll Progress Indicator — GSAP-driven for cross-browser support */}
+      <div
+        ref={progressRef}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "4px",
+          background: "var(--color-dark)",
+          zIndex: 10000,
+          transform: "scaleX(0)",
+          transformOrigin: "left",
+        }}
+      />
       {children}
     </>
   );
 }
+

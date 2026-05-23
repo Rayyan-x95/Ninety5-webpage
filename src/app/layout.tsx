@@ -61,12 +61,9 @@ const jsonLd = {
   "image": "https://ninety5.studio/icon.png",
   "@id": "https://ninety5.studio",
   "url": "https://ninety5.studio",
-  "telephone": "",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "",
     "addressLocality": "Chennai",
-    "postalCode": "",
     "addressCountry": "IN"
   },
   "geo": {

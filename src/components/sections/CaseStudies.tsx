@@ -1,23 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useReveal } from "@/hooks/useReveal";
 import styles from "./CaseStudies.module.css";
 
 import { PROJECTS } from "@/data/projects";
 
 export default function CaseStudies() {
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const els = ref.current?.querySelectorAll(".reveal");
-    if (!els) return;
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.06 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const ref = useReveal<HTMLElement>(0.06);
 
   return (
     <section ref={ref} className={styles.section} id="work">

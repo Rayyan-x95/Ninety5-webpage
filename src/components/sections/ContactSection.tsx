@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useReveal } from "@/hooks/useReveal";
 import styles from "./ContactSection.module.css";
 
 const INFO = [
@@ -11,24 +12,15 @@ const INFO = [
 ];
 
 export default function ContactSection() {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useReveal<HTMLElement>(0.1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    const els = ref.current?.querySelectorAll(".reveal");
-    if (!els) return;
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.1 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     const formData = new FormData(e.currentTarget);
     try {
       const response = await fetch(
@@ -38,10 +30,10 @@ export default function ContactSection() {
       if (response.ok) {
         setSubmitted(true);
       } else {
-        alert("Something went wrong. Please try again.");
+        setError("Something went wrong. Please try again.");
       }
     } catch {
-      alert("Failed to send message. Please check your connection.");
+      setError("Failed to send message. Please check your connection.");
     } finally {
       setIsSubmitting(false);
     }
@@ -160,6 +152,24 @@ export default function ContactSection() {
                       required
                     />
                   </div>
+                  {error && (
+                    <div
+                      role="alert"
+                      style={{
+                        padding: "0.75rem 1rem",
+                        background: "rgba(220, 38, 38, 0.08)",
+                        border: "2px solid #DC2626",
+                        color: "#DC2626",
+                        fontFamily: "monospace",
+                        fontSize: "0.75rem",
+                        fontWeight: 700,
+                        letterSpacing: "0.05em",
+                        textTransform: "uppercase" as const,
+                      }}
+                    >
+                      ⚠ {error}
+                    </div>
+                  )}
                   <button
                     type="submit"
                     disabled={isSubmitting}

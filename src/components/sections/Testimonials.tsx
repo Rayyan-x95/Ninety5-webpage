@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useReveal } from "@/hooks/useReveal";
 import styles from "./Testimonials.module.css";
 
 const TESTIMONIALS = [
@@ -55,18 +55,7 @@ const TESTIMONIALS = [
 ];
 
 export default function Testimonials() {
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const els = ref.current?.querySelectorAll(".reveal");
-    if (!els) return;
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.06 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const ref = useReveal<HTMLElement>(0.06);
 
   const featured = TESTIMONIALS.find((t) => t.featured)!;
   const rest = TESTIMONIALS.filter((t) => !t.featured);
@@ -95,7 +84,7 @@ export default function Testimonials() {
           {/* Featured */}
           <div className={`reveal ${styles.card} ${styles.cardFeatured}`} id={`testimonial-${featured.id}`}>
             <div>
-              <div className={styles.stars}>{"★".repeat(featured.rating)}</div>
+              <div className={styles.stars} role="img" aria-label={`${featured.rating} out of 5 stars`}>{"★".repeat(featured.rating)}</div>
               <div className={styles.quoteIcon}>&ldquo;</div>
               <p className={styles.quote}>{featured.quote}</p>
             </div>
@@ -117,7 +106,7 @@ export default function Testimonials() {
               className={`reveal reveal-delay-${(i % 3) + 1} ${styles.card} ${t.alt ? styles.cardAlt : ""}`}
               id={`testimonial-${t.id}`}
             >
-              <div className={styles.stars}>{"★".repeat(t.rating)}</div>
+              <div className={styles.stars} role="img" aria-label={`${t.rating} out of 5 stars`}>{"★".repeat(t.rating)}</div>
               <div className={styles.quoteIcon}>&ldquo;</div>
               <p className={styles.quote}>{t.quote}</p>
               <div className={styles.author}>

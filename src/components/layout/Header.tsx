@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Header.module.css";
 
 const NAV_LINKS = [
@@ -26,7 +27,7 @@ export default function Header() {
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <Link href="/" className={styles.logo} id="header-logo">
-          <img src="/logo-header.png" alt="Ninety5 Studio" className={styles.logoImage} />
+          <Image src="/logo-header.png" alt="Ninety5 Studio" width={140} height={48} className={styles.logoImage} priority />
         </Link>
 
         {/* Desktop Nav */}

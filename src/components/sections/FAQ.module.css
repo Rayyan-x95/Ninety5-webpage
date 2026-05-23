@@ -133,8 +133,16 @@
 .chevronOpen { transform: rotate(180deg); }
 
 .answer {
-  padding: 0 2rem 1.75rem;
+  max-height: 0;
+  overflow: hidden;
   background: var(--color-bg-alt);
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  padding: 0 2rem;
+}
+
+.answerOpen {
+  max-height: 300px;
+  padding: 0 2rem 1.75rem;
   border-top: 2px solid var(--color-border);
 }
 

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+import { useReveal } from "@/hooks/useReveal";
 import styles from "./FAQ.module.css";
 
 const FAQS = [
@@ -56,18 +57,7 @@ const FAQS = [
 
 export default function FAQ() {
   const [open, setOpen] = useState<string | null>("faq-1");
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const els = ref.current?.querySelectorAll(".reveal");
-    if (!els) return;
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.06 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const ref = useReveal<HTMLElement>(0.06);
 
   return (
     <section ref={ref} className={styles.section} id="faq">
@@ -104,15 +94,16 @@ export default function FAQ() {
                   </span>
                   <span className={styles.questionText}>{faq.question}</span>
                 </div>
-                <span className={`${styles.chevron} ${open === faq.id ? styles.chevronOpen : ""}`}>
+                <span
+                  className={`${styles.chevron} ${open === faq.id ? styles.chevronOpen : ""}`}
+                  aria-hidden="true"
+                >
                   ∨
                 </span>
               </button>
-              {open === faq.id && (
-                <div className={styles.answer}>
-                  <p className={styles.answerText}>{faq.answer}</p>
-                </div>
-              )}
+              <div className={`${styles.answer} ${open === faq.id ? styles.answerOpen : ""}`}>
+                <p className={styles.answerText}>{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -123,8 +114,7 @@ export default function FAQ() {
             <div className={styles.ctaTitle}>Still have questions?</div>
             <div className={styles.ctaSub}>Book a free 30-min call — no pitch, just answers.</div>
           </div>
-          <a href="#contact" className="btn btn-secondary" id="faq-cta-btn"
-            style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "6px 6px 0 var(--color-dark)" }}>
+          <a href="#contact" className="btn btn-secondary btn-large" id="faq-cta-btn">
             Book a Free Call ↗
           </a>
         </div>

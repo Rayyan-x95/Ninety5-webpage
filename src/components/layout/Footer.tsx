@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Twitter, Linkedin, Dribbble, Github } from "lucide-react";
 import styles from "./Footer.module.css";
 
@@ -43,7 +44,7 @@ export default function Footer() {
         <div className={`container ${styles.topInner}`}>
           <div className={styles.topLeft}>
             <div className={styles.logo}>
-              <img src="/logo-footer.png" alt="Ninety5" className={styles.logoImage} />
+              <Image src="/logo-footer.png" alt="Ninety5" width={192} height={96} className={styles.logoImage} />
             </div>
             <p className={styles.tagline}>
               Design &amp; development studio crafting remarkable digital

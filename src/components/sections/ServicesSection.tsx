@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useReveal } from "@/hooks/useReveal";
 import styles from "./ServicesSection.module.css";
 
 const DESIGN_SERVICES = [
@@ -27,18 +27,7 @@ const DEV_SERVICES = [
 ];
 
 export default function ServicesSection() {
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const els = ref.current?.querySelectorAll(".reveal");
-    if (!els) return;
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.06 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const ref = useReveal<HTMLElement>(0.06);
 
   return (
     <section ref={ref} className={styles.section} id="services">
@@ -125,8 +114,7 @@ export default function ServicesSection() {
             <div className={styles.ctaText}>Need the full stack?</div>
             <div className={styles.ctaSub}>Tell us what you&apos;re building — we&apos;ll handle the rest.</div>
           </div>
-          <a href="/contact" className="btn btn-secondary" id="services-cta-btn"
-            style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "6px 6px 0 var(--color-dark)" }}>
+          <a href="/contact" className="btn btn-secondary btn-large" id="services-cta-btn">
             Start a Project ↗
           </a>
         </div>

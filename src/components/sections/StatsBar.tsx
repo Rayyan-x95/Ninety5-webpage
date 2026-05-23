@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useReveal } from "@/hooks/useReveal";
 import styles from "./StatsBar.module.css";
 
 const STATS = [
@@ -11,18 +11,7 @@ const STATS = [
 ];
 
 export default function StatsBar() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const els = ref.current?.querySelectorAll(".reveal");
-    if (!els) return;
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.1 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const ref = useReveal<HTMLDivElement>(0.1);
 
   return (
     <div ref={ref} className={styles.statsBar} id="stats">
