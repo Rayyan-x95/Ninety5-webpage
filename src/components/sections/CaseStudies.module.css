@@ -217,4 +217,40 @@
 @media (max-width: 768px) {
   .cardSmall { grid-column: span 12; }
   .header { flex-direction: column; align-items: flex-start; }
+  .section { padding: 3.5rem 0; }
+  .card {
+    box-shadow: 6px 6px 0 var(--color-dark);
+  }
+  .card:hover {
+    box-shadow: 8px 8px 0 var(--color-brand-blue);
+  }
+  .cardOrange:hover {
+    box-shadow: 8px 8px 0 var(--color-brand-orange);
+  }
 }
+
+@media (max-width: 480px) {
+  .grid {
+    gap: 1rem;
+  }
+  .card {
+    box-shadow: 4px 4px 0 var(--color-dark);
+    border-width: 3px;
+  }
+  .card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-brand-blue);
+  }
+  .cardBody {
+    padding: 1.25rem;
+  }
+  .cardVisual {
+    height: 180px;
+    border-bottom-width: 3px;
+  }
+  .metricBadge {
+    border-width: 3px;
+    box-shadow: 3px 3px 0 var(--color-dark);
+  }
+}
+

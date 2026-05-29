@@ -220,8 +220,34 @@
     align-items: flex-start;
     padding: 1.5rem;
     gap: 1.5rem;
+    box-shadow: 6px 6px 0 var(--color-dark);
   }
   .section {
     padding: 3.5rem 0;
   }
+  .panels {
+    box-shadow: 6px 6px 0 var(--color-dark);
+  }
 }
+
+@media (max-width: 480px) {
+  .panels {
+    box-shadow: 4px 4px 0 var(--color-dark);
+    border-width: 3px;
+  }
+  .panel {
+    border-bottom-width: 3px;
+  }
+  .panelHeader {
+    padding: 1.25rem 1.25rem;
+  }
+  .serviceItem {
+    padding: 1rem 1.25rem;
+  }
+  .cta {
+    box-shadow: 4px 4px 0 var(--color-dark);
+    border-width: 3px;
+    padding: 1.25rem;
+  }
+}
+

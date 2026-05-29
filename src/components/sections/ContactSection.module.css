@@ -337,8 +337,54 @@
   .section {
     padding: 3.5rem 0;
   }
+  .formCard {
+    box-shadow: 6px 6px 0 var(--color-brand-orange);
+  }
+  .infoGrid {
+    box-shadow: 6px 6px 0 var(--color-brand-blue);
+  }
+  .cropTL, .cropBR {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
   .formRow { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 480px) {
+  .title {
+    font-size: clamp(2rem, 10vw, 3rem);
+    border-bottom-width: 4px;
+  }
+  .formCard {
+    box-shadow: 4px 4px 0 var(--color-brand-orange);
+    border-width: 3px;
+  }
+  .formHeader {
+    padding: 1rem 1.25rem;
+    border-bottom-width: 3px;
+  }
+  .form {
+    padding: 1.5rem 1.25rem;
+  }
+  .infoGrid {
+    box-shadow: 4px 4px 0 var(--color-brand-blue);
+    border-width: 3px;
+  }
+  .infoRow {
+    padding: 0.875rem 1.25rem;
+    gap: 1rem;
+  }
+  .infoLabel {
+    width: auto;
+    min-width: 70px;
+  }
+  .submit {
+    box-shadow: 4px 4px 0 var(--color-brand-orange);
+  }
+  .sub {
+    max-width: none;
+  }
+}
+

@@ -240,12 +240,42 @@
   }
   .card {
     padding: 1.5rem;
+    box-shadow: 6px 6px 0 var(--color-dark);
+  }
+  .card:hover {
+    box-shadow: 8px 8px 0 var(--color-brand-blue);
+  }
+  .cardAlt:hover {
+    box-shadow: 8px 8px 0 var(--color-brand-orange);
   }
   .capabilitiesSection, .valuesSection, .ctaSection {
     padding: 3.5rem 0;
+  }
+  .valuesGrid {
+    box-shadow: 6px 6px 0 var(--color-brand-orange);
   }
 }
 
 @media (max-width: 640px) {
   .ctaInner { flex-direction: column; align-items: flex-start; }
 }
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.25rem;
+    box-shadow: 4px 4px 0 var(--color-dark);
+    border-width: 3px;
+  }
+  .valuesGrid {
+    box-shadow: 4px 4px 0 var(--color-brand-orange);
+    border-width: 3px;
+  }
+  .valueItem {
+    padding: 1.5rem 1.25rem;
+    border-bottom-width: 3px;
+  }
+  .cardTitle {
+    border-bottom-width: 3px;
+  }
+}
+

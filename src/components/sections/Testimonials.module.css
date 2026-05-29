@@ -219,6 +219,13 @@
   }
   .card {
     padding: 1.5rem;
+    box-shadow: 6px 6px 0 var(--color-dark);
+  }
+  .card:hover {
+    box-shadow: 8px 8px 0 var(--color-brand-blue);
+  }
+  .cardAlt:hover {
+    box-shadow: 8px 8px 0 var(--color-brand-orange);
   }
 }
 
@@ -226,3 +233,25 @@
   .grid { grid-template-columns: 1fr; }
   .cardFeatured { grid-column: span 1; }
 }
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.25rem;
+    box-shadow: 4px 4px 0 var(--color-dark);
+    border-width: 3px;
+  }
+  .card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-brand-blue);
+  }
+  .cardFeatured {
+    padding: 1.5rem;
+  }
+  .author {
+    border-top-width: 3px;
+  }
+  .grid {
+    gap: 1rem;
+  }
+}
+

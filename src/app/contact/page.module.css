@@ -316,7 +316,59 @@
   .formRow { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 768px) {
+  .mainGrid {
+    padding: 3.5rem 0;
+  }
+  .formCol {
+    box-shadow: 6px 6px 0 var(--color-brand-blue);
+  }
+  .infoCards {
+    box-shadow: 6px 6px 0 var(--color-dark);
+  }
+  .availabilityBadge {
+    box-shadow: 6px 6px 0 var(--color-brand-orange);
+  }
+  .ctaSection {
+    padding: 3.5rem 0;
+  }
+}
+
 @media (max-width: 640px) {
   .ctaInner { flex-direction: column; align-items: flex-start; }
   .availSub { display: none; }
 }
+
+@media (max-width: 480px) {
+  .formCol {
+    box-shadow: 4px 4px 0 var(--color-brand-blue);
+    border-width: 3px;
+  }
+  .formHeader {
+    padding: 1rem 1.25rem;
+    border-bottom-width: 3px;
+  }
+  .form {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+  .formSubmit {
+    box-shadow: 4px 4px 0 var(--color-dark);
+  }
+  .infoCards {
+    box-shadow: 4px 4px 0 var(--color-dark);
+    border-width: 3px;
+  }
+  .infoCard {
+    padding: 1.25rem;
+    border-bottom-width: 3px;
+  }
+  .availabilityBadge {
+    box-shadow: 4px 4px 0 var(--color-brand-orange);
+    border-width: 3px;
+    padding: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+

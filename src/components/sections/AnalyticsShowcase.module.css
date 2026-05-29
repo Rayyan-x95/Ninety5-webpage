@@ -488,15 +488,33 @@
   }
   .card {
     padding: 1.5rem;
-    box-shadow: 12px 12px 0 var(--color-dark);
+    box-shadow: 8px 8px 0 var(--color-dark);
   }
   .floatingTag {
     font-size: 0.75rem;
     padding: 0.5rem 1rem;
+    right: -10px;
+    top: -20px;
+    box-shadow: 4px 4px 0 var(--color-dark);
+  }
+  .cropMarkTL, .cropMarkTR, .cropMarkBL, .cropMarkBR {
+    display: none;
+  }
+  .shape1 {
+    width: 60px;
+    height: 60px;
+    bottom: -30px;
+    left: -30px;
+  }
+  .shape2 {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
+  .section {
+    padding: 3rem 0;
+  }
   .controlRow {
     grid-template-columns: 1fr;
     gap: 0.5rem;
@@ -512,4 +530,41 @@
     gap: 1rem;
     align-items: flex-start;
   }
+  .card {
+    box-shadow: 4px 4px 0 var(--color-dark);
+    border-width: 3px;
+    padding: 1.25rem;
+  }
+  .floatingTag {
+    display: none;
+  }
+  .shape1 {
+    display: none;
+  }
+  .watermark {
+    font-size: 60vw;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  .statValue {
+    font-size: 2.5rem;
+  }
+  .bar {
+    border-width: 2px;
+  }
+  .progressBar {
+    border-width: 2px;
+    height: 20px;
+  }
+  .statusBox {
+    border-width: 2px;
+    box-shadow: 3px 3px 0 var(--color-dark);
+    font-size: 0.875rem;
+  }
+  .divider {
+    height: 3px;
+    margin: 1.5rem 0;
+  }
 }
+

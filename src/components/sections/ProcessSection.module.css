@@ -197,6 +197,11 @@
     align-items: flex-start; 
     padding: 1.5rem;
     gap: 1.5rem;
+    box-shadow: 6px 6px 0 var(--color-brand-blue);
+  }
+  .steps {
+    border-width: 3px;
+    margin-bottom: 2rem;
   }
 }
 
@@ -205,8 +210,15 @@
   .step {
     border-right: none;
     border-top: 4px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem 1.25rem;
   }
   .step:first-child {
     border-top: none;
   }
+  .ctaStrip {
+    box-shadow: 4px 4px 0 var(--color-brand-blue);
+    border-width: 3px;
+    padding: 1.25rem;
+  }
 }
+
