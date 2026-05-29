@@ -6,7 +6,7 @@ import { useState } from "react";
 const INFO_CARDS = [
   {
     label: "Email Us",
-    value: "hello@ninety5.studio",
+    value: "hello@ninety5.in",
     sub: "For project inquiries and general questions.",
     isLink: true,
     href: "mailto:ninety5.designs.95@gmail.com",
@@ -67,7 +67,7 @@ export default function ContactClient() {
           <div className="container" style={{ paddingTop: "3rem", paddingBottom: "4rem" }}>
             <div className={styles.sectionLabel} style={{ marginBottom: "2rem" }}>
               <span className={styles.sectionLabelLine} />
-              <span className={styles.sectionLabelText}>NINETY5.STUDIO · CONTACT</span>
+              <span className={styles.sectionLabelText}>NINETY5.IN · CONTACT</span>
             </div>
             <div style={{ borderBottom: "8px solid var(--color-dark)", paddingBottom: "2.5rem", marginBottom: "3rem" }}>
               <h1
@@ -259,7 +259,7 @@ export default function ContactClient() {
                   boxShadow: "8px 8px 0 var(--color-brand-orange)",
                 }}
               >
-                hello@ninety5.studio ↗
+                hello@ninety5.in ↗
               </a>
             </div>
           </div>

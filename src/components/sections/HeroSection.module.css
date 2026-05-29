@@ -11,6 +11,7 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  padding-top: 120px; /* Offset the fixed header */
 }
 
 /* Sub-pixel noise layer */
@@ -94,7 +95,7 @@
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 4rem;
-  padding-top: calc(var(--hero-header-h) + 1rem);
+  padding-top: 1.5rem; /* Header offset is handled by .hero padding-top */
   padding-bottom: 7rem; /* Make room for proof bar */
   flex: 1;
   min-height: 0;
@@ -697,9 +698,8 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
-    padding-top: calc(var(--hero-header-h) + 2rem);
+    padding-top: 2rem; /* Header offset is handled by .hero padding-top */
     padding-bottom: 9rem;
-    overflow-y: auto;
   }
   .content {
     align-items: center;
@@ -737,6 +737,7 @@
     height: auto;
     min-height: 100svh;
     max-height: none;
+    padding-top: 96px; /* Shorter header on mobile viewports */
   }
   .inner {
     padding-bottom: 12rem;

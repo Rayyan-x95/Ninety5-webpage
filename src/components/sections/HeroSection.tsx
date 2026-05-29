@@ -131,7 +131,7 @@ export default function HeroSection() {
           {/* Eyebrow */}
           <div className={styles.eyebrow}>
             <span className={styles.eyebrowDot} />
-            <span className={styles.eyebrowLabel}>NINETY5.STUDIO</span>
+            <span className={styles.eyebrowLabel}>NINETY5.IN</span>
             <span className={styles.eyebrowDivider}>—</span>
             <span className={styles.eyebrowLabel}>DESIGN &amp; ENGINEERING</span>
           </div>

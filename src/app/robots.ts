@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/tmp/', '/api/'],
     },
-    sitemap: 'https://ninety5.studio/sitemap.xml',
+    sitemap: 'https://ninety5.in/sitemap.xml',
   };
 }

@@ -42,7 +42,7 @@ const FAQS = [
   {
     num: "08",
     q: "How do we get started?",
-    a: "Reach out via our contact form or email hello@ninety5.studio. We will schedule a 30-minute discovery call, then send a detailed proposal within 48 hours.",
+    a: "Reach out via our contact form or email hello@ninety5.in. We will schedule a 30-minute discovery call, then send a detailed proposal within 48 hours.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function FAQClient() {
           <div className="container" style={{ paddingTop: "3rem", paddingBottom: "4rem" }}>
             <div className={styles.sectionLabel} style={{ marginBottom: "2rem" }}>
               <span className={styles.sectionLabelLine} />
-              <span className={styles.sectionLabelText}>NINETY5.STUDIO · FAQ</span>
+              <span className={styles.sectionLabelText}>NINETY5.IN · FAQ</span>
             </div>
             <div style={{ borderBottom: "8px solid var(--color-dark)", paddingBottom: "2.5rem", marginBottom: "3rem" }}>
               <h1

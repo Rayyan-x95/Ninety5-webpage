@@ -3,7 +3,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ninety5.studio"),
+  metadataBase: new URL("https://ninety5.in"),
   title: {
     default: "Ninety5 — Design & Development Studio",
     template: "%s | Ninety5 Studio",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Ninety5",
     locale: "en_US",
-    url: "https://ninety5.studio",
+    url: "https://ninety5.in",
   },
   twitter: {
     card: "summary_large_image",
@@ -58,9 +58,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Ninety5 Studio",
-  "image": "https://ninety5.studio/icon.png",
-  "@id": "https://ninety5.studio",
-  "url": "https://ninety5.studio",
+  "image": "https://ninety5.in/icon.png",
+  "@id": "https://ninety5.in",
+  "url": "https://ninety5.in",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Chennai",

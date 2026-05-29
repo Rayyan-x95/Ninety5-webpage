@@ -58,7 +58,7 @@ const SECTIONS = [
     num: "04",
     id: "rights",
     title: "Your Rights",
-    body: "Under GDPR, CCPA, and equivalent global frameworks, you have the following rights regarding your personal data. To exercise any of these rights, contact us at <a href='mailto:ninety5.designs.95@gmail.com' style='color: inherit; text-decoration: underline;'>hello@ninety5.studio</a>:",
+    body: "Under GDPR, CCPA, and equivalent global frameworks, you have the following rights regarding your personal data. To exercise any of these rights, contact us at <a href='mailto:ninety5.designs.95@gmail.com' style='color: inherit; text-decoration: underline;'>hello@ninety5.in</a>:",
     items: [
       "Right of access — Request a copy of all data we hold on you",
       "Right to rectification — Correct inaccurate or incomplete data",
@@ -87,7 +87,7 @@ const SECTIONS = [
     title: "Contact Us",
     body: "For any privacy-related enquiries, data subject requests, or to exercise your rights, please contact our data controller directly:",
     items: [
-      "Email: <a href='mailto:ninety5.designs.95@gmail.com'>hello@ninety5.studio</a>",
+      "Email: <a href='mailto:ninety5.designs.95@gmail.com'>hello@ninety5.in</a>",
       "Response time: within 72 hours as required by GDPR",
       "Registered entity: Ninety5 Studio, Chennai, India",
     ],
@@ -103,7 +103,7 @@ export default function PrivacyPolicyPage() {
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.eyebrow}>
               <span className={styles.eyebrowLine} />
-              <span className={styles.eyebrowText}>NINETY5.STUDIO · LEGAL</span>
+              <span className={styles.eyebrowText}>NINETY5.IN · LEGAL</span>
             </div>
             <div className={styles.titleBlock}>
               <h1 className={styles.title}>Privacy Policy</h1>

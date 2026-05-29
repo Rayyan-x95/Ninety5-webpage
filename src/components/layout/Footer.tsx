@@ -93,7 +93,7 @@ export default function Footer() {
               Start a project
             </a>
             <div className={styles.email}>
-              <a href="mailto:ninety5.designs.95@gmail.com">hello@ninety5.studio</a>
+              <a href="mailto:ninety5.designs.95@gmail.com">hello@ninety5.in</a>
             </div>
           </div>
         </div>

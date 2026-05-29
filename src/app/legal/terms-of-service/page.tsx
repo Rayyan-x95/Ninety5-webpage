@@ -94,7 +94,7 @@ export default function TermsOfServicePage() {
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.eyebrow}>
               <span className={styles.eyebrowLine} />
-              <span className={styles.eyebrowText}>NINETY5.STUDIO · LEGAL</span>
+              <span className={styles.eyebrowText}>NINETY5.IN · LEGAL</span>
             </div>
             <div className={styles.titleBlock}>
               <h1 className={styles.title}>Terms of Service</h1>

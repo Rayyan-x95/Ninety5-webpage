@@ -70,7 +70,7 @@ const SECTIONS = [
     title: "Contact",
     body: "If you have questions about our use of cookies or this Cookie Policy, please contact us. We respond to all privacy-related enquiries within 72 hours as required by GDPR.",
     items: [
-      "Email: hello@ninety5.studio",
+      "Email: hello@ninety5.in",
       "Subject line: Cookie Policy Enquiry",
     ],
   },
@@ -85,7 +85,7 @@ export default function CookiePolicyPage() {
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.eyebrow}>
               <span className={styles.eyebrowLine} />
-              <span className={styles.eyebrowText}>NINETY5.STUDIO · LEGAL</span>
+              <span className={styles.eyebrowText}>NINETY5.IN · LEGAL</span>
             </div>
             <div className={styles.titleBlock}>
               <h1 className={styles.title}>Cookie Policy</h1>

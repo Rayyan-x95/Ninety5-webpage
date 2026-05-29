@@ -153,7 +153,7 @@ const pageData = [
     subtitle: 'Ready to build something extraordinary? Our inbox is open.',
     intro: 'Whether you are a funded startup looking to disrupt an industry or an enterprise looking to modernize a legacy system, we are ready to execute. Reach out with your brief, and we will get back to you immediately.',
     blocks: [
-      { title: 'EMAIL', text: 'hello@ninety5.studio' },
+      { title: 'EMAIL', text: 'hello@ninety5.in' },
       { title: 'LOCATIONS', text: 'Chennai, India' },
       { title: 'RESPONSE TIME', text: 'We typically respond to all inquiries within 24 hours with actionable feedback on your request.' },
       { title: 'NEW BUSINESS', text: 'Currently accepting select projects for the upcoming quarter. Slots are highly limited.' }

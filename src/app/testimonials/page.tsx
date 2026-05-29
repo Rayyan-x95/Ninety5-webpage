@@ -73,7 +73,7 @@ export default function TestimonialsPage() {
           <div className="container" style={{ paddingTop: "3rem", paddingBottom: "4rem" }}>
             <div className={styles.sectionLabel} style={{ marginBottom: "2rem" }}>
               <span className={styles.sectionLabelLine} />
-              <span className={styles.sectionLabelText}>NINETY5.STUDIO · TESTIMONIALS</span>
+              <span className={styles.sectionLabelText}>NINETY5.IN · TESTIMONIALS</span>
             </div>
             <div style={{ borderBottom: "8px solid var(--color-dark)", paddingBottom: "2.5rem", marginBottom: "3rem" }}>
               <h1

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { PROJECTS } from '@/data/projects';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ninety5.studio';
+  const baseUrl = 'https://ninety5.in';
 
   // Static routes
   const staticRoutes = [
