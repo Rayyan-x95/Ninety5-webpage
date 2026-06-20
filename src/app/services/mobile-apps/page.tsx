@@ -1,123 +1,57 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import styles from "../ServicePage.module.css";
+import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Mobile Apps",
-  description: "Cross-platform mobile applications engineered for performance, retention, and scale.",
+export const metadata: Metadata = {
+  title: "React Native Mobile App Development Services | Ninety5 Studio",
+  description: "Deploying native-quality, high-performance cross-platform iOS and Android applications with React Native and Expo.",
 };
 
-const CAPABILITIES = [
-  { icon: "◻", title: "React Native", body: "Single codebase, two platforms. Maximum performance via native modules and Hermes engine optimisation." },
-  { icon: "◈", title: "iOS & Android", body: "Platform-specific adaptations that respect HIG and Material Design conventions while maintaining your unique identity.", alt: true },
-  { icon: "⬡", title: "Offline First", body: "SQLite and sync architectures that mean your app works flawlessly — network or not." },
-  { icon: "✦", title: "App Store Launch", body: "Full ASO strategy, metadata, screenshots, and launch playbook for maximum day-one visibility.", alt: true },
-];
-
-const DELIVERABLES = [
-  { title: "Native App Build", sub: "iOS + Android" },
-  { title: "Design System", sub: "Mobile component kit" },
-  { title: "App Store Listing", sub: "Optimised metadata" },
-  { title: "Source Code", sub: "Clean, documented" },
-  { title: "90-Day SLA", sub: "Post-launch support" },
-];
-
-const PROCESS = [
-  { num: "01", title: "UX Research", desc: "User flows, personas, and competitive feature mapping." },
-  { num: "02", title: "Prototyping", desc: "High-fidelity interactive Figma prototype." },
-  { num: "03", title: "Engineering", desc: "Sprint-based build with weekly TestFlight releases." },
-  { num: "04", title: "Launch", desc: "Store submission, ASO, and launch monitoring." },
-];
+const DATA: ServicePageData = {
+  slug: "mobile-apps",
+  title: "Mobile Apps",
+  lead: "Crafting native-feel, high-performance iOS and Android apps using React Native.",
+  bodyText: "Mobile experiences demand extreme responsiveness. We engineer cross-platform mobile apps that combine fluid 60fps animations with offline-first support. We bridge the gap between platforms, allowing you to ship to both Apple and Google stores using a unified codebase.",
+  capabilities: [
+    { icon: "◉", title: "React Native", body: "Shared codebases with native UI performance, ensuring fast feature delivery across platforms." },
+    { icon: "⬡", title: "Device APIs", body: "Seamless integration with Bluetooth, GPS location, Apple HealthKit, camera modules, and push notifications.", alt: true },
+    { icon: "▧", title: "Offline Support", body: "Robust local database syncing using SQLite or WatermelonDB for offline functionality." },
+    { icon: "◰", title: "App Store Ops", body: "Handling provisioning, testing via TestFlight, App Store submissions, and metadata optimization.", alt: true },
+  ],
+  deliverables: [
+    { title: "Source Code", sub: "React Native / Expo" },
+    { title: "App Archives", sub: "IPA and AAB bundles" },
+    { title: "API Contracts", sub: "REST / GraphQL specs" },
+    { title: "Test Builds", sub: "Expo Share links" },
+    { title: "Store Assets", sub: "Formatted screenshots" },
+  ],
+  process: [
+    { num: "01", title: "Specs", desc: "Detailing platform constraints, permissions, and API patterns." },
+    { num: "02", title: "Engineering", desc: "Coding mobile views, local state, and device integrations." },
+    { num: "03", title: "Testing", desc: "Multi-device debugging, memory checking, and offline validation." },
+    { num: "04", title: "Publishing", desc: "Submitting builds to Apple App Store and Google Play." },
+  ],
+  expandedIntro: "A successful mobile app requires careful attention to memory management, storage caching, and touch-interaction physics. We construct high-fidelity applications designed to minimize battery drain and load data instantly.",
+  processDetails: "We build apps using Expo and React Native, utilizing Reanimated for fluid 60fps gesture animations. We configure secure token storage, set up background sync workers, and integrate real-time notifications to maximize retention and user engagement.",
+  deliverablesDetails: "Deliverables include the React Native repository, configured Expo workspaces, compilation scripts, App Store and Google Play developer center setup, provisioning profiles, and backend API connection schemas.",
+  timelineDetails: "Mobile app developments run for 8 to 14 weeks from first architectural prototype to production launch.",
+  outcomesDetails: "You get a fast, native-feeling app on both stores with single-codebase maintenance, high reviews, and reliable push notifications.",
+  caseStudyIds: ["bloom"],
+  faqs: [
+    {
+      q: "Do you use Expo or bare React Native?",
+      a: "We prefer Expo for most projects. It speeds up development, simplifies push notifications, and eases OTA updates. If your project needs custom native modules, we prebuild/config Expo packages to handle them.",
+    },
+    {
+      q: "Can the app function offline?",
+      a: "Yes, we build apps with offline capabilities. We implement local caching engines that store user inputs and sync them back to your backend databases when internet connectivity is restored.",
+    },
+    {
+      q: "How do you handle push notifications?",
+      a: "We integrate services like Expo Notification service, OneSignal, or Firebase Cloud Messaging. This allows you to send targeted notifications to iOS and Android users from your admin dashboard.",
+    },
+  ],
+};
 
 export default function MobileAppsPage() {
-  return (
-    <>
-      <Header />
-      <main className={styles.page}>
-        <div className={styles.hero}>
-          <div className={`container ${styles.heroInner}`}>
-            <div className={styles.eyebrow}>
-              <span className={styles.eyebrowLine} />
-              <span className={styles.eyebrowText}>NINETY5.IN · SERVICES</span>
-            </div>
-            <div className={styles.titleBlock}>
-              <h1 className={styles.title}>Mobile Apps</h1>
-            </div>
-            <p className={styles.lead}>
-              Cross-platform mobile applications engineered for performance, retention, and scale.
-            </p>
-            <div className={styles.body}>
-              <p className={styles.bodyText}>
-                Mobile is no longer a secondary platform — it is often the primary one. We build React Native applications that feel genuinely native, perform at the highest level, and convert users into advocates. No compromises on either platform.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <section className={styles.capabilitiesSection}>
-          <div className="container">
-            <div className={styles.sectionLabel}>
-              <span className={styles.sectionLabelLine} />
-              <span className={styles.sectionLabelText}>WHAT WE DELIVER</span>
-            </div>
-            <h2 className={styles.sectionTitle}>Capabilities</h2>
-            <div className={styles.capGrid}>
-              {CAPABILITIES.map((c) => (
-                <div key={c.title} className={`${styles.capCard} ${c.alt ? styles.capCardAlt : ""}`}>
-                  <div className={styles.capIcon}>{c.icon}</div>
-                  <div className={styles.capTitle}>{c.title}</div>
-                  <p className={styles.capBody}>{c.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.deliverablesSection}>
-          <div className="container">
-            <h2 className={styles.deliverablesTitle}>Deliverables</h2>
-            <div className={styles.deliverablesList}>
-              {DELIVERABLES.map((d) => (
-                <div key={d.title} className={styles.deliverableItem}>
-                  <div className={styles.deliverableItemTitle}>{d.title}</div>
-                  <div className={styles.deliverableItemSub}>{d.sub}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.processSection}>
-          <div className="container">
-            <h2 className={styles.processTitle}>Our Approach</h2>
-            <div className={styles.processSteps}>
-              {PROCESS.map((s) => (
-                <div key={s.num} className={styles.processStep}>
-                  <span className={styles.processStepNum}>{s.num}</span>
-                  <div className={styles.processStepTitle}>{s.title}</div>
-                  <p className={styles.processStepDesc}>{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.ctaSection}>
-          <div className="container">
-            <div className={styles.ctaStrip}>
-              <div>
-                <div className={styles.ctaStripTitle}>Ship the app. Own the market.</div>
-                <p className={styles.ctaStripSub}>React Native, built to perfection on iOS and Android.</p>
-              </div>
-              <a href="/contact" className="btn btn-secondary" id="mobile-cta-btn"
-                style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "6px 6px 0 var(--color-dark)" }}>
-                Start a Project ↗
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
+  return <ServicePageTemplate data={DATA} />;
 }

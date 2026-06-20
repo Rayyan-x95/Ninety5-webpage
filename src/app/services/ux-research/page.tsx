@@ -1,123 +1,57 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import styles from "../ServicePage.module.css";
+import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "UX Research",
-  description: "Data-driven user research that eliminates guesswork and de-risks every product decision.",
+export const metadata: Metadata = {
+  title: "UX Research & Usability Auditing Services | Ninety5 Studio",
+  description: "Replacing intuition with empirical data via user interviews, cognitive walkthroughs, and quantitative conversion audits.",
 };
 
-const CAPABILITIES = [
-  { icon: "◎", title: "User Interviews", body: "Structured 1:1 sessions with real users to uncover unmet needs, mental models, and pain points your analytics will never reveal." },
-  { icon: "⬡", title: "Usability Testing", body: "Task-based sessions that expose friction in your current experience and validate new designs before a single line is committed.", alt: true },
-  { icon: "◫", title: "Analytics Audit", body: "Deep-dive into your Mixpanel, Amplitude, or GA4 data to identify conversion killers and behavioural patterns." },
-  { icon: "∞", title: "Journey Mapping", body: "End-to-end visualisations of how users interact with your product, surfacing moments of delight and moments of abandonment.", alt: true },
-];
+const DATA: ServicePageData = {
+  slug: "ux-research",
+  title: "UX Research",
+  lead: "Uncovering empirical user insights to replace assumptions with validation data.",
+  bodyText: "Designing without research is just guessing. We run qualitative user interviews, usability audits, heuristic analysis, and quantitative A/B testing to understand your users' mental models. We deliver clear, actionable reports that drive your product strategy and design decisions.",
+  capabilities: [
+    { icon: "▦", title: "User Interviews", body: "One-on-one sessions with your target audience to identify true pain points and motivations." },
+    { icon: "◎", title: "Usability Audits", body: "Evaluating current systems against industry heuristics to pinpoint design friction.", alt: true },
+    { icon: "⬡", title: "Data Analytics", body: "Synthesizing event logs, heatmaps, and funnel analytics to see where users drop off." },
+    { icon: "◫", title: "A/B Testing", body: "Designing and executing scientific layout tests to measure and validate conversion lift.", alt: true },
+  ],
+  deliverables: [
+    { title: "Research Summary", sub: "Executive insights" },
+    { title: "User Archetypes", sub: "Detailed personas" },
+    { title: "Journey Maps", sub: "Visual touchpoints" },
+    { title: "Friction Audit", sub: "Problem catalog" },
+    { title: "Strategy Brief", sub: "Prioritized roadmap" },
+  ],
+  process: [
+    { num: "01", title: "Framing", desc: "Defining research goals, hypotheses, and user profiles." },
+    { num: "02", title: "Recruiting", desc: "Sourcing and vetting relevant participants for interviews." },
+    { num: "03", title: "Execution", desc: "Running usability testing, interviews, and audits." },
+    { num: "04", title: "Analysis", desc: "Synthesizing qualitative and quantitative data." },
+  ],
+  expandedIntro: "Product success is determined by how well it fits into a user's habits. By analyzing user behavior under test scenarios, we remove subjective opinions from design debates, ensuring your product budget is spent on features that deliver value.",
+  processDetails: "We combine qualitative testing with quantitative data. We conduct live, recorded user interviews and watch users interact with prototypes. Concurrently, we audit web analytics and heatmaps to identify high-friction points, summarizing findings in a prioritized roadmap.",
+  deliverablesDetails: "You receive recorded user testing videos, written transcripts, interactive journey maps, distinct customer personas, and a comprehensive research document outlining immediately actionable UI and layout changes.",
+  timelineDetails: "A research and usability audit phase typically takes 3 to 5 weeks from cohort recruiting to final report.",
+  outcomesDetails: "Teams gain a clear understanding of user needs, product-market fit metrics, and a prioritized features list that prevents building unwanted layouts.",
+  caseStudyIds: ["bloom", "atlas"],
+  faqs: [
+    {
+      q: "How do you recruit test participants?",
+      a: "We recruit participants based on your exact user profile using dedicated panels. We vet candidates for demographics, tech-savviness, and habits to ensure the feedback matches your target audience.",
+    },
+    {
+      q: "Can you audit an existing live product?",
+      a: "Yes. We perform comprehensive heuristic reviews and look at your current analytics data (like hotjar or mixpanel) to show exactly where your users are running into trouble and dropping off.",
+    },
+    {
+      q: "How do you share research findings?",
+      a: "We deliver findings as a structured PDF/notion report, with video clips of users facing bugs or friction points, followed by a live presentation with your design and engineering teams.",
+    },
+  ],
+};
 
-const DELIVERABLES = [
-  { title: "Research Report", sub: "Insights + recommendations" },
-  { title: "Persona Documents", sub: "3–5 user archetypes" },
-  { title: "Journey Maps", sub: "Full visualisations" },
-  { title: "Usability Report", sub: "Issue severity ratings" },
-  { title: "Priority Matrix", sub: "Actionable next steps" },
-];
-
-const PROCESS = [
-  { num: "01", title: "Planning", desc: "Research questions, methodology selection, and recruitment." },
-  { num: "02", title: "Fieldwork", desc: "Interviews, surveys, and usability sessions." },
-  { num: "03", title: "Analysis", desc: "Affinity mapping, thematic analysis, and synthesis." },
-  { num: "04", title: "Readout", desc: "Strategic recommendations and priority roadmap." },
-];
-
-export default function UXResearchPage() {
-  return (
-    <>
-      <Header />
-      <main className={styles.page}>
-        <div className={styles.hero}>
-          <div className={`container ${styles.heroInner}`}>
-            <div className={styles.eyebrow}>
-              <span className={styles.eyebrowLine} />
-              <span className={styles.eyebrowText}>NINETY5.IN · SERVICES</span>
-            </div>
-            <div className={styles.titleBlock}>
-              <h1 className={styles.title}>UX Research</h1>
-            </div>
-            <p className={styles.lead}>
-              Data-driven user research that eliminates guesswork and de-risks every product decision.
-            </p>
-            <div className={styles.body}>
-              <p className={styles.bodyText}>
-                Building on assumptions is the fastest path to a product nobody uses. Our research practice combines qualitative depth with quantitative rigour to give you an unfair advantage — before your competitors know what hit them.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <section className={styles.capabilitiesSection}>
-          <div className="container">
-            <div className={styles.sectionLabel}>
-              <span className={styles.sectionLabelLine} />
-              <span className={styles.sectionLabelText}>WHAT WE DELIVER</span>
-            </div>
-            <h2 className={styles.sectionTitle}>Capabilities</h2>
-            <div className={styles.capGrid}>
-              {CAPABILITIES.map((c) => (
-                <div key={c.title} className={`${styles.capCard} ${c.alt ? styles.capCardAlt : ""}`}>
-                  <div className={styles.capIcon}>{c.icon}</div>
-                  <div className={styles.capTitle}>{c.title}</div>
-                  <p className={styles.capBody}>{c.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.deliverablesSection}>
-          <div className="container">
-            <h2 className={styles.deliverablesTitle}>Deliverables</h2>
-            <div className={styles.deliverablesList}>
-              {DELIVERABLES.map((d) => (
-                <div key={d.title} className={styles.deliverableItem}>
-                  <div className={styles.deliverableItemTitle}>{d.title}</div>
-                  <div className={styles.deliverableItemSub}>{d.sub}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.processSection}>
-          <div className="container">
-            <h2 className={styles.processTitle}>Our Approach</h2>
-            <div className={styles.processSteps}>
-              {PROCESS.map((s) => (
-                <div key={s.num} className={styles.processStep}>
-                  <span className={styles.processStepNum}>{s.num}</span>
-                  <div className={styles.processStepTitle}>{s.title}</div>
-                  <p className={styles.processStepDesc}>{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.ctaSection}>
-          <div className="container">
-            <div className={styles.ctaStrip}>
-              <div>
-                <div className={styles.ctaStripTitle}>Know your users. Build with certainty.</div>
-                <p className={styles.ctaStripSub}>Research-backed decisions that eliminate expensive mistakes.</p>
-              </div>
-              <a href="/contact" className="btn btn-secondary" id="ux-cta-btn"
-                style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "6px 6px 0 var(--color-dark)" }}>
-                Start a Project ↗
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
+export default function UxResearchPage() {
+  return <ServicePageTemplate data={DATA} />;
 }

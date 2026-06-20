@@ -105,6 +105,9 @@ export default function Footer() {
           <span className={styles.copyright}>
             © {new Date().getFullYear()} Ninety5 Studio. All rights reserved.
           </span>
+          <span className={styles.copyright} style={{ textTransform: "none" }}>
+            Ninety5 Studio • Chennai, India • hello@ninety5.in • +91 95000 95000
+          </span>
         </div>
       </div>
     </footer>

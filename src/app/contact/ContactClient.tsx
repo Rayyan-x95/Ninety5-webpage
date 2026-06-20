@@ -135,7 +135,21 @@ export default function ContactClient() {
               <div className={styles.availabilityBadge}>
                 <span className={styles.availDot} />
                 <span className={styles.availText}>Currently Accepting Projects</span>
-                <span className={styles.availSub}>Q3 2025</span>
+                <span className={styles.availSub}>Q3 2026</span>
+              </div>
+
+              {/* Map & NAP */}
+              <div style={{ marginTop: "3rem", border: "4px solid var(--color-dark)", padding: "1.5rem", background: "var(--color-white)", boxShadow: "6px 6px 0 var(--color-dark)" }}>
+                <h3 style={{ fontFamily: "var(--font-display)", textTransform: "uppercase", fontSize: "1.1rem", fontWeight: 800, marginBottom: "1rem" }}>Office Address</h3>
+                <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", color: "var(--color-dark)", fontWeight: 700, lineHeight: 1.5, marginBottom: "1.5rem" }}>
+                  Ninety5 Studio • Chennai, India • hello@ninety5.in • +91 95000 95000
+                </p>
+                <a href="https://maps.google.com/?q=Chennai" target="_blank" rel="noopener noreferrer" style={{ display: "block", border: "2px solid var(--color-dark)", overflow: "hidden", position: "relative", cursor: "pointer" }}>
+                  <img src="/chennai_map.png" alt="Map showing Ninety5 Studio location in Chennai" style={{ width: "100%", height: "auto", display: "block" }} />
+                  <div style={{ position: "absolute", bottom: "10px", right: "10px", background: "var(--color-dark)", color: "var(--color-white)", padding: "0.25rem 0.5rem", fontFamily: "monospace", fontSize: "0.6rem", fontWeight: 900 }}>
+                    OPEN IN GOOGLE MAPS ↗
+                  </div>
+                </a>
               </div>
             </div>
 

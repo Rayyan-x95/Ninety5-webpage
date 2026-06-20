@@ -1,123 +1,57 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import styles from "../ServicePage.module.css";
+import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Web Development",
-  description: "Production-grade web engineering built on Next.js, React, and the modern stack — fast, scalable, and maintainable.",
+export const metadata: Metadata = {
+  title: "Next.js Web Development Services | Ninety5 Studio",
+  description: "Building blazing-fast, SEO-optimized, and highly secure web applications using modern React and Next.js frontend frameworks.",
 };
 
-const CAPABILITIES = [
-  { icon: "⬡", title: "Next.js / React", body: "Server components, streaming SSR, and edge functions that deliver sub-second page loads and perfect Lighthouse scores." },
-  { icon: "◎", title: "Headless CMS", body: "Sanity, Contentful, or Payload CMS integrated for editorial flexibility without sacrificing performance.", alt: true },
-  { icon: "◫", title: "E-Commerce", body: "Shopify Hydrogen and custom headless commerce builds that convert at scale without the baggage of legacy platforms." },
-  { icon: "∞", title: "API Engineering", body: "RESTful and GraphQL APIs, edge middleware, webhooks, and third-party integrations built to handle production load.", alt: true },
-];
-
-const DELIVERABLES = [
-  { title: "Production Codebase", sub: "Fully documented" },
-  { title: "CI/CD Pipeline", sub: "GitHub Actions + Vercel" },
-  { title: "Performance Report", sub: "Lighthouse audit" },
-  { title: "CMS Setup", sub: "Content-ready" },
-  { title: "90-Day Warranty", sub: "Bug-fix guarantee" },
-];
-
-const PROCESS = [
-  { num: "01", title: "Architecture", desc: "Tech stack selection, data modelling, and API design." },
-  { num: "02", title: "Setup", desc: "Project scaffolding, CI/CD, environments, and monitoring." },
-  { num: "03", title: "Engineering", desc: "Feature sprints with daily commits and weekly demos." },
-  { num: "04", title: "Launch", desc: "Load testing, performance audit, and production deploy." },
-];
+const DATA: ServicePageData = {
+  slug: "web-development",
+  title: "Web Development",
+  lead: "Engineering blazing-fast, SEO-optimized web experiences with modern React and Next.js frameworks.",
+  bodyText: "We don't build generic marketing pages. We engineer high-performance web applications that convert traffic. By combining Next.js Server Components, static generation, clean CSS modules, and custom micro-animations, we deliver websites with near-perfect Lighthouse scores and robust security.",
+  capabilities: [
+    { icon: "⟨/⟩", title: "Next.js & React", body: "Full-stack React architectures leveraging Server Components for fast initial loads and reduced JS payloads." },
+    { icon: "🔍", title: "Technical SEO", body: "Structured schema markup, semantic HTML structure, dynamic sitemaps, and Core Web Vitals optimization.", alt: true },
+    { icon: "♒", title: "Custom Animations", body: "Fluid, hardware-accelerated transitions using GSAP and CSS animations that feel premium." },
+    { icon: "⊞", title: "CMS Integrations", body: "Connecting headless systems (Sanity, Contentful) to give your marketing teams self-serve editing power.", alt: true },
+  ],
+  deliverables: [
+    { title: "Production Code", sub: "Next.js + TypeScript" },
+    { title: "CMS Panel", sub: "Custom-configured schema" },
+    { title: "SEO Audit", sub: "Lighthouse validations" },
+    { title: "API Schema", sub: "Annotated backend" },
+    { title: "Deploy Pipeline", sub: "Vercel auto-deploy" },
+  ],
+  process: [
+    { num: "01", title: "Architecture", desc: "Setting up database schemas, API architecture, and routing." },
+    { num: "02", title: "Development", desc: "Translating designs into clean, responsive Next.js components." },
+    { num: "03", title: "Optimization", desc: "Compressing images, reducing JS bundles, and tuning performance." },
+    { num: "04", title: "Launch", desc: "DNS routing, SSL setup, and Google Search Console submission." },
+  ],
+  expandedIntro: "Web engineering is the bottleneck of digital user experience. If a website takes longer than two seconds to load, half your users leave. We build custom Next.js platforms optimized for speed, accessibility, and high crawlability.",
+  processDetails: "We build strictly with clean TypeScript and vanilla CSS/CSS Modules to maintain lightweight footprints. We implement static site generation (SSG) and incremental static regeneration (ISR) to deliver pages instantly. We also integrate custom search engine schemes and microcopy directly into the layout.",
+  deliverablesDetails: "Deliverables include a production-ready GitHub repository with Next.js code, headless CMS access with custom block structures, schema JSON-LD scripts, sitemaps, automated CI/CD configurations, and performance audit summaries.",
+  timelineDetails: "Our typical web engineering cycles run from 6 to 12 weeks depending on integration complexity and page counts.",
+  outcomesDetails: "Clients experience high Lighthouse scores, faster page indexation on Google, increased organic search impressions, and lower customer bounce rates.",
+  caseStudyIds: ["orbit", "atlas"],
+  faqs: [
+    {
+      q: "Do you use Tailwind or Vanilla CSS?",
+      a: "We utilize Vanilla CSS and CSS Modules. This prevents styling conflicts, ensures complete design flexibility, keeps CSS bundle sizes to a minimum, and maintains strict separation of concerns.",
+    },
+    {
+      q: "Will my team be able to edit page copy?",
+      a: "Yes. We connect the Next.js frontend to a headless CMS (like Sanity or Contentful). We set up structured blocks so your team can edit headers, text, images, and FAQs without touching code.",
+    },
+    {
+      q: "How do you guarantee page performance?",
+      a: "We optimize assets (WebP/AVIF compression, Next.js image priority), lazy-load non-critical animations, utilize server-side caching, and host builds on edge networks like Vercel to guarantee sub-second load times.",
+    },
+  ],
+};
 
 export default function WebDevelopmentPage() {
-  return (
-    <>
-      <Header />
-      <main className={styles.page}>
-        <div className={styles.hero}>
-          <div className={`container ${styles.heroInner}`}>
-            <div className={styles.eyebrow}>
-              <span className={styles.eyebrowLine} />
-              <span className={styles.eyebrowText}>NINETY5.IN · SERVICES</span>
-            </div>
-            <div className={styles.titleBlock}>
-              <h1 className={styles.title}>Web Development</h1>
-            </div>
-            <p className={styles.lead}>
-              Production-grade web engineering built on Next.js, React, and the modern stack — fast, scalable, and maintainable.
-            </p>
-            <div className={styles.body}>
-              <p className={styles.bodyText}>
-                Beautiful design is worthless if the code underneath can't handle real traffic. We engineer web applications that are as robust as they are refined — optimised at every layer from database query to edge cache — and built to evolve with your business.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <section className={styles.capabilitiesSection}>
-          <div className="container">
-            <div className={styles.sectionLabel}>
-              <span className={styles.sectionLabelLine} />
-              <span className={styles.sectionLabelText}>WHAT WE DELIVER</span>
-            </div>
-            <h2 className={styles.sectionTitle}>Capabilities</h2>
-            <div className={styles.capGrid}>
-              {CAPABILITIES.map((c) => (
-                <div key={c.title} className={`${styles.capCard} ${c.alt ? styles.capCardAlt : ""}`}>
-                  <div className={styles.capIcon}>{c.icon}</div>
-                  <div className={styles.capTitle}>{c.title}</div>
-                  <p className={styles.capBody}>{c.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.deliverablesSection}>
-          <div className="container">
-            <h2 className={styles.deliverablesTitle}>Deliverables</h2>
-            <div className={styles.deliverablesList}>
-              {DELIVERABLES.map((d) => (
-                <div key={d.title} className={styles.deliverableItem}>
-                  <div className={styles.deliverableItemTitle}>{d.title}</div>
-                  <div className={styles.deliverableItemSub}>{d.sub}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.processSection}>
-          <div className="container">
-            <h2 className={styles.processTitle}>Our Approach</h2>
-            <div className={styles.processSteps}>
-              {PROCESS.map((s) => (
-                <div key={s.num} className={styles.processStep}>
-                  <span className={styles.processStepNum}>{s.num}</span>
-                  <div className={styles.processStepTitle}>{s.title}</div>
-                  <p className={styles.processStepDesc}>{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.ctaSection}>
-          <div className="container">
-            <div className={styles.ctaStrip}>
-              <div>
-                <div className={styles.ctaStripTitle}>Built to perform. Built to scale.</div>
-                <p className={styles.ctaStripSub}>Next.js engineering that handles production from day one.</p>
-              </div>
-              <a href="/contact" className="btn btn-secondary" id="webdev-cta-btn"
-                style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "6px 6px 0 var(--color-dark)" }}>
-                Start a Project ↗
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
+  return <ServicePageTemplate data={DATA} />;
 }

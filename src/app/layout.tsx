@@ -71,6 +71,11 @@ const jsonLd = {
     "latitude": 13.0827,
     "longitude": 80.2707
   },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "5"
+  },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": [

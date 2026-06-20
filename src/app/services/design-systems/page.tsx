@@ -1,123 +1,57 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import styles from "../ServicePage.module.css";
+import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Design Systems",
-  description: "Building the infrastructure of design — scalable, token-driven systems that eliminate inconsistency at scale.",
+export const metadata: Metadata = {
+  title: "Design Systems Engineering Services | Ninety5 Studio",
+  description: "Engineering unified UI component libraries and tokenized design systems that scale your design language across platforms.",
 };
 
-const CAPABILITIES = [
-  { icon: "⬡", title: "Component Libraries", body: "Every reusable UI element documented with variants, states, and usage guidelines in Figma and code." },
-  { icon: "◫", title: "Design Tokens", body: "Centralised colour, spacing, typography, and elevation tokens that keep code and design perfectly in sync.", alt: true },
-  { icon: "∞", title: "Documentation", body: "Comprehensive Storybook or Zeroheight documentation so every team member ships with confidence." },
-  { icon: "✦", title: "Governance", body: "Contribution frameworks and versioning strategies that prevent your design system from going stale.", alt: true },
-];
-
-const DELIVERABLES = [
-  { title: "Figma Library", sub: "Full component file" },
-  { title: "Token JSON", sub: "Code-ready tokens" },
-  { title: "Storybook", sub: "Live component docs" },
-  { title: "Style Guide", sub: "Usage guidelines" },
-  { title: "Handoff Notes", sub: "Dev annotations" },
-];
-
-const PROCESS = [
-  { num: "01", title: "Audit", desc: "Existing UI inventory and pattern extraction." },
-  { num: "02", title: "Architecture", desc: "Token hierarchy and naming convention design." },
-  { num: "03", title: "Build", desc: "Component construction and documentation." },
-  { num: "04", title: "Adoption", desc: "Team training and integration support." },
-];
+const DATA: ServicePageData = {
+  slug: "design-systems",
+  title: "Design Systems",
+  lead: "Engineering unified component libraries and tokenized design systems for scale.",
+  bodyText: "Design debt slows down shipping and dilutes the product experience. We audit, design, and document comprehensive UI pattern libraries that act as the single source of truth for designers and developers. We build systems that make product iteration fast, consistent, and beautiful.",
+  capabilities: [
+    { icon: "▦", title: "Component Library", body: "Reusable Figma layouts and React components constructed with strict auto-layout and variable states." },
+    { icon: "⬡", title: "Design Tokens", body: "Centralized configuration files for spacing, color, typography, and shadow properties, synced across design and code.", alt: true },
+    { icon: "⟨/⟩", title: "Code Integration", body: "React/Next.js/HTML implementation matching design components, documented inside Storybook." },
+    { icon: "▤", title: "Documentation", body: "Exhaustive documentation outlining pattern rules, component use cases, and handoff instructions.", alt: true },
+  ],
+  deliverables: [
+    { title: "Figma UI Kit", sub: "Interactive master file" },
+    { title: "Token Registry", sub: "JSON/CSS variables" },
+    { title: "Storybook", sub: "Documented React code" },
+    { title: "Usage Guide", sub: "Contextual rules" },
+    { title: "Workflow Setup", sub: "Version control path" },
+  ],
+  process: [
+    { num: "01", title: "Audit", desc: "Cataloging all current UI variants, components, and code debt." },
+    { num: "02", title: "Architecture", desc: "Defining tokens, variables, and base primitives." },
+    { num: "03", title: "Component Build", desc: "Crafting the UI elements in Figma and code." },
+    { num: "04", title: "Integration", desc: "Setting up versioning, Storybook, and handoff paths." },
+  ],
+  expandedIntro: "A modern design system is more than a UI kit. It is a shared infrastructure that bridges design and engineering. By standardizing component behaviors and code tokens, we eliminate redundant design work and speed up product shipping.",
+  processDetails: "We start by auditing your existing products to identify inconsistencies. Then, we build the foundation: a token system for spacing, color, and text. We construct interactive UI components (buttons, inputs, navigation, cards) in Figma and map them directly to React code, validating them against accessibility parameters.",
+  deliverablesDetails: "You get a master Figma UI library, a repository of styled React/CSS components, JSON design tokens, a Storybook instance showing live documentation, and governance guidelines to guide your team in updating the system.",
+  timelineDetails: "Depending on product scale, a design system takes between 8 and 12 weeks to design, engineer, and document.",
+  outcomesDetails: "Product teams experience up to a 50% decrease in front-end development time, immediate visual consistency, and unified workflows across design and engineering.",
+  caseStudyIds: ["atlas", "forge"],
+  faqs: [
+    {
+      q: "What are design tokens and how do they work?",
+      a: "Design tokens are the visual atoms of a brand (colors, fonts, borders, margins) saved as variables (like JSON or CSS custom properties). They ensure that if a brand color is changed in the token registry, it propagates to both Figma and code automatically.",
+    },
+    {
+      q: "Can this integrate with our existing Next.js repo?",
+      a: "Yes, we configure the design system to output standard CSS variables or tailwind tokens that plug directly into your current Next.js configuration, ensuring there is zero friction during adoption.",
+    },
+    {
+      q: "Who maintains the design system after handoff?",
+      a: "We establish a governance model and train your internal designers and developers on how to propose, review, and merge updates to the design system, ensuring it continues to grow without bloating.",
+    },
+  ],
+};
 
 export default function DesignSystemsPage() {
-  return (
-    <>
-      <Header />
-      <main className={styles.page}>
-        <div className={styles.hero}>
-          <div className={`container ${styles.heroInner}`}>
-            <div className={styles.eyebrow}>
-              <span className={styles.eyebrowLine} />
-              <span className={styles.eyebrowText}>NINETY5.IN · SERVICES</span>
-            </div>
-            <div className={styles.titleBlock}>
-              <h1 className={styles.title}>Design Systems</h1>
-            </div>
-            <p className={styles.lead}>
-              Building the infrastructure of design — scalable, token-driven systems that eliminate inconsistency at scale.
-            </p>
-            <div className={styles.body}>
-              <p className={styles.bodyText}>
-                Inconsistency kills products. A well-architected design system is not a luxury — it is the foundation that lets teams ship faster, at higher quality, with zero ambiguity. We build them from the ground up, or we rescue your existing chaos.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <section className={styles.capabilitiesSection}>
-          <div className="container">
-            <div className={styles.sectionLabel}>
-              <span className={styles.sectionLabelLine} />
-              <span className={styles.sectionLabelText}>WHAT WE DELIVER</span>
-            </div>
-            <h2 className={styles.sectionTitle}>Capabilities</h2>
-            <div className={styles.capGrid}>
-              {CAPABILITIES.map((c) => (
-                <div key={c.title} className={`${styles.capCard} ${c.alt ? styles.capCardAlt : ""}`}>
-                  <div className={styles.capIcon}>{c.icon}</div>
-                  <div className={styles.capTitle}>{c.title}</div>
-                  <p className={styles.capBody}>{c.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.deliverablesSection}>
-          <div className="container">
-            <h2 className={styles.deliverablesTitle}>Deliverables</h2>
-            <div className={styles.deliverablesList}>
-              {DELIVERABLES.map((d) => (
-                <div key={d.title} className={styles.deliverableItem}>
-                  <div className={styles.deliverableItemTitle}>{d.title}</div>
-                  <div className={styles.deliverableItemSub}>{d.sub}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.processSection}>
-          <div className="container">
-            <h2 className={styles.processTitle}>Our Approach</h2>
-            <div className={styles.processSteps}>
-              {PROCESS.map((s) => (
-                <div key={s.num} className={styles.processStep}>
-                  <span className={styles.processStepNum}>{s.num}</span>
-                  <div className={styles.processStepTitle}>{s.title}</div>
-                  <p className={styles.processStepDesc}>{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.ctaSection}>
-          <div className="container">
-            <div className={styles.ctaStrip}>
-              <div>
-                <div className={styles.ctaStripTitle}>Eliminate design debt today.</div>
-                <p className={styles.ctaStripSub}>A system that scales as fast as you do.</p>
-              </div>
-              <a href="/contact" className="btn btn-secondary" id="ds-cta-btn"
-                style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "6px 6px 0 var(--color-dark)" }}>
-                Start a Project ↗
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
+  return <ServicePageTemplate data={DATA} />;
 }
