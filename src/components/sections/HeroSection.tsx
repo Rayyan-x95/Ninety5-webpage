@@ -49,12 +49,6 @@ export default function HeroSection() {
           1.0
         )
         .fromTo(
-          `.${styles.proofBar}`,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.8 },
-          1.2
-        )
-        .fromTo(
           `.${styles.orbBlue}`,
           { scale: 0, opacity: 0 },
           { scale: 1, opacity: 1, duration: 1.5, ease: "elastic.out(1, 0.5)" },
@@ -139,28 +133,6 @@ export default function HeroSection() {
 
         {/* ── RIGHT COLUMN — Terminal ── */}
         <TerminalMockup />
-      </div>
-
-      {/* ── Bottom proof bar ── */}
-      <div className={styles.proofBar}>
-        <div className={`container ${styles.proofInner}`}>
-          <div className={styles.proofLeft}>
-            <span className={styles.trustTitle}>Trusted by:</span>
-            <div className={styles.logos}>
-              <Image src="/logos/atlas.svg" alt="Logo: Atlas Analytics" width={80} height={20} className={styles.logoItem} />
-              <Image src="/logos/bloom.svg" alt="Logo: Bloom Health" width={80} height={20} className={styles.logoItem} />
-              <Image src="/logos/forge.svg" alt="Logo: Forge Dev Tools" width={80} height={20} className={styles.logoItem} />
-              <Image src="/logos/orbit.svg" alt="Logo: Orbit Labs" width={80} height={20} className={styles.logoItem} />
-              <Image src="/logos/vertex.svg" alt="Logo: Vertex SaaS" width={80} height={20} className={styles.logoItem} />
-            </div>
-          </div>
-          <div className={styles.proofRight}>
-            <div className={styles.proofTag}>Next.js</div>
-            <div className={styles.proofTag}>React Native</div>
-            <div className={styles.proofTag}>Figma</div>
-            <div className={styles.proofTag}>TypeScript</div>
-          </div>
-        </div>
       </div>
 
       {/* Scroll indicator */}
