@@ -551,47 +551,33 @@
   gap: 1rem;
 }
 
-/* Overlapping avatars stack */
-.avatarStack {
-  display: flex;
-  align-items: center;
+/* Trust title & logo row styles */
+.trustTitle {
+  font-family: monospace;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
 }
 
-.avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  font-family: monospace;
-  font-size: 0.625rem;
-  font-weight: 800;
-  color: #ffffff;
+.logos {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 2px solid #080806;
-  margin-left: -8px;
-  transition: transform 0.2s ease;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.logoItem {
+  opacity: 0.45;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  filter: grayscale(1) brightness(1.5);
   cursor: default;
 }
 
-.avatar:first-child {
-  margin-left: 0;
-}
-
-.avatar:hover {
-  transform: translateY(-4px) scale(1.1);
-  z-index: 10 !important;
-}
-
-.proofText {
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.proofText strong {
-  color: #ffffff;
-  font-weight: 700;
+.logoItem:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
 /* Custom tech tags */
@@ -740,7 +726,7 @@
   }
   .inner {
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4.5rem;
     padding-left: var(--space-5);
     padding-right: var(--space-5);
     gap: 2.5rem;

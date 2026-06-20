@@ -55,9 +55,16 @@
 }
 
 @media (max-width: 480px) {
-  .inner { grid-template-columns: 1fr 1fr; }
-  .metric { padding: 1.5rem 1.25rem; }
-  .metricValue { font-size: 1.75rem; }
+  .inner { grid-template-columns: 1fr; }
+  .metric { 
+    padding: 1.75rem 1.5rem; 
+    border-right: none;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.08);
+  }
+  .metric:last-child {
+    border-bottom: none;
+  }
+  .metricValue { font-size: 2.25rem; }
   .statsBar {
     border-bottom-width: 3px;
   }

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 24" fill="none">
+  <path d="M12 4l8 14H4l8-14z" fill="#FFFFFF"/>
+  <path d="M12 9l5 9H7l5-9z" fill="#080806"/>
+  <text x="28" y="17" fill="#FFFFFF" font-family="monospace" font-weight="bold" font-size="11" letter-spacing="0.1em">VERTEX</text>
+</svg>

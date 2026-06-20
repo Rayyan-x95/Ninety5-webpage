@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import styles from "./HeroSection.module.css";
 
@@ -149,13 +150,13 @@ export default function HeroSection() {
 
           {/* CTAs */}
           <div className={styles.ctaGroup}>
-            <a href="#work" className={styles.ctaPrimary} id="hero-view-work-btn">
-              <span className={styles.ctaText}>Explore Work</span>
-              <span className={styles.ctaArrow}>↗</span>
-            </a>
-            <a href="#contact" className={styles.ctaSecondary} id="hero-contact-btn">
+            <a href="#contact" className={styles.ctaPrimary} id="hero-contact-btn">
               <span className={styles.ctaText}>Start a Project</span>
               <span className={styles.ctaPulse} />
+            </a>
+            <a href="#work" className={styles.ctaSecondary} id="hero-view-work-btn">
+              <span className={styles.ctaText}>Explore Work</span>
+              <span className={styles.ctaArrow}>↗</span>
             </a>
           </div>
         </div>
@@ -225,19 +226,13 @@ export default function HeroSection() {
       <div className={styles.proofBar}>
         <div className={`container ${styles.proofInner}`}>
           <div className={styles.proofLeft}>
-            <div className={styles.avatarStack}>
-              {["#1B4FFF", "#7C3AED", "#059669", "#D97706"].map((c, i) => (
-                <div
-                  key={i}
-                  className={styles.avatar}
-                  style={{ background: c, zIndex: 4 - i }}
-                >
-                  {["AM", "JK", "SP", "TR"][i]}
-                </div>
-              ))}
-            </div>
-            <div className={styles.proofText}>
-              Trusted by <strong>100+ founders</strong> worldwide
+            <span className={styles.trustTitle}>Trusted by:</span>
+            <div className={styles.logos}>
+              <Image src="/logos/atlas.svg" alt="Logo: Atlas Analytics" width={80} height={20} className={styles.logoItem} />
+              <Image src="/logos/bloom.svg" alt="Logo: Bloom Health" width={80} height={20} className={styles.logoItem} />
+              <Image src="/logos/forge.svg" alt="Logo: Forge Dev Tools" width={80} height={20} className={styles.logoItem} />
+              <Image src="/logos/orbit.svg" alt="Logo: Orbit Labs" width={80} height={20} className={styles.logoItem} />
+              <Image src="/logos/vertex.svg" alt="Logo: Vertex SaaS" width={80} height={20} className={styles.logoItem} />
             </div>
           </div>
           <div className={styles.proofRight}>
