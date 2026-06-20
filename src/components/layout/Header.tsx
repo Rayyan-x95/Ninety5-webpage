@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
 const NAV_LINKS = [
@@ -15,6 +16,8 @@ const NAV_LINKS = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -22,8 +25,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const headerClass = `${styles.header} ${scrolled ? styles.scrolled : ""} ${
+    isHome && !scrolled ? styles.darkHeroHeader : ""
+  }`;
+
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+    <header className={headerClass}>
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <Link href="/" className={styles.logo} id="header-logo">

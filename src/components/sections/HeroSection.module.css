@@ -91,17 +91,19 @@
 }
 
 .inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 4rem;
-  padding-top: 1.5rem; /* Header offset is handled by .hero padding-top */
-  padding-bottom: 7rem; /* Make room for proof bar */
+  justify-content: center;
+  text-align: center;
+  gap: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
   flex: 1;
   min-height: 0;
   z-index: 3;
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -111,7 +113,8 @@
 .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 1.5rem;
   min-height: 0;
 }
@@ -212,17 +215,19 @@
 /* Sub-copy */
 .sub {
   font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   font-weight: 400;
   color: #a6a69a;
-  line-height: 1.6;
-  max-width: 520px;
+  line-height: 1.65;
+  max-width: 680px;
+  text-align: center;
 }
 
 /* Interactive CTA group */
 .ctaGroup {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.25rem;
   margin-top: 1rem;
   flex-wrap: wrap;

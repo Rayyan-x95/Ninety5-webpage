@@ -207,3 +207,31 @@
   }
 }
 
+/* Dark Hero Theme for Header (Unscrolled on Home) */
+.darkHeroHeader {
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.darkHeroHeader .logoImage {
+  filter: invert(1) !important;
+}
+
+.darkHeroHeader .navLink {
+  color: var(--color-white) !important;
+}
+
+.darkHeroHeader .navLink:hover {
+  color: var(--color-brand-orange) !important;
+}
+
+.darkHeroHeader .navLink::after {
+  background: var(--color-brand-orange) !important;
+}
+
+.darkHeroHeader .bar {
+  background: var(--color-white) !important;
+}
+
+
