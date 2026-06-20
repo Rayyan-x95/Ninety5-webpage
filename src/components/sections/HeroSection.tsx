@@ -115,13 +115,6 @@ export default function HeroSection() {
 
       </div>
 
-      {/* Scroll indicator */}
-      <div className={styles.scrollCue}>
-        <div className={styles.scrollMouse}>
-          <div className={styles.scrollWheel} />
-        </div>
-        <span className={styles.scrollLabel}>SCROLL</span>
-      </div>
     </section>
   );
 }
