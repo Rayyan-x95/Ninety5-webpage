@@ -52,7 +52,7 @@ export default function ProcessPage() {
   return (
     <>
       <Header />
-      <main className={styles.page}>
+      <main className={styles.page} id="main">
 
         {/* ── PAGE HERO ── */}
         <div

@@ -80,7 +80,7 @@ export default function CookiePolicyPage() {
   return (
     <>
       <Header />
-      <main className={styles.page}>
+      <main className={styles.page} id="main">
         <div className={styles.hero}>
           <div className={`container ${styles.heroInner}`}>
             <div className={styles.eyebrow}>

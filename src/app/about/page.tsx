@@ -46,7 +46,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className={styles.page}>
+      <main className={styles.page} id="main">
 
         {/* ── PAGE HERO ── */}
         <div

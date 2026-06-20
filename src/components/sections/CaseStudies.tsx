@@ -53,8 +53,15 @@ export default function CaseStudies() {
                   ))}
                   <div className={styles.mockupDot} style={{ background: p.accent }} />
                 </div>
-                <div className={styles.metricBadge}>
-                  <div className={styles.metricValue}>{p.metric}</div>
+                <div 
+                  className={styles.metricBadge}
+                  aria-label={`${p.metricLabel}: ${p.metric}`}
+                >
+                  <div className={styles.metricValue}>
+                    {p.id === "atlas" || p.id === "forge" ? "↑ " : ""}
+                    {p.id === "orbit" ? "⚡ " : ""}
+                    {p.metric}
+                  </div>
                   <div className={styles.metricLabel}>{p.metricLabel}</div>
                 </div>
               </div>

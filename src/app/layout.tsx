@@ -115,6 +115,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <a href="#main" className="skip-link">Skip to main content</a>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

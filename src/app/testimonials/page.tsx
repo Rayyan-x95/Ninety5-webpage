@@ -57,7 +57,7 @@ export default function TestimonialsPage() {
   return (
     <>
       <Header />
-      <main className={styles.page}>
+      <main className={styles.page} id="main">
 
         {/* ── PAGE HERO ── */}
         <div

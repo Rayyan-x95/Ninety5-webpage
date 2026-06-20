@@ -131,7 +131,7 @@ export default function ServicesPage() {
   return (
     <>
       <Header />
-      <main style={{ paddingTop: "140px", paddingBottom: "120px", backgroundColor: "var(--color-white)", minHeight: "100vh" }}>
+      <main id="main" style={{ paddingTop: "140px", paddingBottom: "120px", backgroundColor: "var(--color-white)", minHeight: "100vh" }}>
         <div className="container" style={{ position: "relative", zIndex: 10 }}>
           {/* Background Watermark */}
           <div style={{ position: "absolute", top: "-50px", right: "-100px", fontSize: "15vw", fontWeight: 900, color: "var(--color-bg-alt)", zIndex: -1, opacity: 0.5, pointerEvents: "none", fontFamily: "var(--font-display)", letterSpacing: "-0.05em" }}>

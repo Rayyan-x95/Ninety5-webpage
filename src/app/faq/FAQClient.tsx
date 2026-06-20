@@ -50,7 +50,7 @@ export default function FAQClient() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <main className={styles.page}>
+    <main className={styles.page} id="main">
 
         {/* ── PAGE HERO ── */}
         <div

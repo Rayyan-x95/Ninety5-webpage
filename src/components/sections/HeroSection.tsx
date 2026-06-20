@@ -33,9 +33,9 @@ export default function HeroSection() {
           0.2
         )
         .fromTo(
-          `.${styles.headlineLine}`,
-          { opacity: 0, y: 80, rotateX: 40 },
-          { opacity: 1, y: 0, rotateX: 0, duration: 1, stagger: 0.12 },
+          headlineRef.current,
+          { opacity: 0, y: 40, rotateX: 10 },
+          { opacity: 1, y: 0, rotateX: 0, duration: 1.2 },
           0.3
         )
         .fromTo(
@@ -138,22 +138,7 @@ export default function HeroSection() {
 
           {/* Headline */}
           <h1 ref={headlineRef} className={styles.headline}>
-            <span className={styles.headlineLine}>
-              <span className={styles.headlineWord}>We</span>{" "}
-              <span className={styles.headlineOutline}>Design</span>
-            </span>
-            <span className={styles.headlineLine}>
-              <span className={styles.headlineHighlight}>&amp; Build</span>{" "}
-              <span className={styles.headlineWord}>Digital</span>
-            </span>
-            <span className={styles.headlineLine}>
-              <span className={styles.headlineAccent}>Products</span>{" "}
-              <span className={styles.headlineWord}>That</span>
-            </span>
-            <span className={styles.headlineLine}>
-              <span className={styles.headlineWord}>Define</span>{" "}
-              <span className={styles.headlineStrike}>Industries.</span>
-            </span>
+            We <span className={styles.headlineOutline}>Design</span> <span className={styles.headlineHighlight}>&amp; Build</span> Digital <span className={styles.headlineAccent}>Products</span> That Define <span className={styles.headlineStrike}>Industries.</span>
           </h1>
 
           {/* Sub */}

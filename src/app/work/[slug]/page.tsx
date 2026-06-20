@@ -40,7 +40,7 @@ export default function CaseStudyPage({ params }: Props) {
   return (
     <>
       <Header />
-      <main className={styles.page}>
+      <main className={styles.page} id="main">
         
         {/* HERO SECTION */}
         <section className={styles.hero}>
