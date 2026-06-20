@@ -19,12 +19,6 @@ export default function HeroSection() {
         { opacity: 1, duration: 1.2 }
       )
         .fromTo(
-          `.${styles.eyebrow}`,
-          { opacity: 0, y: 20, clipPath: "inset(100% 0 0 0)" },
-          { opacity: 1, y: 0, clipPath: "inset(0% 0 0 0)", duration: 0.8 },
-          0.2
-        )
-        .fromTo(
           headlineRef.current,
           { opacity: 0, y: 40, rotateX: 10 },
           { opacity: 1, y: 0, rotateX: 0, duration: 1.2 },
@@ -93,13 +87,7 @@ export default function HeroSection() {
       <div className={`container ${styles.inner}`}>
         {/* ── LEFT COLUMN ── */}
         <div className={styles.content}>
-          {/* Eyebrow */}
-          <div className={styles.eyebrow}>
-            <span className={styles.eyebrowDot} />
-            <span className={styles.eyebrowLabel}>NINETY5.IN</span>
-            <span className={styles.eyebrowDivider}>—</span>
-            <span className={styles.eyebrowLabel}>DESIGN &amp; ENGINEERING</span>
-          </div>
+
 
           {/* Headline */}
           <h1 ref={headlineRef} className={styles.headline}>
