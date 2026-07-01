@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     siteName: "Ninety5",
     locale: "en_US",
     url: "https://ninety5.in",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1024,
+        height: 682,
+        alt: "Ninety5 — Design & Development Studio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -40,6 +48,7 @@ export const metadata: Metadata = {
     description:
       "We craft digital products that convert, retain, and delight.",
     creator: "@ninety5studio",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
