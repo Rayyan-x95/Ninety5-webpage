@@ -58,6 +58,18 @@ const DATA: ServicePageData = {
   timelineDetails: "Typical graphic design and pitch deck engagements range from 1 to 3 weeks, with express turnaround options available for active fundraising rounds.",
   outcomesDetails: "Clients achieve up to 3.2× higher ad engagement rates, significant investor response increases on pitch decks, and an unmistakable visual market presence.",
   caseStudyIds: ["ujrat", "titan", "forge"],
+  relatedPosts: [
+    {
+      title: "The ROI of High-Impact Graphic Design and Pitch Decks for Tech Startups",
+      slug: "roi-graphic-design-pitch-decks-startups",
+      readTime: "6 min read"
+    },
+    {
+      title: "Brand Identity Designer Chennai: What to Look For in 2026",
+      slug: "brand-identity-designer-chennai-what-to-look-for",
+      readTime: "5 min read"
+    }
+  ],
   faqs: [
     {
       q: "What design file formats does Ninety5 deliver?",

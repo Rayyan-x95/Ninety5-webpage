@@ -2,8 +2,26 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Design Systems Engineering Services | Ninety5 Studio",
-  description: "Engineering unified UI component libraries and tokenized design systems that scale your design language across platforms.",
+  title: "Design Systems Architecture & Tokenized UI Engineering | Ninety5 Studio",
+  description:
+    "Engineering unified UI component libraries, Figma variable tokens, and Storybook React design systems that scale your SaaS product teams without design debt.",
+  keywords: [
+    "Design systems agency India",
+    "Figma design tokens architecture",
+    "Storybook component library development",
+    "Design systems ROI SaaS",
+    "Tokenized UI engineering",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/services/design-systems",
+  },
+  openGraph: {
+    title: "Design Systems Engineering Services | Ninety5 Studio",
+    description:
+      "Engineering unified UI component libraries and tokenized design systems that scale your design language across platforms.",
+    url: "https://ninety5.in/services/design-systems",
+    type: "website",
+  },
 };
 
 const DATA: ServicePageData = {
@@ -36,6 +54,18 @@ const DATA: ServicePageData = {
   timelineDetails: "Depending on product scale, a design system takes between 8 and 12 weeks to design, engineer, and document.",
   outcomesDetails: "Product teams experience up to a 50% decrease in front-end development time, immediate visual consistency, and unified workflows across design and engineering.",
   caseStudyIds: ["atlas", "forge"],
+  relatedPosts: [
+    {
+      title: "The ROI of Design Systems for Fast-Growing Startups: A 2026 Guide",
+      slug: "roi-of-design-systems-startups-guide",
+      readTime: "6 min read"
+    },
+    {
+      title: "How Ninety5 Designs, Engineers & Ships High-Converting Digital Products",
+      slug: "how-ninety5-designs-engineers-ships-digital-products",
+      readTime: "8 min read"
+    }
+  ],
   faqs: [
     {
       q: "What are design tokens and how do they work?",

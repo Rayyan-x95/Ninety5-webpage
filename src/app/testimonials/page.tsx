@@ -2,9 +2,72 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Testimonials",
-  description: "What industry leaders say about partnering with Ninety5 Studio.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Client Testimonials & Case Reviews — UI/UX & Next.js Results | Ninety5 Studio",
+  description:
+    "Read real reviews and client feedback from venture-backed tech founders, CTOs, and product leaders who partnered with Ninety5 Studio for product design and engineering.",
+  keywords: [
+    "Ninety5 Studio client reviews",
+    "Product design agency testimonials",
+    "UI/UX studio case studies",
+    "Next.js agency feedback",
+    "Design studio ratings India",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/testimonials",
+  },
+  openGraph: {
+    title: "Client Testimonials & Reviews | Ninety5 Studio",
+    description:
+      "What B2B SaaS founders and product leaders say about Ninety5 Studio's execution velocity and design craft.",
+    url: "https://ninety5.in/testimonials",
+    type: "website",
+  },
+};
+
+const testimonialsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemPage",
+  "@id": "https://ninety5.in/testimonials#webpage",
+  "url": "https://ninety5.in/testimonials",
+  "name": "Ninety5 Studio Client Testimonials",
+  "description": "Client reviews and feedback for Ninety5 Studio design and engineering services.",
+  "mainEntity": {
+    "@type": "ProfessionalService",
+    "@id": "https://ninety5.in/#service",
+    "name": "Ninety5 Studio",
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Arjun Mehta",
+          "jobTitle": "CEO, FinStack"
+        },
+        "reviewBody": "Ninety5 didn't just build an app — they defined our entire product strategy. Unmatched velocity and an aesthetic that absolutely dominates our niche."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah Chen",
+          "jobTitle": "VP of Engineering, NovaDash"
+        },
+        "reviewBody": "The cleanest React architecture we have ever audited. They operate at the highest technical level. A true engineering powerhouse."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Marcus Johnson",
+          "jobTitle": "Creative Director, Orbit Labs"
+        },
+        "reviewBody": "Their brutalist aesthetic cuts through the noise perfectly. Bold, decisive, and flawlessly executed from Figma to deployment in record time."
+      }
+    ]
+  }
 };
 
 const STATS = [
@@ -56,6 +119,10 @@ const CLIENT_LOGOS = [
 export default function TestimonialsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(testimonialsSchema) }}
+      />
       <Header />
       <main className={styles.page} id="main">
 

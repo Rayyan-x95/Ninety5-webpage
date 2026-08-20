@@ -2,9 +2,49 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "About",
-  description: "Ninety5 is a brutalist design and engineering collective. We deliver high-performance digital products with raw execution and extreme velocity.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Ninety5 Studio — UI/UX Design & Next.js Engineering Collective, Chennai",
+  description:
+    "Ninety5 is a brutalist design and engineering collective founded by M Mohammed Rayyan in Chennai. We design high-converting SaaS products, pitch decks, and digital experiences.",
+  keywords: [
+    "About Ninety5 Studio",
+    "Mohammed Rayyan designer",
+    "UI UX design collective Chennai",
+    "Full stack design studio India",
+    "Brutalist web design agency",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/about",
+  },
+  openGraph: {
+    title: "About Ninety5 Studio | Design & Engineering Collective",
+    description:
+      "Stripping away unnecessary agency bureaucracy to deliver high-performance digital products with speed and precision.",
+    url: "https://ninety5.in/about",
+    type: "website",
+  },
+};
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://ninety5.in/about#webpage",
+  "url": "https://ninety5.in/about",
+  "name": "About Ninety5 Studio",
+  "description": "Ninety5 is a design and engineering collective delivering high-performance digital products.",
+  "mainEntity": {
+    "@type": "Organization",
+    "@id": "https://ninety5.in/#organization",
+    "name": "Ninety5 Studio",
+    "founder": {
+      "@type": "Person",
+      "@id": "https://rayyan.ninety5.in/#person",
+      "name": "M Mohammed Rayyan",
+      "jobTitle": "Founder & Design Lead"
+    }
+  }
 };
 
 const CAPABILITIES = [
@@ -45,6 +85,10 @@ const VALUES = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       <Header />
       <main className={styles.page} id="main">
 

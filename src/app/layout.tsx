@@ -226,6 +226,14 @@ const jsonLd = {
       "image": "https://ninety5.in/icon.png",
       "url": "https://ninety5.in",
       "priceRange": "$$$",
+      "areaServed": [
+        "Worldwide",
+        "United States",
+        "United Kingdom",
+        "India",
+        "United Arab Emirates",
+        "Singapore"
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Chennai",
@@ -235,11 +243,6 @@ const jsonLd = {
         "@type": "GeoCoordinates",
         "latitude": 13.0827,
         "longitude": 80.2707
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "5"
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",

@@ -27,6 +27,9 @@ export interface ServicePageData {
   // Case Studies
   caseStudyIds: string[];
   
+  // Related Blog Guides (Bidirectional Internal Linking)
+  relatedPosts?: { title: string; slug: string; readTime?: string }[];
+  
   // FAQs
   faqs: { q: string; a: string }[];
 }
@@ -58,7 +61,15 @@ export default function ServicePageTemplate({ data }: Props) {
         "serviceType": data.title,
         "description": data.lead,
         "areaServed": "Worldwide",
-        "termsOfService": "https://ninety5.in/legal/terms-of-service"
+        "termsOfService": "https://ninety5.in/legal/terms-of-service",
+        ...(data.relatedPosts && data.relatedPosts.length > 0 ? {
+          "isRelatedTo": data.relatedPosts.map(p => ({
+            "@type": "BlogPosting",
+            "@id": `https://ninety5.in/blog/${p.slug}#article`,
+            "name": p.title,
+            "url": `https://ninety5.in/blog/${p.slug}`
+          }))
+        } : {})
       },
       {
         "@type": "FAQPage",
@@ -280,6 +291,47 @@ export default function ServicePageTemplate({ data }: Props) {
 
         {/* AUDIT LEAD MAGNET */}
         <AuditBanner />
+
+        {/* RELATED BLOG GUIDES & INSIGHTS (Bidirectional Internal Linking) */}
+        {data.relatedPosts && data.relatedPosts.length > 0 && (
+          <section style={{ padding: "4rem 0", backgroundColor: "var(--color-bg)", borderBottom: "4px solid var(--color-dark)" }}>
+            <div className="container">
+              <div className={styles.sectionLabel}>
+                <span className={styles.sectionLabelLine} />
+                <span className={styles.sectionLabelText}>RELATED READING</span>
+              </div>
+              <h2 className={styles.sectionTitle}>Expert Guides &amp; Insights</h2>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginTop: "2rem" }}>
+                {data.relatedPosts.map((post) => (
+                  <a
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    style={{
+                      display: "block",
+                      backgroundColor: "var(--color-white)",
+                      border: "3px solid var(--color-dark)",
+                      padding: "1.75rem",
+                      boxShadow: "4px 4px 0 var(--color-dark)",
+                      textDecoration: "none",
+                      color: "inherit",
+                      transition: "transform 0.15s ease, box-shadow 0.15s ease",
+                    }}
+                  >
+                    <span style={{ fontSize: "0.72rem", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--color-brand-orange)", display: "block", marginBottom: "0.5rem" }}>
+                      {post.readTime || "Guide"}
+                    </span>
+                    <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.15rem", fontWeight: 800, lineHeight: 1.3, color: "var(--color-dark)", marginBottom: "0.75rem" }}>
+                      {post.title}
+                    </h3>
+                    <span style={{ fontSize: "0.85rem", fontWeight: 800, color: "var(--color-brand-blue)", textDecoration: "underline" }}>
+                      Read Guide →
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* FAQs */}
         <section className={styles.faqSection}>

@@ -2,8 +2,26 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "UX Research & Usability Auditing Services | Ninety5 Studio",
-  description: "Replacing intuition with empirical data via user interviews, cognitive walkthroughs, and quantitative conversion audits.",
+  title: "UX Research, Usability Auditing & User Testing Agency | Ninety5 Studio",
+  description:
+    "Replacing subjective assumptions with empirical user validation data via qualitative user interviews, heuristic usability teardowns, and conversion audits.",
+  keywords: [
+    "UX research agency India",
+    "Usability testing studio Chennai",
+    "SaaS UX audit services",
+    "Heuristic evaluation agency",
+    "User journey mapping consultants",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/services/ux-research",
+  },
+  openGraph: {
+    title: "UX Research & Usability Auditing Services | Ninety5 Studio",
+    description:
+      "Replacing intuition with empirical data via user interviews, cognitive walkthroughs, and quantitative conversion audits.",
+    url: "https://ninety5.in/services/ux-research",
+    type: "website",
+  },
 };
 
 const DATA: ServicePageData = {
@@ -36,6 +54,18 @@ const DATA: ServicePageData = {
   timelineDetails: "A research and usability audit phase typically takes 3 to 5 weeks from cohort recruiting to final report.",
   outcomesDetails: "Teams gain a clear understanding of user needs, product-market fit metrics, and a prioritized features list that prevents building unwanted layouts.",
   caseStudyIds: ["bloom", "atlas"],
+  relatedPosts: [
+    {
+      title: "UI/UX Design Cost in India: The Complete 2026 Pricing Guide",
+      slug: "ui-ux-design-cost-india-2026-guide",
+      readTime: "7 min read"
+    },
+    {
+      title: "How to Design B2B SaaS Dashboards That Users Actually Love",
+      slug: "designing-b2b-saas-dashboards-users-love",
+      readTime: "6 min read"
+    }
+  ],
   faqs: [
     {
       q: "How do you recruit test participants?",

@@ -1,6 +1,18 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
+  // Protect staging/preview URLs from accidental indexing
+  if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== 'production') {
+    return {
+      rules: [
+        {
+          userAgent: '*',
+          disallow: '/',
+        },
+      ],
+    };
+  }
+
   return {
     rules: [
       {

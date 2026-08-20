@@ -2,9 +2,69 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Our Process",
-  description: "A systematic, battle-tested methodology for delivering exceptional digital products at incredible speed.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our 4-Phase Product Design & Engineering Process | Ninety5 Studio",
+  description:
+    "Explore Ninety5 Studio's structured product design and Next.js engineering process: Discovery, UX Strategy, Sprint Execution, Launch, and Ongoing Growth.",
+  keywords: [
+    "Product design process",
+    "UI UX design methodology",
+    "Next.js engineering workflow",
+    "Figma to code process",
+    "SaaS design agency sprints",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/process",
+  },
+  openGraph: {
+    title: "Our Design & Engineering Process | Ninety5 Studio",
+    description:
+      "A systematic, battle-tested methodology for delivering exceptional digital products at extreme velocity.",
+    url: "https://ninety5.in/process",
+    type: "website",
+  },
+};
+
+const processSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": "https://ninety5.in/process#howto",
+  "name": "Ninety5 Studio Product Design and Engineering Process",
+  "description": "A 5-phase methodology for designing, building, and scaling high-performance digital products.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Discovery",
+      "text": "Deep alignment on business goals, technical constraints, and user needs before code is written."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Strategy",
+      "text": "Defining architecture, technology stack, and visual direction with a clear milestone roadmap."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Execution",
+      "text": "Sprints of high-fidelity Figma design and Next.js engineering with daily progress pushes."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Deployment",
+      "text": "Flawless launch with edge performance audits and 90-day post-launch SLA support."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Growth",
+      "text": "Ongoing monthly retainers, conversion optimization, and continuous feature iteration."
+    }
+  ]
 };
 
 const STEPS = [
@@ -51,6 +111,10 @@ const DELIVERABLES = [
 export default function ProcessPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(processSchema) }}
+      />
       <Header />
       <main className={styles.page} id="main">
 

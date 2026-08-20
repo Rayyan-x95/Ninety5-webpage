@@ -2,8 +2,26 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "React Native Mobile App Development Services | Ninety5 Studio",
-  description: "Deploying native-quality, high-performance cross-platform iOS and Android applications with React Native and Expo.",
+  title: "React Native Mobile App Development Studio | Ninety5 Studio",
+  description:
+    "Engineering 60fps native-performance cross-platform iOS and Android mobile apps using React Native, Expo, and offline-first local database architectures.",
+  keywords: [
+    "React Native mobile app agency",
+    "Cross-platform app development India",
+    "iOS and Android app developers Chennai",
+    "Expo mobile app studio",
+    "Offline-first mobile apps",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/services/mobile-apps",
+  },
+  openGraph: {
+    title: "React Native Mobile App Development Services | Ninety5 Studio",
+    description:
+      "Deploying native-quality, high-performance cross-platform iOS and Android applications with React Native and Expo.",
+    url: "https://ninety5.in/services/mobile-apps",
+    type: "website",
+  },
 };
 
 const DATA: ServicePageData = {
@@ -34,8 +52,20 @@ const DATA: ServicePageData = {
   processDetails: "We build apps using Expo and React Native, utilizing Reanimated for fluid 60fps gesture animations. We configure secure token storage, set up background sync workers, and integrate real-time notifications to maximize retention and user engagement.",
   deliverablesDetails: "Deliverables include the React Native repository, configured Expo workspaces, compilation scripts, App Store and Google Play developer center setup, provisioning profiles, and backend API connection schemas.",
   timelineDetails: "Mobile app developments run for 8 to 14 weeks from first architectural prototype to production launch.",
-  outcomesDetails: "You get a fast, native-feeling app on both stores with single-codebase maintenance, high reviews, and reliable push notifications.",
+  outcomesDetails: "Clients receive a fast, native-feeling app on both stores with single-codebase maintenance, high reviews, and reliable push notifications.",
   caseStudyIds: ["bloom"],
+  relatedPosts: [
+    {
+      title: "How to Design B2B SaaS Dashboards That Users Actually Love",
+      slug: "designing-b2b-saas-dashboards-users-love",
+      readTime: "6 min read"
+    },
+    {
+      title: "UI/UX Design Cost in India: The Complete 2026 Pricing Guide",
+      slug: "ui-ux-design-cost-india-2026-guide",
+      readTime: "7 min read"
+    }
+  ],
   faqs: [
     {
       q: "Do you use Expo or bare React Native?",

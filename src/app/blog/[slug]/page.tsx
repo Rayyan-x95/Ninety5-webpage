@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Ninety5 Studio Blog`,
     description: post.description,
+    keywords: post.tags.join(", "),
     alternates: {
       canonical: `https://ninety5.in/blog/${post.slug}`,
     },
@@ -37,6 +38,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://ninety5.in/blog/${post.slug}`,
       publishedTime: post.publishDate,
       authors: [post.author.name],
+      tags: post.tags,
+      images: [
+        {
+          url: post.coverImage,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [post.coverImage],
+      creator: "@ninety5studio",
     },
   };
 }
@@ -243,14 +260,35 @@ export default async function BlogPostPage({ params }: Props) {
         "@id": `https://ninety5.in/blog/${post.slug}#article`,
         "headline": post.title,
         "description": post.description,
+        "image": `https://ninety5.in${post.coverImage}`,
+        "inLanguage": "en-US",
+        "keywords": post.tags.join(", "),
         "datePublished": post.publishDate,
         "dateModified": post.publishDate,
+        "wordCount": post.wordCount ?? Math.round(post.contentMarkdown.length / 5),
         "mainEntityOfPage": `https://ninety5.in/blog/${post.slug}`,
+        "isPartOf": {
+          "@type": "Blog",
+          "@id": "https://ninety5.in/blog#collection",
+          "name": "Ninety5 Studio Blog",
+          "url": "https://ninety5.in/blog"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["blockquote", "h1"]
+        },
         "author": {
           "@type": "Person",
+          "@id": "https://rayyan.ninety5.in/#person",
           "name": post.author.name,
           "jobTitle": post.author.role,
-          "url": "https://rayyan.qzz.io",
+          "url": "https://rayyan.ninety5.in",
+          "image": "https://rayyan.ninety5.in/profile.webp",
+          "sameAs": [
+            "https://linkedin.com/in/rayyan-ninety5",
+            "https://twitter.com/ninety5studio",
+            "https://dribbble.com/ninety5"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -262,6 +300,18 @@ export default async function BlogPostPage({ params }: Props) {
           }
         }
       },
+      ...(post.faqs && post.faqs.length > 0 ? [{
+        "@type": "FAQPage",
+        "@id": `https://ninety5.in/blog/${post.slug}#faq`,
+        "mainEntity": post.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }] : []),
       {
         "@type": "BreadcrumbList",
         "@id": `https://ninety5.in/blog/${post.slug}#breadcrumb`,
@@ -312,15 +362,23 @@ export default async function BlogPostPage({ params }: Props) {
                 <span>•</span>
                 <span>{post.readTime}</span>
               </div>
-              <div className={styles.author}>
+            <div className={styles.author} itemScope itemType="https://schema.org/Person" itemID="https://rayyan.ninety5.in/#person">
                 <div className={styles.authorAvatar} style={{
                   backgroundImage: `url(${post.author.avatar})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }} />
                 <div className={styles.authorInfo}>
-                  <span className={styles.authorName}>{post.author.name}</span>
-                  <span className={styles.authorRole}>{post.author.role}</span>
+                  <span className={styles.authorName} itemProp="name">{post.author.name}</span>
+                  <span className={styles.authorRole} itemProp="jobTitle">{post.author.role}</span>
+                  <p style={{ fontSize: "0.78rem", color: "var(--color-muted, #888)", margin: "0.35rem 0 0.5rem", lineHeight: 1.5, maxWidth: "480px" }}>
+                    M Mohammed Rayyan is the Founder of Ninety5 Studio with 5+ years designing high-performance SaaS products and brand systems for 30+ global clients across the US, UK, and MENA.
+                  </p>
+                  <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+                    <a href="https://linkedin.com/in/rayyan-ninety5" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">LinkedIn ↗</a>
+                    <a href="https://twitter.com/ninety5studio" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">Twitter ↗</a>
+                    <a href="https://dribbble.com/ninety5" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">Dribbble ↗</a>
+                  </div>
                 </div>
               </div>
             </div>

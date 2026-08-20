@@ -2,8 +2,26 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Next.js Web Development Services | Ninety5 Studio",
-  description: "Building blazing-fast, SEO-optimized, and highly secure web applications using modern React and Next.js frontend frameworks.",
+  title: "Next.js Web Development & Full-Stack Frontend Agency | Ninety5 Studio",
+  description:
+    "Engineering blazing-fast, sub-second Next.js web applications, React Server Components, and Technical SEO architectures for high-growth tech startups.",
+  keywords: [
+    "Next.js web development agency",
+    "React frontend engineering India",
+    "Technical SEO Next.js agency",
+    "Sub-second web performance",
+    "Headless CMS Next.js developers",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/services/web-development",
+  },
+  openGraph: {
+    title: "Next.js Web Development Services | Ninety5 Studio",
+    description:
+      "Building blazing-fast, SEO-optimized, and highly secure web applications using modern React and Next.js frontend frameworks.",
+    url: "https://ninety5.in/services/web-development",
+    type: "website",
+  },
 };
 
 const DATA: ServicePageData = {
@@ -36,6 +54,18 @@ const DATA: ServicePageData = {
   timelineDetails: "Our typical web engineering cycles run from 6 to 12 weeks depending on integration complexity and page counts.",
   outcomesDetails: "Clients experience high Lighthouse scores, faster page indexation on Google, increased organic search impressions, and lower customer bounce rates.",
   caseStudyIds: ["orbit", "atlas"],
+  relatedPosts: [
+    {
+      title: "Why Next.js App Router is the Ultimate Stack for B2B SaaS in 2026",
+      slug: "why-nextjs-app-router-for-b2b-saas",
+      readTime: "8 min read"
+    },
+    {
+      title: "Core Web Vitals & SaaS Conversion Rate: The Data Link in 2026",
+      slug: "core-web-vitals-saas-conversion-rate",
+      readTime: "8 min read"
+    }
+  ],
   faqs: [
     {
       q: "Do you use Tailwind or Vanilla CSS?",

@@ -2,8 +2,26 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Brand Identity Design Services | Ninety5 Studio",
-  description: "Forging iconic, high-contrast visual brand systems that resonance and dominate in crowded markets.",
+  title: "Brand Identity Design & Visual Systems Studio | Ninety5 Studio",
+  description:
+    "Forging iconic, brutalist brand identities, typography guidelines, and design systems for tech startups and digital-first brands globally.",
+  keywords: [
+    "Brand identity designer Chennai",
+    "Tech startup branding agency",
+    "Visual identity systems India",
+    "Brutalist logo design studio",
+    "B2B brand design",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/services/brand-identity",
+  },
+  openGraph: {
+    title: "Brand Identity Design Services | Ninety5 Studio",
+    description:
+      "Forging iconic, high-contrast visual brand systems that resonance and dominate in crowded markets.",
+    url: "https://ninety5.in/services/brand-identity",
+    type: "website",
+  },
 };
 
 const DATA: ServicePageData = {
@@ -36,6 +54,18 @@ const DATA: ServicePageData = {
   timelineDetails: "A brand identity engagement typically takes 4 to 6 weeks from initial research to final asset delivery.",
   outcomesDetails: "Brands receive an unforgettable visual system that boosts customer recognition, increases brand trust, and unifies all visual communications.",
   caseStudyIds: ["forge"],
+  relatedPosts: [
+    {
+      title: "Brand Identity Designer Chennai: What to Look For in 2026",
+      slug: "brand-identity-designer-chennai-what-to-look-for",
+      readTime: "5 min read"
+    },
+    {
+      title: "The ROI of High-Impact Graphic Design and Pitch Decks for Tech Startups",
+      slug: "roi-graphic-design-pitch-decks-startups",
+      readTime: "6 min read"
+    }
+  ],
   faqs: [
     {
       q: "What formats are the logos delivered in?",

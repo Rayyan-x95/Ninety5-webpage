@@ -2,8 +2,26 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Product Design Services | Ninety5 Studio",
-  description: "End-to-end UX/UI product design that transforms complex problems into elegant, high-converting digital experiences.",
+  title: "B2B SaaS Product Design (UI/UX) Agency | Ninety5 Studio",
+  description:
+    "End-to-end UX/UI product design that transforms complex B2B workflows into intuitive, high-converting digital interfaces. Production-ready Figma specs to code.",
+  keywords: [
+    "B2B SaaS product design",
+    "UI UX design agency Chennai",
+    "Product design studio India",
+    "SaaS dashboard UX design",
+    "Figma UI UX designers",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/services/product-design",
+  },
+  openGraph: {
+    title: "Product Design (UI/UX) Services | Ninety5 Studio",
+    description:
+      "End-to-end UX/UI product design that transforms complex problems into elegant, high-converting digital experiences.",
+    url: "https://ninety5.in/services/product-design",
+    type: "website",
+  },
 };
 
 const DATA: ServicePageData = {
@@ -36,6 +54,23 @@ const DATA: ServicePageData = {
   timelineDetails: "A typical product design project runs for 6 to 10 weeks, depending on the volume of screens and flow complexity.",
   outcomesDetails: "Clients typically see improved conversion rates, reduced onboarding drop-offs, and significantly faster engineering velocity due to clean design specs.",
   caseStudyIds: ["atlas", "bloom"],
+  relatedPosts: [
+    {
+      title: "UI/UX Design Cost in India: The Complete 2026 Pricing Guide",
+      slug: "ui-ux-design-cost-india-2026-guide",
+      readTime: "7 min read"
+    },
+    {
+      title: "How to Design B2B SaaS Dashboards That Users Actually Love",
+      slug: "designing-b2b-saas-dashboards-users-love",
+      readTime: "6 min read"
+    },
+    {
+      title: "Best UI/UX Agency in Chennai for Startups: What to Look for in 2026",
+      slug: "ui-ux-agency-chennai-startups",
+      readTime: "7 min read"
+    }
+  ],
   faqs: [
     {
       q: "What files do we receive at handoff?",

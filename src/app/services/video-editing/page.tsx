@@ -2,8 +2,26 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Video Editing & Motion Graphics Services | Ninety5 Studio",
-  description: "High-retention video editing, motion design, product demos, and viral social cuts engineered for engagement.",
+  title: "Video Editing & Motion Graphics for Tech Startups | Ninety5 Studio",
+  description:
+    "High-retention video editing, SaaS product demos, kinetic typography, and viral short-form motion design engineered to maximize watch time and conversion.",
+  keywords: [
+    "Video editing agency tech startups",
+    "SaaS product walkthrough video",
+    "Motion graphics studio Chennai",
+    "High retention video editing",
+    "B2B video marketing retainers",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/services/video-editing",
+  },
+  openGraph: {
+    title: "Video Editing & Motion Graphics Services | Ninety5 Studio",
+    description:
+      "High-retention video editing, motion design, product demos, and viral social cuts engineered for engagement.",
+    url: "https://ninety5.in/services/video-editing",
+    type: "website",
+  },
 };
 
 const DATA: ServicePageData = {
@@ -36,6 +54,18 @@ const DATA: ServicePageData = {
   timelineDetails: "Single video projects turn around in 3 to 5 business days; monthly content retainer packages provide ongoing weekly delivery.",
   outcomesDetails: "Clients see up to 3× higher video completion rates, enhanced organic impressions across social channels, and increased conversion on landing page video embeds.",
   caseStudyIds: ["bloom", "orbit"],
+  relatedPosts: [
+    {
+      title: "The ROI of High-Impact Graphic Design and Pitch Decks for Tech Startups",
+      slug: "roi-graphic-design-pitch-decks-startups",
+      readTime: "6 min read"
+    },
+    {
+      title: "How Ninety5 Designs, Engineers & Ships High-Converting Digital Products",
+      slug: "how-ninety5-designs-engineers-ships-digital-products",
+      readTime: "8 min read"
+    }
+  ],
   faqs: [
     {
       q: "What types of video do you edit?",

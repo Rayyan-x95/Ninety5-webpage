@@ -28,11 +28,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${project.title} — Case Study | Ninety5 Studio`,
     description: project.description,
+    keywords: [
+      project.category,
+      `${project.title} case study`,
+      "UI UX design case study",
+      "Product engineering case study",
+      ...(project.techStack ?? []),
+    ],
     openGraph: {
       title: `${project.title} — Ninety5 Case Study`,
       description: project.description,
       type: "article",
       url: `https://ninety5.in/work/${project.id}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Case Study | Ninety5 Studio`,
+      description: project.description,
+      creator: "@ninety5studio",
     },
     alternates: {
       canonical: `https://ninety5.in/work/${project.id}`,

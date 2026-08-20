@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/products`,
       lastModified: siteLastUpdated,
       changeFrequency: 'weekly',
-      priority: 0.95,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/services`,
@@ -95,6 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(`${project.year}-06-01T00:00:00Z`),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
+    images: [`${baseUrl}/og-image.jpg`],
   }));
 
   // Dynamic Blog Articles (Priority 0.85)
@@ -103,6 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(`${post.publishDate}T00:00:00Z`),
     changeFrequency: 'monthly' as const,
     priority: 0.85,
+    images: post.coverImage ? [`${baseUrl}${post.coverImage}`] : undefined,
   }));
 
   return [

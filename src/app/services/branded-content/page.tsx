@@ -2,8 +2,26 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Branded Content Creation Suite | Ninety5 Studio",
-  description: "End-to-end branded content engine. High-impact carousels, thought leadership assets, newsletter design, and omni-channel creative.",
+  title: "Branded Content Creation & Social Design Retainers | Ninety5 Studio",
+  description:
+    "Turnkey branded content engine for tech startups and executives: high-density LinkedIn slide carousels, custom newsletter design, and viral visual data storytelling.",
+  keywords: [
+    "Branded content agency India",
+    "LinkedIn carousel design service",
+    "Newsletter design agency Beehiiv Substack",
+    "Visual content retainers tech startups",
+    "B2B social media graphic design",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/services/branded-content",
+  },
+  openGraph: {
+    title: "Branded Content Creation Suite | Ninety5 Studio",
+    description:
+      "End-to-end branded content engine. High-impact carousels, thought leadership assets, newsletter design, and omni-channel creative.",
+    url: "https://ninety5.in/services/branded-content",
+    type: "website",
+  },
 };
 
 const DATA: ServicePageData = {
@@ -36,6 +54,18 @@ const DATA: ServicePageData = {
   timelineDetails: "Delivered as an ongoing monthly subscription or project-based content packages.",
   outcomesDetails: "Clients experience 4× increases in LinkedIn engagement, higher newsletter subscriber retention, and a steady stream of warm inbound inquiries.",
   caseStudyIds: ["atlas", "orbit"],
+  relatedPosts: [
+    {
+      title: "The ROI of High-Impact Graphic Design and Pitch Decks for Tech Startups",
+      slug: "roi-graphic-design-pitch-decks-startups",
+      readTime: "6 min read"
+    },
+    {
+      title: "Brand Identity Designer Chennai: What to Look For in 2026",
+      slug: "brand-identity-designer-chennai-what-to-look-for",
+      readTime: "5 min read"
+    }
+  ],
   faqs: [
     {
       q: "How does the monthly Branded Content retainer work?",
