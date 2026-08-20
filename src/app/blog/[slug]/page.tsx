@@ -27,10 +27,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Ninety5 Studio Blog`,
     description: post.description,
+    alternates: {
+      canonical: `https://ninety5.in/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
+      url: `https://ninety5.in/blog/${post.slug}`,
       publishedTime: post.publishDate,
       authors: [post.author.name],
     },
@@ -231,32 +235,65 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const articleSchema = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": post.title,
-    "description": post.description,
-    "datePublished": post.publishDate,
-    "author": {
-      "@type": "Person",
-      "name": post.author.name,
-      "jobTitle": post.author.role
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ninety5 Studio",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ninety5.in/logo.png"
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `https://ninety5.in/blog/${post.slug}#article`,
+        "headline": post.title,
+        "description": post.description,
+        "datePublished": post.publishDate,
+        "dateModified": post.publishDate,
+        "mainEntityOfPage": `https://ninety5.in/blog/${post.slug}`,
+        "author": {
+          "@type": "Person",
+          "name": post.author.name,
+          "jobTitle": post.author.role,
+          "url": "https://rayyan.qzz.io",
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://ninety5.in/#organization",
+          "name": "Ninety5 Studio",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ninety5.in/logo-header.png"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://ninety5.in/blog/${post.slug}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ninety5.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://ninety5.in/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.title,
+            "item": `https://ninety5.in/blog/${post.slug}`
+          }
+        ]
       }
-    }
+    ]
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Header />
       <main id="main" className={styles.page}>

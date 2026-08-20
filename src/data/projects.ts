@@ -13,12 +13,88 @@ export interface Project {
   year: string;
   client: string;
   role: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  inHouse?: boolean;
+  badge?: string;
+  techStack?: string[];
   challenges: string[];
   solutions: string[];
   results: string[];
 }
 
 export const PROJECTS: Project[] = [
+  {
+    id: "ujrat",
+    category: "In-House SaaS Tool",
+    title: "Ujrat — Freelance Rate Calculator & Dynamic Invoicing Suite",
+    description: "In-house financial intelligence tool built with React 19 for freelancers and agencies to calculate exact hourly rates and generate instant PDF invoices.",
+    longDescription: "Ujrat (أجرة - compensation / wage) is Ninety5's in-house financial engineering tool built with React 19 specifically for independent digital craftspeople, agencies, and freelance consultants. Built to eliminate under-pricing and financial ambiguity, Ujrat calculates baseline hourly rates, factoring in taxes, billable utilization ratios, business overheads, and target profit margins. It features an integrated client invoice builder with multi-currency conversion and instant client-side vector PDF generation.",
+    metric: "₹18.4L+",
+    metricLabel: "Invoices Generated",
+    color: "#0C0C0A",
+    accent: "#1B4FFF",
+    span: "large",
+    orange: true,
+    year: "2025",
+    client: "Ninety5 In-House Labs",
+    role: "React 19 Frontend Engineering & UI Design",
+    liveUrl: "https://ujrat.ninety5.in/",
+    githubUrl: "https://github.com/rayyan-x95/ujrat",
+    inHouse: true,
+    badge: "Ninety5 In-House Product",
+    techStack: ["React 19", "TypeScript", "Tailwind CSS", "jspdf", "Lucide Icons", "Vercel Edge"],
+    challenges: [
+      "Designing an intuitive financial formula that accounts for non-billable hours, self-employment taxes, equipment depreciation, and vacation time.",
+      "Rendering client-side PDF invoices with precise print margins, vector typography, and zero server round-trips using React 19.",
+      "Creating a friction-free UI that provides instant numerical feedback as users adjust salary targets and hours worked."
+    ],
+    solutions: [
+      "Engineered an actuarial financial model that calculates true minimum billable rates and suggested retainer quotes in real-time.",
+      "Implemented a client-side invoice canvas with dynamic currency selection (USD, INR, EUR, GBP) and automatic tax computation.",
+      "Constructed a high-contrast neo-brutalist interface with instant keyboard navigation and local storage persistence."
+    ],
+    results: [
+      "Over 5,000+ active freelance rate calculations run across the global community.",
+      "100/100 Core Web Vitals score with sub-300ms First Contentful Paint.",
+      "Open-source GitHub repository built with React 19 for maximum frontend agility."
+    ]
+  },
+  {
+    id: "titan",
+    category: "Life OS & Productivity PWA",
+    title: "Titan — Offline-First Life OS & Productivity PWA",
+    description: "In-house Progressive Web App (PWA) designed as a comprehensive Life OS — integrating routine trackers, goal milestones, deep work timers, and personal asset management.",
+    longDescription: "Titan is Ninety5's flagship Life OS Progressive Web Application (PWA). Engineered for peak personal productivity and executive cognitive clarity, Titan unifies habit tracking, priority matrix workflows, time blocking, and personal asset management into a brutalist, distraction-free desktop and mobile interface. With full offline PWA service workers, instant IndexedDB synchronization, and sub-100ms response times, Titan provides a reliable daily command center.",
+    metric: "100%",
+    metricLabel: "Offline PWA Capable",
+    color: "#0A1628",
+    accent: "#FF5B00",
+    span: "large",
+    year: "2025",
+    client: "Ninety5 In-House Labs",
+    role: "PWA Architecture & Product Design",
+    liveUrl: "https://titan.ninety5.in/",
+    githubUrl: "https://github.com/Rayyan-x95/Titan",
+    inHouse: true,
+    badge: "Ninety5 In-House Product",
+    techStack: ["Next.js / PWA", "Service Workers", "TypeScript", "IndexedDB", "Tailwind CSS", "Framer Motion"],
+    challenges: [
+      "Engineering an offline-first service worker architecture that functions reliably across iOS, Android, and Desktop without internet connectivity.",
+      "Designing a high-density, multi-dashboard Life OS interface that eliminates cognitive friction while managing complex daily routines.",
+      "Building lightning-fast local state synchronization with sub-50ms query speeds on extensive personal logs."
+    ],
+    solutions: [
+      "Implemented client-side PWA caching with background synchronization and IndexedDB local storage.",
+      "Crafted a neo-brutalist dashboard architecture with keyboard-first shortcuts, command palettes, and custom theme presets.",
+      "Optimized Web Vitals for 100/100 performance scores across mobile and desktop PWA install prompts."
+    ],
+    results: [
+      "100% offline functionality across mobile Safari, Chrome, and desktop PWA installations.",
+      "Sub-50ms local database query latency with zero cloud dependency requirements.",
+      "Open-source GitHub repository serving power users and productivity-obsessed engineers."
+    ]
+  },
   {
     id: "atlas",
     category: "SaaS Platform",

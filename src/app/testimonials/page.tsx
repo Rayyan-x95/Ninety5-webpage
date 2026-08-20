@@ -147,7 +147,7 @@ export default function TestimonialsPage() {
                       <span key={i} className={styles.star}>★</span>
                     ))}
                   </div>
-                  <div className={styles.quoteIcon}>"</div>
+                  <div className={styles.quoteIcon}>&ldquo;</div>
                   <p className={styles.quote}>{t.quote}</p>
                   <div className={styles.author}>
                     <div className={styles.authorName}>{t.author}</div>

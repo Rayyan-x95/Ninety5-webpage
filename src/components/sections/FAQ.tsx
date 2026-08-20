@@ -9,49 +9,49 @@ const FAQS = [
     id: "faq-1",
     question: "What types of projects does Ninety5 take on?",
     answer:
-      "We work on product design, branding, web apps, mobile apps, and design systems — typically for early-stage startups through Series B companies, as well as established brands launching new digital products. Our sweet spot is projects where design and development are both needed.",
+      "Ninety5 designs and builds B2B SaaS dashboards, web applications, mobile apps, and design systems for early-stage startups to Series B companies. Our sweet spot is full-stack projects requiring both tokenized Figma design and Next.js engineering.",
   },
   {
     id: "faq-2",
     question: "How long does a typical project take?",
     answer:
-      "It depends on scope. A landing page or brand identity can take 2–4 weeks. A full product design engagement typically runs 6–12 weeks. Development-only projects are scoped individually. We'll give you a precise timeline after our discovery call.",
+      "Landing pages and brand systems take 2–4 weeks. Full-scale product design or MVP development runs 6–10 weeks. Retainer engagements provide continuous sprint velocity with weekly production releases.",
   },
   {
     id: "faq-3",
     question: "Do you work on a project basis or retainer?",
     answer:
-      "Both. We offer fixed-scope project engagements for defined deliverables, and monthly retainers for ongoing design/development support. Retainer clients get priority scheduling and a dedicated team.",
+      "Both. We offer fixed-scope project engagements for clearly defined milestones and monthly retainers for ongoing feature design, design system maintenance, and frontend engineering support.",
   },
   {
     id: "faq-4",
     question: "What does your design process look like?",
     answer:
-      "We follow five phases: Discover → Define → Design → Develop → Ship & Grow. Every phase involves you — you'll have visibility into our Figma files, staging environments, and progress at all times. No surprises.",
+      "We follow a 5-step methodology: Discover → Strategy → Figma Token Design → Next.js Development → Deploy & Scale. Clients have 24/7 visibility into Figma workspaces, staging previews, and weekly Loom demos.",
   },
   {
     id: "faq-5",
     question: "Do you handle development as well as design?",
     answer:
-      "Yes. We're a full-stack studio — our developers and designers work side by side. We build in Next.js, React Native, and Webflow, and we care just as much about clean code as clean UI.",
+      "Yes. Ninety5 is a full-stack collective. We engineer production-ready web and mobile apps in Next.js, React Native, TypeScript, and Tailwind CSS, guaranteeing sub-second Core Web Vitals and zero layout shift.",
   },
   {
     id: "faq-6",
-    question: "Can you work with our existing design system or codebase?",
+    question: "Can you work with our existing codebase or Figma files?",
     answer:
-      "Absolutely. Many clients come to us with existing foundations they want to improve. We audit what's there, identify gaps, and extend or evolve it rather than starting from scratch.",
+      "Yes. We frequently audit existing codebases and Figma files, refactor inconsistent components into unified token systems, and eliminate front-end technical debt without requiring a full rewrite from scratch.",
   },
   {
     id: "faq-7",
     question: "What is your pricing structure?",
     answer:
-      "Projects are priced based on scope and timeline. We don't publish rates publicly because every engagement is different — book a call and we'll give you a transparent estimate within 24 hours.",
+      "Project engagements range from ₹2.5L to ₹12L ($3,000 to $15,000) depending on screen count and complexity. Retainers are billed monthly with dedicated senior hours. Proposals are delivered within 48 hours.",
   },
   {
     id: "faq-8",
     question: "How do we get started?",
     answer:
-      "Book a free 30-minute strategy call below. We'll discuss your goals, timeline, and budget — and if we're a good fit, we'll send a proposal within 48 hours. No hard sell, just a genuine conversation.",
+      "Submit your project brief at ninety5.in/contact or request a Free 48-Hour UX Audit. We review your goals and schedule a 30-minute discovery call within 24 hours.",
   },
 ];
 

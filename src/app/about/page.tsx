@@ -88,7 +88,7 @@ export default function AboutPage() {
                 fontFamily: "var(--font-body)",
                 fontSize: "1.375rem",
                 fontWeight: 700,
-                color: "var(--color-brand-blue)",
+                color: "var(--color-dark)",
                 maxWidth: "760px",
                 lineHeight: 1.45,
                 marginBottom: "2rem",
@@ -101,7 +101,7 @@ export default function AboutPage() {
               <p style={{ fontFamily: "var(--font-body)", fontSize: "1.125rem", color: "var(--color-dark)", lineHeight: 1.8, fontWeight: 500 }}>
                 Founded by{" "}
                 <a
-                  href="https://rayyan.qzz.io"
+                  href="https://rayyan.ninety5.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "var(--color-brand-blue)", textDecoration: "underline", fontWeight: 800 }}
@@ -121,7 +121,7 @@ export default function AboutPage() {
               <span className={styles.sectionLabelLine} />
               <span className={styles.sectionLabelText}>BY THE NUMBERS</span>
             </div>
-            <h2 className={styles.sectionTitle}>What We've Built</h2>
+            <h2 className={styles.sectionTitle}>What We&apos;ve Built</h2>
             <div className={styles.cardGrid}>
               {CAPABILITIES.map((c) => (
                 <div key={c.title} className={`${styles.card} ${c.alt ? styles.cardAlt : ""}`}>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useReveal } from "@/hooks/useReveal";
 import styles from "./CaseStudies.module.css";
 
@@ -21,9 +22,9 @@ export default function CaseStudies() {
             </div>
             <h2 className={styles.title}>Products We&apos;ve Shipped</h2>
           </div>
-          <a href="/work" className="btn btn-secondary" id="all-work-btn">
+          <Link href="/work" className="btn btn-secondary" id="all-work-btn">
             See All Work ↗
-          </a>
+          </Link>
         </div>
 
         {/* Grid */}
@@ -31,13 +32,18 @@ export default function CaseStudies() {
           {PROJECTS.map((p, i) => (
             <article
               key={p.id}
-              className={`reveal reveal-delay-${(i % 3) + 1} ${styles.card} ${
-                p.span === "large" ? styles.cardLarge : styles.cardSmall
-              } ${p.orange ? styles.cardOrange : ""}`}
+              className={`reveal reveal-delay-${(i % 2) + 1} ${styles.card} ${
+                p.orange ? styles.cardOrange : ""
+              }`}
               id={`project-card-${p.id}`}
             >
               {/* Visual */}
               <div className={styles.cardVisual} style={{ background: p.color }}>
+                {p.inHouse && (
+                  <span className={`${styles.badgePill} ${p.accent === "#1B4FFF" ? styles.badgePillBlue : ""}`}>
+                    {p.badge || "In-House Product"}
+                  </span>
+                )}
                 <div className={styles.mockupContent}>
                   {[...Array(4)].map((_, j) => (
                     <div
@@ -71,13 +77,27 @@ export default function CaseStudies() {
                 <span className={styles.cardCat}>{p.category}</span>
                 <h3 className={styles.cardTitle}>{p.title}</h3>
                 <p className={styles.cardDesc}>{p.description}</p>
-                <a
-                  href={`/work/${p.id}`}
-                  className={styles.cardLink}
-                  id={`view-project-${p.id}`}
-                >
-                  View case study →
-                </a>
+                <div style={{ display: "flex", gap: "1.25rem", alignItems: "center", marginTop: "auto", flexWrap: "wrap" }}>
+                  <a
+                    href={`/work/${p.id}`}
+                    className={styles.cardLink}
+                    id={`view-project-${p.id}`}
+                  >
+                    View case study →
+                  </a>
+                  {p.liveUrl && (
+                    <a
+                      href={p.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.cardLink}
+                      style={{ color: "var(--color-brand-orange)", borderColor: "var(--color-brand-orange)" }}
+                      id={`launch-app-${p.id}`}
+                    >
+                      Launch Live App ↗
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           ))}

@@ -1,11 +1,34 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "@/components/sections/ServicesSection.module.css";
+import ComparisonTable from "@/components/sections/ComparisonTable";
+import AuditBanner from "@/components/sections/AuditBanner";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Services",
-  description: "End-to-end design and engineering solutions for the world's most ambitious brands. Product Design, Brand Identity, and Scalable Web Development.",
+  title: "Full-Stack Design, Pitch Decks & Web Engineering Services | Ninety5 Studio",
+  description:
+    "Explore Ninety5 Studio's comprehensive capabilities: Graphic Design & Investor Pitch Decks, UI/UX Product Design, Video Editing, Design Systems, and Next.js Web Development.",
+  keywords: [
+    "Graphic design services India",
+    "Investor pitch deck design agency",
+    "UI/UX product design studio",
+    "Next.js web development agency",
+    "Video editing and motion graphics studio",
+    "Branded content creation retainers",
+    "Design systems architecture",
+    "Full stack digital agency Chennai",
+  ],
+  alternates: {
+    canonical: "https://ninety5.in/services",
+  },
+  openGraph: {
+    title: "Services & Capabilities | Ninety5 Studio",
+    description:
+      "Graphic Design, Investor Pitch Decks, UI/UX Systems, Video Editing, and High-Performance Next.js Engineering.",
+    url: "https://ninety5.in/services",
+    type: "website",
+  },
 };
 
 const DESIGN_SERVICES = [
@@ -25,208 +48,178 @@ const DESIGN_SERVICES = [
     desc: "Scalable component libraries and tokenised design systems built for growing product teams.",
   },
   {
-    icon: "▦",
+    icon: "◇",
     title: "UX Research",
-    desc: "User interviews, usability testing, and data-driven insights to validate and sharpen your product.",
-  },
-  {
-    icon: "⬭",
-    title: "Motion Design",
-    desc: "Micro-interactions, onboarding animations, and brand motion that add life to digital products.",
+    desc: "User interviews, usability testing, heuristic analysis, and actionable insights to derisk decisions.",
   },
   {
     icon: "◻",
-    title: "Landing Pages",
-    desc: "High-converting marketing pages crafted around your GTM goals and brand voice.",
+    title: "Interaction Design",
+    desc: "Micro-interactions, state transitions, and animation that make products feel responsive and alive.",
   },
   {
-    icon: "🛒",
-    title: "E-commerce Design",
-    desc: "Conversion-optimized shopping experiences built for global brands and scale.",
+    icon: "○",
+    title: "Design Audits",
+    desc: "Comprehensive review of existing products — identifying UX friction, accessibility, and visual debt.",
   },
-  {
-    icon: "✉",
-    title: "Email Design",
-    desc: "High-impact email templates and automated flow designs that drive retention.",
-  }
 ];
 
 const GRAPHIC_SERVICES = [
   {
     icon: "✎",
-    title: "Typographic Posters",
-    desc: "Aggressive, statement-making print and digital posters using heavy display type.",
+    title: "Graphic Design & Collateral",
+    desc: "Aggressive, statement-making pitch decks, whitepapers, print collateral, and marketing visuals.",
   },
   {
-    icon: "📦",
-    title: "Package Design",
-    desc: "Physical product packaging that stands out on shelves with bold, minimalist geometry.",
+    icon: "▷",
+    title: "Video Editing & Motion",
+    desc: "High-retention product walkthroughs, viral short-form clips, kinetic typography, and motion design.",
   },
   {
     icon: "✦",
-    title: "Social Assets",
-    desc: "High-conversion social media kits, templates, and static ad creative for all platforms.",
+    title: "Branded Content Suite",
+    desc: "LinkedIn slide carousels, newsletter design, and omni-channel recurring content creation retainers.",
   },
   {
-    icon: "▧",
-    title: "Brand Collateral",
-    desc: "Business cards, stationary, and physical touchpoints that reinforce your visual identity.",
+    icon: "▲",
+    title: "Investor Pitch Decks",
+    desc: "Visually commanding, data-dense presentations engineered to help founders close funding rounds.",
   },
   {
-    icon: "◈",
-    title: "3D Illustration",
-    desc: "Modern 3D assets and abstract renders that add depth to your digital presence.",
+    icon: "❖",
+    title: "3D & Spatial Visuals",
+    desc: "Product renders, abstract 3D visual assets, and immersive brand graphics that elevate perception.",
   },
   {
-    icon: "♒",
-    title: "Merchandise",
-    desc: "Apparel and limited edition brand merch designed for your most loyal community members.",
-  }
+    icon: "◩",
+    title: "Packaging & Print",
+    desc: "Physical packaging, merchandise, editorial lookbooks, and high-end print collateral.",
+  },
 ];
 
 const DEV_SERVICES = [
   {
     icon: "⟨/⟩",
-    title: "Next.js & React",
-    desc: "Production-grade web apps with server-side rendering, edge delivery, and TypeScript throughout.",
-  },
-  {
-    icon: "◉",
-    title: "Mobile Apps",
-    desc: "Cross-platform React Native apps with native feel, offline support, and seamless UX.",
-  },
-  {
-    icon: "⊞",
-    title: "Webflow Development",
-    desc: "CMS-powered marketing sites and landing pages in Webflow — no-compromise quality.",
-  },
-  {
-    icon: "⬟",
-    title: "API & Backend",
-    desc: "REST and GraphQL APIs, database architecture, and backend integrations built to scale.",
-  },
-  {
-    icon: "▷",
-    title: "Performance Optimisation",
-    desc: "Core Web Vitals, bundle optimisation, and CDN strategy — making your product lightning fast.",
-  },
-  {
-    icon: "⟳",
-    title: "Maintenance & Growth",
-    desc: "Ongoing retainer support, feature development, and technical growth strategy post-launch.",
+    title: "Full-Stack Web Apps",
+    desc: "React, Next.js, Node, and TypeScript applications built for speed, reliability, and scale.",
   },
   {
     icon: "⚡",
-    title: "Headless Commerce",
-    desc: "Shopify Hydrogen and Sanity integrations for the fastest shopping experiences on earth.",
+    title: "Static & Marketing Sites",
+    desc: "Fast, SEO-optimised websites with sub-second page loads and seamless headless CMS integration.",
   },
   {
-    icon: "🔍",
+    icon: "⬢",
+    title: "Mobile Applications",
+    desc: "Cross-platform iOS and Android apps using React Native and Flutter with native performance.",
+  },
+  {
+    icon: "☵",
+    title: "Headless CMS & APIs",
+    desc: "Sanity, Strapi, REST, and GraphQL architectures built for content flexibility and performance.",
+  },
+  {
+    icon: "◫",
+    title: "E-Commerce",
+    desc: "Shopify Hydrogen, custom checkouts, and high-conversion storefronts designed to sell.",
+  },
+  {
+    icon: "⚙",
     title: "Technical SEO",
     desc: "Deep-dive architectural audits and implementation to ensure your product ranks #1.",
-  }
+  },
 ];
 
 export default function ServicesPage() {
   return (
     <>
       <Header />
-      <main id="main" style={{ paddingTop: "140px", paddingBottom: "120px", backgroundColor: "var(--color-white)", minHeight: "100vh" }}>
-        <div className="container" style={{ position: "relative", zIndex: 10 }}>
-          {/* Background Watermark */}
-          <div style={{ position: "absolute", top: "-50px", right: "-100px", fontSize: "15vw", fontWeight: 900, color: "var(--color-bg-alt)", zIndex: -1, opacity: 0.5, pointerEvents: "none", fontFamily: "var(--font-display)", letterSpacing: "-0.05em" }}>
-            SERVICES
-          </div>
-
-          {/* Header Section */}
-          <div style={{ borderBottom: "8px solid var(--color-dark)", paddingBottom: "3rem", marginBottom: "5rem" }}>
-            <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(3.5rem, 10vw, 8rem)", fontWeight: 800, textTransform: "uppercase", color: "var(--color-dark)", lineHeight: 0.85, letterSpacing: "-0.04em", wordBreak: "break-word" }}>
-              Our Services
-            </h1>
-          </div>
-          
-          {/* Intro Section */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "3rem", marginBottom: "6rem" }}>
-            <p style={{ fontFamily: "var(--font-body)", fontSize: "1.5rem", fontWeight: 700, color: "var(--color-brand-blue)", maxWidth: "800px", lineHeight: 1.4 }}>
-              We provide end-to-end design and engineering solutions for the world's most ambitious brands.
-            </p>
-            <div style={{ borderLeft: "8px solid var(--color-brand-orange)", paddingLeft: "2rem" }}>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: "1.25rem", color: "var(--color-dark)", lineHeight: 1.8, maxWidth: "800px", fontWeight: 500 }}>
-                Ninety5 is built on the principle that design and development are inseparable. We do not just make things look good; we make them work perfectly. Our services are divided into two core pillars: High-Fidelity Design and Scalable Engineering.
+      <main id="main" style={{ paddingTop: "100px", backgroundColor: "var(--color-bg)", minHeight: "100vh" }}>
+        
+        {/* Main Services Grid */}
+        <section className={styles.section}>
+          <div className="container">
+            {/* Header */}
+            <div className={styles.header}>
+              <div>
+                <div className={styles.eyebrow}>
+                  <span className={styles.eyebrowLine} />
+                  <span className={styles.eyebrowText}>NINETY5 CAPABILITIES</span>
+                </div>
+                <h1 className={styles.title}>Our Services</h1>
+              </div>
+              <p className={styles.sub}>
+                We combine product strategy, world-class design craft, and engineering precision under one roof. No silos, no handoff friction.
               </p>
             </div>
-            {/* Modern Accent */}
-            <div style={{ position: "absolute", top: "20%", left: "-10%", width: "300px", height: "4px", background: "var(--color-brand-blue)", transform: "rotate(-15deg)", zIndex: -1 }}></div>
-          </div>
 
-          {/* Three-column panels */}
-          <div className={styles.panels} style={{ gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))" }}>
-            {/* Design */}
-            <div className={styles.panel}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTag}>Product Design</span>
-                <h3 className={styles.panelTitle}>Craft that converts</h3>
+            {/* Three-column panels */}
+            <div className={styles.panels}>
+              {/* 01 // Graphic Design & Creative Suite */}
+              <div className={`${styles.panel} ${styles.panelOrange}`}>
+                <div className={styles.panelHeader}>
+                  <span className={`${styles.panelTag} ${styles.panelTagOrange}`}>01 // Graphic Design &amp; Creative</span>
+                  <h2 className={styles.panelTitle}>Visual Impact &amp; Pitch Decks</h2>
+                </div>
+                <div className={styles.serviceList}>
+                  {GRAPHIC_SERVICES.map((s) => (
+                    <a key={s.title} href={s.title.includes("Graphic") || s.title.includes("Pitch") ? "/services/graphic-design" : s.title.includes("Video") ? "/services/video-editing" : s.title.includes("Branded") ? "/services/branded-content" : "/services/brand-identity"} className={styles.serviceItem} style={{ textDecoration: "none" }}>
+                      <span className={styles.serviceIcon} aria-hidden="true">{s.icon}</span>
+                      <div>
+                        <div className={styles.serviceName}>{s.title} ↗</div>
+                        <div className={styles.serviceDesc}>{s.desc}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
-              <div className={styles.serviceList}>
-                {DESIGN_SERVICES.map((s, i) => (
-                  <div key={s.title} className={styles.serviceItem}>
-                    <span className={styles.serviceIcon} aria-hidden="true">{s.icon}</span>
-                    <div>
-                      <div className={styles.serviceName}>{s.title}</div>
-                      <div className={styles.serviceDesc}>{s.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            {/* Graphic Design */}
-            <div className={`${styles.panel} ${styles.panelOrange}`}>
-              <div className={styles.panelHeader}>
-                <span className={`${styles.panelTag} ${styles.panelTagOrange}`}>Graphic Design</span>
-                <h3 className={styles.panelTitle}>Visual Impact</h3>
+              {/* 02 // Product Design */}
+              <div className={styles.panel}>
+                <div className={styles.panelHeader}>
+                  <span className={styles.panelTag}>02 // Product &amp; UX/UI</span>
+                  <h2 className={styles.panelTitle}>Craft That Converts</h2>
+                </div>
+                <div className={styles.serviceList}>
+                  {DESIGN_SERVICES.map((s) => (
+                    <a key={s.title} href={s.title.includes("Product") ? "/services/product-design" : s.title.includes("Brand") ? "/services/brand-identity" : s.title.includes("Systems") ? "/services/design-systems" : "/services/ux-research"} className={styles.serviceItem} style={{ textDecoration: "none" }}>
+                      <span className={styles.serviceIcon} aria-hidden="true">{s.icon}</span>
+                      <div>
+                        <div className={styles.serviceName}>{s.title} ↗</div>
+                        <div className={styles.serviceDesc}>{s.desc}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
-              <div className={styles.serviceList}>
-                {GRAPHIC_SERVICES.map((s, i) => (
-                  <div key={s.title} className={styles.serviceItem}>
-                    <span className={styles.serviceIcon} aria-hidden="true">{s.icon}</span>
-                    <div>
-                      <div className={styles.serviceName}>{s.title}</div>
-                      <div className={styles.serviceDesc}>{s.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            {/* Development */}
-            <div className={`${styles.panel} ${styles.panelDark}`}>
-              <div className={styles.panelHeader}>
-                <span className={`${styles.panelTag} ${styles.panelTagDark}`}>Development</span>
-                <h3 className={`${styles.panelTitle} ${styles.panelTitleDark}`}>Code that scales</h3>
-              </div>
-              <div className={styles.serviceList}>
-                {DEV_SERVICES.map((s, i) => (
-                  <div key={s.title} className={`${styles.serviceItem} ${styles.serviceItemDark}`}>
-                    <span className={styles.serviceIconDark} aria-hidden="true">{s.icon}</span>
-                    <div>
-                      <div className={`${styles.serviceName} ${styles.serviceNameDark}`}>{s.title}</div>
-                      <div className={`${styles.serviceDesc} ${styles.serviceDescDark}`}>{s.desc}</div>
-                    </div>
-                  </div>
-                ))}
+              {/* 03 // Development */}
+              <div className={`${styles.panel} ${styles.panelDark}`}>
+                <div className={styles.panelHeader}>
+                  <span className={`${styles.panelTag} ${styles.panelTagDark}`}>03 // Engineering</span>
+                  <h2 className={`${styles.panelTitle} ${styles.panelTitleDark}`}>Code That Scales</h2>
+                </div>
+                <div className={styles.serviceList}>
+                  {DEV_SERVICES.map((s) => (
+                    <a key={s.title} href={s.title.includes("Mobile") ? "/services/mobile-apps" : "/services/web-development"} className={`${styles.serviceItem} ${styles.serviceItemDark}`} style={{ textDecoration: "none" }}>
+                      <span className={styles.serviceIconDark} aria-hidden="true">{s.icon}</span>
+                      <div>
+                        <div className={`${styles.serviceName} ${styles.serviceNameDark}`}>{s.title} ↗</div>
+                        <div className={`${styles.serviceDesc} ${styles.serviceDescDark}`}>{s.desc}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-          
-          {/* CTA Section */}
-          <div style={{ borderTop: "8px solid var(--color-dark)", paddingTop: "5rem", marginTop: "8rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "3rem" }}>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 5vw, 4rem)", fontWeight: 800, textTransform: "uppercase", color: "var(--color-dark)", lineHeight: 1 }}>Ready to build?</h2>
-            <a href="/contact" className="btn btn-primary" style={{ padding: "1.5rem 3rem", fontSize: "1.25rem", borderRadius: 0, textTransform: "uppercase", fontWeight: 800, textDecoration: "none", boxShadow: "8px 8px 0 var(--color-brand-orange)" }}>
-              Start a Project
-            </a>
-          </div>
-        </div>
+        </section>
+
+        {/* Value Comparison */}
+        <ComparisonTable />
+
+        {/* Audit Lead Magnet */}
+        <AuditBanner />
       </main>
       <Footer />
     </>

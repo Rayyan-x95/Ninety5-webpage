@@ -4,26 +4,24 @@ import { useReveal } from "@/hooks/useReveal";
 import styles from "./ServicesSection.module.css";
 
 const DESIGN_SERVICES = [
-  { icon: "◈", title: "Product Design", desc: "End-to-end UX/UI — discovery, wireframes, and pixel-perfect interfaces." },
-  { icon: "⬡", title: "Brand Identity", desc: "Logos, visual systems, and identities that make your brand unmistakable." },
-  { icon: "◎", title: "Design Systems", desc: "Scalable component libraries and token-driven systems for growing teams." },
-  { icon: "▦", title: "UX Research", desc: "User interviews and data-driven insights to sharpen your product." },
+  { icon: "◈", title: "Product Design", desc: "End-to-end UX/UI — discovery, wireframes, and pixel-perfect interfaces.", link: "/services/product-design" },
+  { icon: "⬡", title: "Brand Identity", desc: "Logos, visual systems, and identities that make your brand unmistakable.", link: "/services/brand-identity" },
+  { icon: "◎", title: "Design Systems", desc: "Scalable component libraries and token-driven systems for growing teams.", link: "/services/design-systems" },
+  { icon: "▦", title: "UX Research", desc: "User interviews and data-driven insights to sharpen your product.", link: "/services/ux-research" },
 ];
 
 const GRAPHIC_SERVICES = [
-  { icon: "✎", title: "Graphic Design", desc: "Aggressive, statement-making digital and print assets using bold type." },
-  { icon: "📦", title: "Package Design", desc: "Physical packaging that stands out with bold, minimalist geometry." },
-  { icon: "✦", title: "Social Assets", desc: "High-conversion social media kits and ad creative for all platforms." },
-  { icon: "◈", title: "3D Illustration", desc: "Modern 3D assets and abstract renders that add depth to your presence." },
+  { icon: "✎", title: "Graphic Design", desc: "Aggressive, statement-making digital and print assets with bold typography.", link: "/services/graphic-design" },
+  { icon: "▷", title: "Video Editing & Motion", desc: "High-retention product walkthroughs, viral shorts, and kinetic typography.", link: "/services/video-editing" },
+  { icon: "✦", title: "Branded Content Suite", desc: "LinkedIn carousels, newsletter design, and omni-channel creative retainers.", link: "/services/branded-content" },
+  { icon: "▲", title: "Investor Pitch Decks", desc: "High-stakes fundraising presentations engineered to close capital.", link: "/services/graphic-design" },
 ];
 
 const DEV_SERVICES = [
-  { icon: "⟨/⟩", title: "Next.js & React", desc: "Production web apps with SSR, edge delivery, and TypeScript." },
-  { icon: "◉", title: "Mobile Apps", desc: "Cross-platform React Native apps with offline support and native feel." },
-  { icon: "⊞", title: "Webflow", desc: "CMS-powered marketing sites — no-compromise quality." },
-  { icon: "⬟", title: "API & Backend", desc: "REST and GraphQL APIs and database architecture built to scale." },
-  { icon: "▷", title: "Performance", desc: "Core Web Vitals, bundle optimisation, and CDN strategy." },
-  { icon: "⟳", title: "Maintenance", desc: "Ongoing retainer support and technical growth strategy post-launch." },
+  { icon: "⟨/⟩", title: "Next.js & React", desc: "Production web apps with SSR, edge delivery, and TypeScript.", link: "/services/web-development" },
+  { icon: "◉", title: "Mobile Apps", desc: "Cross-platform React Native apps with offline support and native feel.", link: "/services/mobile-apps" },
+  { icon: "⊞", title: "Webflow & Headless", desc: "CMS-powered marketing sites with sub-second page speeds.", link: "/services/web-development" },
+  { icon: "⬟", title: "API & Backend", desc: "REST and GraphQL APIs and database architecture built to scale.", link: "/services/web-development" },
 ];
 
 export default function ServicesSection() {
@@ -49,41 +47,42 @@ export default function ServicesSection() {
         </div>
 
         {/* Three-column panels */}
+        {/* Three-column panels with Graphic Design as primary column */}
         <div className={`reveal reveal-delay-1 ${styles.panels}`}>
-          {/* Product Design */}
-          <div className={styles.panel}>
+          {/* Graphic Design & Creative Suite */}
+          <div className={`${styles.panel} ${styles.panelOrange}`}>
             <div className={styles.panelHeader}>
-              <span className={styles.panelTag}>Product</span>
-              <h3 className={styles.panelTitle}>Craft that converts</h3>
+              <span className={styles.panelTag}>01 // Creative Suite</span>
+              <h3 className={styles.panelTitle}>Graphic Design &amp; Video</h3>
             </div>
             <div className={styles.serviceList}>
-              {DESIGN_SERVICES.map((s, i) => (
-                <div key={s.title} className={styles.serviceItem} id={`service-design-${i}`}>
+              {GRAPHIC_SERVICES.map((s, i) => (
+                <a key={s.title} href={s.link} className={styles.serviceItem} id={`service-graphic-${i}`} style={{ textDecoration: "none" }}>
                   <span className={styles.serviceIcon} aria-hidden="true">{s.icon}</span>
                   <div>
-                    <div className={styles.serviceName}>{s.title}</div>
+                    <div className={styles.serviceName}>{s.title} ↗</div>
                     <div className={styles.serviceDesc}>{s.desc}</div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
 
-          {/* Graphic Design */}
-          <div className={`${styles.panel} ${styles.panelOrange}`}>
+          {/* Product Design */}
+          <div className={styles.panel}>
             <div className={styles.panelHeader}>
-              <span className={styles.panelTag}>Visuals</span>
-              <h3 className={styles.panelTitle}>Design that hits</h3>
+              <span className={styles.panelTag}>02 // Product Design</span>
+              <h3 className={styles.panelTitle}>Craft that converts</h3>
             </div>
             <div className={styles.serviceList}>
-              {GRAPHIC_SERVICES.map((s, i) => (
-                <div key={s.title} className={styles.serviceItem} id={`service-graphic-${i}`}>
+              {DESIGN_SERVICES.map((s, i) => (
+                <a key={s.title} href={s.link} className={styles.serviceItem} id={`service-design-${i}`} style={{ textDecoration: "none" }}>
                   <span className={styles.serviceIcon} aria-hidden="true">{s.icon}</span>
                   <div>
-                    <div className={styles.serviceName}>{s.title}</div>
+                    <div className={styles.serviceName}>{s.title} ↗</div>
                     <div className={styles.serviceDesc}>{s.desc}</div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -91,18 +90,18 @@ export default function ServicesSection() {
           {/* Development */}
           <div className={`${styles.panel} ${styles.panelDark}`}>
             <div className={styles.panelHeader}>
-              <span className={styles.panelTag}>Engineering</span>
+              <span className={styles.panelTag}>03 // Engineering</span>
               <h3 className={styles.panelTitle}>Code that scales</h3>
             </div>
             <div className={styles.serviceList}>
               {DEV_SERVICES.map((s, i) => (
-                <div key={s.title} className={`${styles.serviceItem}`} id={`service-dev-${i}`}>
+                <a key={s.title} href={s.link} className={`${styles.serviceItem}`} id={`service-dev-${i}`} style={{ textDecoration: "none" }}>
                   <span className={styles.serviceIcon} aria-hidden="true">{s.icon}</span>
                   <div>
-                    <div className={styles.serviceName}>{s.title}</div>
+                    <div className={styles.serviceName}>{s.title} ↗</div>
                     <div className={styles.serviceDesc}>{s.desc}</div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>

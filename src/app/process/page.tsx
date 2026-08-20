@@ -91,7 +91,7 @@ export default function ProcessPage() {
                 fontFamily: "var(--font-body)",
                 fontSize: "1.375rem",
                 fontWeight: 700,
-                color: "var(--color-brand-blue)",
+                color: "var(--color-dark)",
                 maxWidth: "760px",
                 lineHeight: 1.45,
                 marginBottom: "2rem",
@@ -160,7 +160,7 @@ export default function ProcessPage() {
             <div className={styles.ctaStrip}>
               <div>
                 <div className={styles.ctaStripTitle}>Ready to start?</div>
-                <p className={styles.ctaStripSub}>Let's build something exceptional together.</p>
+                <p className={styles.ctaStripSub}>Let&apos;s build something exceptional together.</p>
               </div>
               <a
                 href="/contact"

@@ -46,8 +46,8 @@ html {
   --color-accent-glow:  rgba(27,79,255,0.20);
 
   /* Typography */
-  --font-display: 'Syne', system-ui, sans-serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: var(--font-syne), 'Syne', system-ui, sans-serif;
+  --font-body:    var(--font-inter), 'Inter', system-ui, sans-serif;
 
   /* Font Sizes */
   --text-xs:   0.75rem;     /* 12px */
@@ -346,6 +346,7 @@ button {
 /* ── Glass Card ────────────────────────────────────────── */
 .glass-card {
   background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: var(--shadow-glass);

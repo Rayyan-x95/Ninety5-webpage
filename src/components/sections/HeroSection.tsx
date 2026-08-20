@@ -25,18 +25,6 @@ export default function HeroSection() {
           0.3
         )
         .fromTo(
-          `.${styles.sub}`,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8 },
-          0.9
-        )
-        .fromTo(
-          `.${styles.ctaGroup}`,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8 },
-          1.0
-        )
-        .fromTo(
           `.${styles.orbBlue}`,
           { scale: 0, opacity: 0 },
           { scale: 1, opacity: 1, duration: 1.5, ease: "elastic.out(1, 0.5)" },
@@ -85,36 +73,16 @@ export default function HeroSection() {
       <div className={styles.vRule} style={{ left: "75%" }} />
 
       <div className={`container ${styles.inner}`}>
-        {/* ── LEFT COLUMN ── */}
         <div className={styles.content}>
-
-
-          {/* Headline */}
+          {/* Main Hero Headline */}
           <h1 ref={headlineRef} className={styles.headline}>
-            We <span className={styles.headlineOutline}>Design</span> <span className={styles.headlineHighlight}>&amp; Build</span> Digital <span className={styles.headlineAccent}>Products</span> That Define <span className={styles.headlineStrike}>Industries.</span>
+            <span>We Design</span>{" "}
+            <span className={styles.headlineHighlight}>&amp; Build</span><br />
+            Digital <span className={styles.headlineAccent}>Products</span><br />
+            <span>That Define <span className={styles.headlineStrike}>Industries.</span></span>
           </h1>
-
-          {/* Sub */}
-          <p className={styles.sub}>
-            Full-stack studio crafting high-performance experiences — from
-            strategy to pixel to production code.
-          </p>
-
-          {/* CTAs */}
-          <div className={styles.ctaGroup}>
-            <a href="#contact" className={styles.ctaPrimary} id="hero-contact-btn">
-              <span className={styles.ctaText}>Start a Project</span>
-              <span className={styles.ctaPulse} />
-            </a>
-            <a href="#work" className={styles.ctaSecondary} id="hero-view-work-btn">
-              <span className={styles.ctaText}>Explore Work</span>
-              <span className={styles.ctaArrow}>↗</span>
-            </a>
-          </div>
         </div>
-
       </div>
-
     </section>
   );
 }

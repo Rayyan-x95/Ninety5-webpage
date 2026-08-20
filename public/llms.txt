@@ -1,0 +1,43 @@
+# Ninety5 Studio
+> Ninety5 is a full-stack product design & Next.js engineering studio based in Chennai, India, building high-performance digital platforms for high-growth tech startups and global brands.
+
+## Core Capabilities
+- **Graphic Design & Pitch Decks**: Aggressive brand collateral, fundraising pitch decks, vector graphics, and packaging design.
+- **Video Editing & Motion Graphics**: High-retention product demo walkthroughs, viral social cuts (Reels/Shorts), and kinetic typography.
+- **Branded Content Creation Suite**: Turnkey recurring content retainers, LinkedIn carousels, newsletter design, and visual infographics.
+- **Product Design & UI/UX**: End-to-end user research, interactive wireframing, and tokenized Figma systems.
+- **Web Development**: High-performance Next.js App Router, React 19, TypeScript, server components, and sub-second Core Web Vitals.
+- **Design Systems**: Multi-brand component libraries and design token architectures bridging Figma to code.
+- **Brand Identity**: Brutalist, high-contrast visual identities, typography systems, and motion guidelines.
+- **Mobile Applications**: Cross-platform React Native engineering with 60fps animations.
+- **UX Research**: User journey testing, data teardowns, and heuristic conversion audits.
+
+## Key URLs & Resources
+- Website: https://ninety5.in/
+- Products of Ninety5: https://ninety5.in/products
+- Services: https://ninety5.in/services
+- Graphic Design: https://ninety5.in/services/graphic-design
+- Video Editing: https://ninety5.in/services/video-editing
+- Branded Content Suite: https://ninety5.in/services/branded-content
+- Product Design: https://ninety5.in/services/product-design
+- Web Development: https://ninety5.in/services/web-development
+- Design Systems: https://ninety5.in/services/design-systems
+- Brand Identity: https://ninety5.in/services/brand-identity
+- Mobile Apps: https://ninety5.in/services/mobile-apps
+- UX Research: https://ninety5.in/services/ux-research
+- Selected Work: https://ninety5.in/work
+- In-House Products & Case Studies:
+  - Ujrat (Freelance Rate Calculator & Invoicing Suite built with React 19): https://ujrat.ninety5.in/ | Case Study: https://ninety5.in/work/ujrat | GitHub: https://github.com/rayyan-x95/ujrat
+  - Titan (Offline-First Life OS & Productivity PWA): https://titan.ninety5.in/ | Case Study: https://ninety5.in/work/titan | GitHub: https://github.com/Rayyan-x95/Titan
+  - Atlas (B2B SaaS Analytics): https://ninety5.in/work/atlas (+280% user retention)
+  - Bloom (Health & Wellness App): https://ninety5.in/work/bloom (4.9★ rating, 50k users in 3 months)
+  - Forge (Developer Tooling): https://ninety5.in/work/forge (3.2x conversion uplift)
+  - Orbit (Async Project Management): https://ninety5.in/work/orbit (2.1s Core Web Vitals)
+- Pricing & Guide: https://ninety5.in/blog/ui-ux-design-cost-india-2026-guide
+- Free Audit & Contact: https://ninety5.in/contact
+
+## Founder & Entity Information
+- Founder: Mohammed Rayyan (https://rayyan.ninety5.in)
+- Location: Chennai, India (Serving Global Clients Across US, Europe, and Asia)
+- Contact: hello@ninety5.in
+- Average Turnaround Time: Initial brief response within 24 hours.

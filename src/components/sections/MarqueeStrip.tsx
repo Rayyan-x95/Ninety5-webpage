@@ -3,16 +3,16 @@
 import styles from "./MarqueeStrip.module.css";
 
 const ITEMS = [
-  "UI/UX Design",
-  "Product Strategy",
-  "Brand Identity",
-  "React & Next.js",
-  "Mobile Apps",
+  "Graphic Design",
+  "Investor Pitch Decks",
+  "Product UI/UX",
+  "Video Editing & Motion",
+  "Branded Content Suite",
+  "In-House SaaS Products",
   "Design Systems",
-  "Motion Design",
-  "Webflow",
-  "Performance",
-  "Research",
+  "Next.js Engineering",
+  "Brand Identity",
+  "Conversion Rate Optimization",
 ];
 
 export default function MarqueeStrip() {

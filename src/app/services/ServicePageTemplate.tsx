@@ -4,6 +4,8 @@ import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { PROJECTS } from "@/data/projects";
+import ComparisonTable from "@/components/sections/ComparisonTable";
+import AuditBanner from "@/components/sections/AuditBanner";
 import styles from "./ServicePage.module.css";
 
 export interface ServicePageData {
@@ -39,25 +41,69 @@ export default function ServicePageTemplate({ data }: Props) {
   // Get matching case studies from PROJECTS
   const caseStudies = PROJECTS.filter((p) => data.caseStudyIds.includes(p.id));
 
-  // Build FAQ JSON-LD Schema
-  const faqSchema = {
+  // Build Multi-type JSON-LD Schema (Service, FAQPage, BreadcrumbList)
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": data.faqs.map((faq) => ({
-      "@type": "Question",
-      "name": faq.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.a,
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `https://ninety5.in/services/${data.slug}#service`,
+        "name": `${data.title} Services`,
+        "provider": {
+          "@type": "Organization",
+          "@id": "https://ninety5.in/#organization",
+          "name": "Ninety5 Studio",
+          "url": "https://ninety5.in"
+        },
+        "serviceType": data.title,
+        "description": data.lead,
+        "areaServed": "Worldwide",
+        "termsOfService": "https://ninety5.in/legal/terms-of-service"
       },
-    })),
+      {
+        "@type": "FAQPage",
+        "@id": `https://ninety5.in/services/${data.slug}#faq`,
+        "mainEntity": data.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://ninety5.in/services/${data.slug}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ninety5.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://ninety5.in/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": data.title,
+            "item": `https://ninety5.in/services/${data.slug}`
+          }
+        ]
+      }
+    ]
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Header />
       <main className={styles.page} id="main">
@@ -72,6 +118,7 @@ export default function ServicePageTemplate({ data }: Props) {
               <h1 className={styles.title}>{data.title}</h1>
             </div>
             <p className={styles.lead}>{data.lead}</p>
+            
             <div className={styles.body}>
               <p className={styles.bodyText}>{data.bodyText}</p>
             </div>
@@ -227,6 +274,12 @@ export default function ServicePageTemplate({ data }: Props) {
             </div>
           </section>
         )}
+
+        {/* COMPARISON & VALUE PROP */}
+        <ComparisonTable />
+
+        {/* AUDIT LEAD MAGNET */}
+        <AuditBanner />
 
         {/* FAQs */}
         <section className={styles.faqSection}>

@@ -9,12 +9,16 @@ const FOOTER_LINKS = {
   Services: [
     { label: "Product Design", href: "/services/product-design" },
     { label: "Brand Identity", href: "/services/brand-identity" },
+    { label: "Graphic Design", href: "/services/graphic-design" },
+    { label: "Video Editing", href: "/services/video-editing" },
+    { label: "Branded Content", href: "/services/branded-content" },
     { label: "Design Systems", href: "/services/design-systems" },
     { label: "Web Development", href: "/services/web-development" },
     { label: "Mobile Apps", href: "/services/mobile-apps" },
     { label: "UX Research", href: "/services/ux-research" },
   ],
   Company: [
+    { label: "Products of Ninety5", href: "/products" },
     { label: "About us", href: "/about" },
     { label: "Our process", href: "/process" },
     { label: "Selected work", href: "/work" },
@@ -106,7 +110,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Ninety5 Studio. All rights reserved.
           </span>
           <span className={styles.copyright} style={{ textTransform: "none" }}>
-            Ninety5 Studio • Chennai, India • hello@ninety5.in • +91 95000 95000
+            Ninety5 Studio • Chennai, India • hello@ninety5.in • +91 63696 12671
           </span>
         </div>
       </div>

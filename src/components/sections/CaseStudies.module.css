@@ -54,8 +54,8 @@
 /* ── GRID ── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .card {
@@ -64,7 +64,7 @@
   box-shadow: 8px 8px 0 var(--color-dark);
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
   overflow: hidden;
 }
 
@@ -77,8 +77,26 @@
   box-shadow: 12px 12px 0 var(--color-brand-orange);
 }
 
-.cardLarge { grid-column: span 7; }
-.cardSmall { grid-column: span 5; }
+.badgePill {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--color-brand-orange);
+  color: var(--color-white);
+  border: 2px solid var(--color-dark);
+  font-family: monospace;
+  font-size: 0.65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  box-shadow: 3px 3px 0 var(--color-dark);
+  z-index: 2;
+}
+
+.badgePillBlue {
+  background: var(--color-brand-blue);
+}
 
 /* ── CARD VISUAL ── */
 .cardVisual {
@@ -209,13 +227,11 @@
 .cardLink:hover { gap: 0.875rem; }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .cardLarge { grid-column: span 12; }
-  .cardSmall { grid-column: span 6; }
-}
-
-@media (max-width: 768px) {
-  .cardSmall { grid-column: span 12; }
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
   .header { flex-direction: column; align-items: flex-start; }
   .section { padding: 3.5rem 0; }
   .card {

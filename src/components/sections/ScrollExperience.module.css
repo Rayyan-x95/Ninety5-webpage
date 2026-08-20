@@ -1,0 +1,740 @@
+/* ScrollExperience.module.css — Interactive Systematic Engineering Pipeline */
+
+.section {
+  position: relative;
+  background: var(--color-bg);
+  border-top: 4px solid var(--color-dark);
+  border-bottom: 4px solid var(--color-dark);
+  overflow: hidden;
+  padding: 6rem 0 8rem 0;
+}
+
+.intro {
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.eyebrowLine {
+  width: 2.5rem;
+  height: 3px;
+  background: var(--color-brand-orange);
+}
+
+.eyebrowText {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+/* ── PROGRESS BAR ── */
+.progressTrack {
+  width: 100%;
+  height: 6px;
+  background: rgba(12, 12, 10, 0.08);
+  border: 2px solid var(--color-dark);
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-brand-orange), var(--color-brand-blue));
+  width: 25%;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── PINNED CONTAINER ── */
+.pinnedContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3.5rem;
+  align-items: stretch;
+  min-height: 640px;
+  background: var(--color-white);
+  border: 4px solid var(--color-dark);
+  box-shadow: 12px 12px 0 var(--color-dark);
+  padding: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .pinnedContainer {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+}
+
+/* ── STAGE TRACKER (LEFT COL) ── */
+.trackerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.stageCard {
+  position: relative;
+  padding: 1.5rem;
+  background: var(--color-bg);
+  border: 3px solid var(--color-dark);
+  box-shadow: 4px 4px 0 var(--color-dark);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.stageCard:hover {
+  transform: translateX(4px);
+  box-shadow: 6px 6px 0 var(--color-dark);
+}
+
+.stageCardActive {
+  background: var(--color-white);
+  border-color: var(--color-brand-blue);
+  box-shadow: 8px 8px 0 var(--color-brand-blue);
+  transform: translateX(10px);
+}
+
+.stageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.stageNumber {
+  font-family: monospace;
+  font-size: 0.8125rem;
+  font-weight: 900;
+  color: var(--color-brand-orange);
+  letter-spacing: 0.1em;
+}
+
+.stageTag {
+  font-family: monospace;
+  font-size: 0.6875rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stageTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.stageDesc {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.activeIndicatorLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-brand-blue);
+}
+
+/* ── INTERACTIVE CANVAS (RIGHT COL) ── */
+.canvasCol {
+  position: relative;
+  min-height: 520px;
+  background: var(--color-dark);
+  border: 4px solid var(--color-dark);
+  box-shadow: 8px 8px 0 var(--color-brand-orange);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.canvasTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 1.25rem;
+  background: #141412;
+  border-bottom: 2px solid #282824;
+}
+
+.windowControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.controlDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #444;
+}
+
+.controlDot:nth-child(1) { background: #FF5B00; }
+.controlDot:nth-child(2) { background: #FFB800; }
+.controlDot:nth-child(3) { background: #34D399; }
+
+.windowTitle {
+  font-family: monospace;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #777;
+  margin-left: 0.5rem;
+}
+
+.canvasTelemetry {
+  font-family: monospace;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #34D399;
+  letter-spacing: 0.08em;
+}
+
+.canvasViewport {
+  position: relative;
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* ── STAGE VISUAL LAYERS ── */
+.stageLayer {
+  position: absolute;
+  inset: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.layerActive {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+
+/* ── STAGE 1: Blueprint Architecture ── */
+.blueprintWrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  padding: 1rem;
+  border: 1px dashed #444;
+  overflow: hidden;
+}
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-brand-blue), transparent);
+  box-shadow: 0 0 8px var(--color-brand-blue);
+  animation: scan 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(380px); opacity: 0; }
+}
+
+.blueprintCoords {
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 0.6875rem;
+  color: #666;
+  font-weight: 700;
+  border-bottom: 1px dashed #333;
+  padding-bottom: 0.5rem;
+}
+
+.pulseLive {
+  color: #34D399;
+  animation: pulse-dot 1.5s infinite;
+}
+
+.wireframeGrid {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  gap: 1rem;
+  flex: 1;
+}
+
+.wireframeSidebar {
+  border: 1px dashed #555;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.nodeTag {
+  font-family: monospace;
+  font-size: 0.5625rem;
+  font-weight: 800;
+  color: var(--color-brand-orange);
+}
+
+.wireframeBlock {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+
+.wireframeBadge {
+  margin-top: auto;
+  font-family: monospace;
+  font-size: 0.5625rem;
+  color: #34D399;
+  background: rgba(52, 211, 153, 0.1);
+  padding: 0.2rem 0.4rem;
+  text-align: center;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.wireframeContent {
+  border: 1px dashed #555;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.wireframeHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wireframePill {
+  font-family: monospace;
+  font-size: 0.5625rem;
+  color: var(--color-brand-blue);
+  background: rgba(27, 79, 255, 0.15);
+  border: 1px solid rgba(27, 79, 255, 0.3);
+  padding: 0.15rem 0.5rem;
+}
+
+.wireframeCardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.wireframeCard {
+  border: 1px dashed #666;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.wireframeGraphSim {
+  margin-top: auto;
+  height: 32px;
+  background: linear-gradient(180deg, rgba(27, 79, 255, 0.2), transparent);
+  border-bottom: 2px solid var(--color-brand-blue);
+}
+
+.wireframeGraphSimAlt {
+  margin-top: auto;
+  height: 32px;
+  background: linear-gradient(180deg, rgba(255, 91, 0, 0.2), transparent);
+  border-bottom: 2px solid var(--color-brand-orange);
+}
+
+.blueprintFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: monospace;
+  font-size: 0.625rem;
+  color: #666;
+  border-top: 1px dashed #333;
+  padding-top: 0.5rem;
+}
+
+.flowStep { color: #888; }
+.flowArrow { color: #555; }
+.flowStepActive { color: #FFF; font-weight: 800; }
+
+/* ── STAGE 2: Tokens Lab ── */
+.tokensLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.tokenSwatches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.tokenSwatch {
+  position: relative;
+  padding: 1.25rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 4px 4px 0 #000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tokenSwatch:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.tokenHex {
+  font-family: monospace;
+  font-size: 0.8125rem;
+  font-weight: 900;
+  color: #FFF;
+}
+
+.tokenName {
+  font-family: monospace;
+  font-size: 0.625rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tokenContrast {
+  font-family: monospace;
+  font-size: 0.5625rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.5rem;
+}
+
+.copiedBadge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #34D399;
+  color: #000;
+  font-family: monospace;
+  font-size: 0.5625rem;
+  font-weight: 900;
+  padding: 0.1rem 0.3rem;
+}
+
+.typographyTokens {
+  background: #181816;
+  border: 1px solid #333;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.specimenRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #282824;
+  padding-bottom: 0.5rem;
+}
+
+.specimenRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.specimenLabel {
+  font-family: monospace;
+  font-size: 0.625rem;
+  color: var(--color-brand-orange);
+  font-weight: 800;
+}
+
+.specimenValue {
+  font-size: 0.875rem;
+  color: #EEE;
+  font-weight: 700;
+}
+
+.tokenSyncStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: monospace;
+  font-size: 0.625rem;
+  color: #34D399;
+  background: rgba(52, 211, 153, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  padding: 0.5rem 0.75rem;
+}
+
+.syncDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34D399;
+  box-shadow: 0 0 6px #34D399;
+}
+
+/* ── STAGE 3: React 19 RSC Terminal ── */
+.ideContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: #0C0C0A;
+  border: 1px solid #333;
+}
+
+.ideTabs {
+  display: flex;
+  background: #181816;
+  border-bottom: 1px solid #333;
+}
+
+.ideTab {
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  font-size: 0.6875rem;
+  color: #888;
+  background: none;
+  border-right: 1px solid #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ideTab:hover {
+  background: #222;
+  color: #FFF;
+}
+
+.ideTabActive {
+  background: #0C0C0A;
+  color: #FFF;
+  font-weight: 700;
+  border-top: 2px solid var(--color-brand-blue);
+}
+
+.tabBadge {
+  font-size: 0.5rem;
+  padding: 0.1rem 0.3rem;
+  background: #333;
+  color: #AAA;
+  border-radius: 2px;
+}
+
+.codeTerminal {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: #E2E8F0;
+  overflow: auto;
+  white-space: pre;
+}
+
+.ideFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0.875rem;
+  background: #141412;
+  border-top: 1px solid #282824;
+  font-family: monospace;
+  font-size: 0.5625rem;
+  color: #666;
+  font-weight: 700;
+}
+
+/* ── STAGE 4: Gauge Deck ── */
+.vitalsDeck {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.vitalBox {
+  background: #141412;
+  border: 2px solid #282824;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.gaugeRing {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.gaugeSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gaugeBg {
+  fill: none;
+  stroke: #282824;
+  stroke-width: 8;
+}
+
+.gaugeProgress {
+  fill: none;
+  stroke: #34D399;
+  stroke-width: 8;
+  stroke-dasharray: 264;
+  stroke-dashoffset: 0;
+  stroke-linecap: square;
+  filter: drop-shadow(0 0 6px rgba(52, 211, 153, 0.6));
+}
+
+.gaugeProgressBlue {
+  fill: none;
+  stroke: var(--color-brand-blue);
+  stroke-width: 8;
+  stroke-dasharray: 264;
+  stroke-dashoffset: 20;
+  stroke-linecap: square;
+  filter: drop-shadow(0 0 6px rgba(27, 79, 255, 0.6));
+}
+
+.gaugeScore {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: #34D399;
+}
+
+.vitalLabel {
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #FFF;
+  letter-spacing: 0.05em;
+}
+
+.vitalSub {
+  font-family: monospace;
+  font-size: 0.5625rem;
+  color: #777;
+  margin-top: 0.25rem;
+}
+
+.vitalsPillRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.vitalMetricPill {
+  background: #181816;
+  border: 1px solid #333;
+  padding: 0.4rem 0.5rem;
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.625rem;
+}
+
+.metricKey { color: #888; margin-right: 0.25rem; }
+.metricVal { color: #34D399; font-weight: 800; }
+
+.liveBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid #34D399;
+  color: #34D399;
+  font-family: monospace;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+}
+
+.pulseDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34D399;
+  box-shadow: 0 0 6px #34D399;
+  animation: pulse-dot 2s infinite;
+}

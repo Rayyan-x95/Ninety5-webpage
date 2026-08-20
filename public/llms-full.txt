@@ -1,0 +1,108 @@
+# Ninety5 Studio — Comprehensive Knowledge & Service Manifest
+> Ninety5 is a full-stack product design & Next.js engineering studio based in Chennai, India, delivering brutalist, high-performance digital products for high-growth startups and global enterprises.
+
+## Entity Overview
+- Official Name: Ninety5 Studio
+- Legal Identifier: Ninety5 Studio
+- Founder: Mohammed Rayyan (Founder & Lead Designer, https://rayyan.ninety5.in)
+- Headquarters: Chennai, Tamil Nadu, India
+- Delivery Model: Global Remote Collective (Clients across USA, Europe, UK, Singapore, India)
+- Core URL: https://ninety5.in
+- Inquiries: hello@ninety5.in
+
+## Core Specializations & Services
+
+### 1. Graphic Design & Investor Pitch Decks
+- Focus: Aggressive visual collateral, fundraising pitch decks, packaging design, and omni-channel marketing assets.
+- Deliverables: Investor deck bundles (Figma, PDF, PPT), multi-ratio campaign visuals, print-ready CMYK files, and 3D spatial renders.
+- URL: https://ninety5.in/services/graphic-design
+
+### 2. Video Editing & Motion Graphics
+- Focus: High-retention product walkthroughs, viral short-form clips (Reels, TikTok, Shorts), kinetic typography, and custom sound design.
+- Deliverables: 4K master renders, multi-format cutdowns (16:9, 9:16, 1:1), animated subtitles, and motion graphics packages.
+- URL: https://ninety5.in/services/video-editing
+
+### 3. Branded Content Creation Suite
+- Focus: Turnkey monthly content creation retainers for tech founders and marketing teams.
+- Deliverables: LinkedIn slide carousels, newsletter design (Substack/Beehiiv), visual data infographics, and weekly content bundles.
+- URL: https://ninety5.in/services/branded-content
+
+### 4. Product Design (UI/UX)
+- Focus: B2B SaaS dashboards, consumer applications, complex administrative portals, and AI interfaces.
+- Deliverables: User research briefs, wireframe prototypes, tokenized Figma component libraries, developer handoff specs, and usability testing reports.
+- Process: Discovery → Information Architecture → Hi-Fi Design → User Testing.
+- URL: https://ninety5.in/services/product-design
+
+### 2. Next.js Web Development & Frontend Engineering
+- Focus: Production web apps, headless e-commerce, server-rendered applications, high-performance marketing engines.
+- Stack: Next.js App Router, React 19, TypeScript, Tailwind CSS, GSAP, Lenis Smooth Scroll.
+- Standards: 100/100 Core Web Vitals, sub-second TTFB, full accessibility (WCAG AA), zero layout shift (CLS < 0.01).
+- URL: https://ninety5.in/services/web-development
+
+### 3. Design Systems Architecture
+- Focus: Reusable token-driven component systems bridging Figma variables to code tokens (JSON/CSS/TypeScript).
+- Outcome: 3x faster engineering velocity, elimination of design debt, multi-brand consistency.
+- URL: https://ninety5.in/services/design-systems
+
+### 4. Brand Identity & Visual Systems
+- Focus: Unapologetic, brutalist visual identities, monospaced typography pairings, high-contrast dark/light palette systems.
+- URL: https://ninety5.in/services/brand-identity
+
+### 5. Cross-Platform Mobile Applications
+- Focus: React Native engineering with 60fps animations, offline-first sync, and native iOS/Android bridge integrations.
+- URL: https://ninety5.in/services/mobile-apps
+
+### 6. UX Research & Conversion Audits
+- Focus: Quantitative drop-off analytics, user interviews, heuristic usability testing, and conversion rate optimization (CRO).
+- URL: https://ninety5.in/services/ux-research
+
+## In-House Products & Case Studies (Ninety5 Labs)
+
+### Ujrat (Freelance Rate Calculator & Dynamic Invoicing Suite)
+- Scope: In-house financial engineering tool built with React 19 for independent freelancers and agencies to eliminate underpricing and generate instant client-side vector PDF invoices.
+- Tech Stack: React 19, TypeScript, Tailwind CSS, jspdf, Lucide Icons, Vercel Edge.
+- Live App: https://ujrat.ninety5.in/
+- GitHub Repository: https://github.com/rayyan-x95/ujrat
+- Case Study URL: https://ninety5.in/work/ujrat
+- Metrics: ₹18.4L+ in invoices generated, 5,000+ calculations, 100/100 Core Web Vitals.
+
+### Titan (Offline-First Life OS & Productivity PWA)
+- Scope: In-house Progressive Web App (PWA) designed as a comprehensive Life OS — integrating routine trackers, goal milestones, deep work timers, and personal asset management with full offline service worker caching.
+- Tech Stack: Next.js / PWA, Service Workers, TypeScript, IndexedDB, Tailwind CSS, Framer Motion.
+- Live App: https://titan.ninety5.in/
+- GitHub Repository: https://github.com/Rayyan-x95/Titan
+- Case Study URL: https://ninety5.in/work/titan
+- Metrics: 100% Offline PWA capability, sub-50ms local database queries.
+
+### Atlas (B2B Analytics Dashboard)
+- Scope: End-to-end product design and Next.js frontend engineering for a multi-tenant enterprise analytics engine.
+- Metrics Achieved: +280% user retention increase, 45% reduction in time-to-insight, $1.2B in processed data volume.
+- URL: https://ninety5.in/work/atlas
+
+### Bloom (Personalized AI Wellness Mobile App)
+- Scope: Product design and React Native engineering from 0 to 50k users in 90 days.
+- Metrics Achieved: 4.9★ App Store rating (10,000+ reviews), #12 in Health & Fitness category.
+- URL: https://ninety5.in/work/bloom
+
+### Forge (Developer Tooling Platform)
+- Scope: Complete brand overhaul and web platform for an open-source toolchain with 80k+ GitHub stars.
+- Metrics Achieved: 3.2x increase in enterprise support conversions, 25k new stars.
+- URL: https://ninety5.in/work/forge
+
+### Orbit (Async Engineering Management Suite)
+- Scope: High-speed web application built for remote-first engineering teams.
+- Metrics Achieved: Sub-2.1s load times on complex task boards, 40% reduction in coordination meetings.
+- URL: https://ninety5.in/work/orbit
+
+## Engagement & Pricing Models
+1. **Fixed-Scope Project**: Clearly defined deliverables and timelines (MVP/Landing pages: 2–4 weeks; Full product design & build: 6–10 weeks; ₹2.5L to ₹12L / $3,000 to $15,000).
+2. **Monthly Retainer**: Dedicated senior design and engineering capacity for continuous feature sprints and growth.
+3. **Free 48-Hour Audit**: Zero-risk 5-minute video teardown and speed diagnostic for founders looking to optimize their existing platforms.
+
+## Frequently Asked Questions (AI Snippet Ready)
+- **Q: What is Ninety5 Studio?**
+  - **A:** Ninety5 Studio is a full-stack digital product design and Next.js engineering collective based in Chennai, India, that designs and builds high-performance web apps, mobile apps, and brand systems for tech companies.
+- **Q: How fast does Ninety5 deliver?**
+  - **A:** Most landing pages and brand identities take 2–4 weeks, while full-stack SaaS product engagements take 6–10 weeks.
+- **Q: How do we get started?**
+  - **A:** Visit https://ninety5.in/contact or request a Free 48-Hour UX Audit. We review all briefs and respond within 24 hours.
