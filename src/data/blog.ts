@@ -26,7 +26,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
-      avatar: "https://rayyan.ninety5.in/avatar.jpg"
+      avatar: "https://rayyan.ninety5.in/profile.webp"
     },
     primaryKeyword: "UI/UX design cost in India",
     tags: ["Product Strategy", "Pricing", "Startup Guide"],
@@ -103,7 +103,7 @@ A: You can request a Free 48-Hour UX Audit or submit a brief at ninety5.in/conta
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
-      avatar: "https://rayyan.ninety5.in/avatar.jpg"
+      avatar: "https://rayyan.ninety5.in/profile.webp"
     },
     primaryKeyword: "design system ROI for startups",
     tags: ["Design Systems", "Frontend Velocity", "Engineering ROI"],
@@ -177,7 +177,7 @@ A: A complete token-driven design system with Figma kits and React components ty
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
-      avatar: "https://rayyan.ninety5.in/avatar.jpg"
+      avatar: "https://rayyan.ninety5.in/profile.webp"
     },
     primaryKeyword: "Next.js SaaS development stack",
     tags: ["Next.js", "React 19", "Web Architecture", "SaaS Engineering"],
@@ -253,7 +253,7 @@ A: Our full-stack engineering sprints take an approved Figma design system and s
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
-      avatar: "https://rayyan.ninety5.in/avatar.jpg"
+      avatar: "https://rayyan.ninety5.in/profile.webp"
     },
     primaryKeyword: "B2B SaaS dashboard design",
     tags: ["Product Design", "B2B SaaS", "UX Heuristics", "Retention"],
@@ -328,7 +328,7 @@ A: Yes. We conduct progressive redesigns, building a parallel tokenized design s
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
-      avatar: "https://rayyan.ninety5.in/avatar.jpg"
+      avatar: "https://rayyan.ninety5.in/profile.webp"
     },
     primaryKeyword: "brand identity designer Chennai",
     tags: ["Branding", "Local Business", "Visual Design"],
@@ -391,7 +391,7 @@ A: Contact us at ninety5.in/contact or request a Free Brand Audit. We review you
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
-      avatar: "https://rayyan.ninety5.in/avatar.jpg"
+      avatar: "https://rayyan.ninety5.in/profile.webp"
     },
     primaryKeyword: "product design process",
     tags: ["Engineering", "Product Process", "UI/UX"],
@@ -469,7 +469,7 @@ A: Submit your brief at ninety5.in/contact or request a Free 48-Hour UX Audit. W
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
-      avatar: "https://rayyan.ninety5.in/avatar.jpg"
+      avatar: "https://rayyan.ninety5.in/profile.webp"
     },
     primaryKeyword: "Graphic design agency for tech startups",
     tags: ["Graphic Design", "Pitch Decks", "Fundraising", "Brand Strategy"],
