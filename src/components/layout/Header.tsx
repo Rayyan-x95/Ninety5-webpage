@@ -35,7 +35,15 @@ export default function Header() {
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <Link href="/" className={styles.logo} id="header-logo">
-          <Image src="/logo-header.png" alt="Ninety5 Studio" width={140} height={48} className={styles.logoImage} priority />
+          <Image
+            src="/logo-header.png"
+            alt="Ninety5 Studio — High-Performance Product Design & Engineering"
+            width={140}
+            height={48}
+            className={styles.logoImage}
+            priority
+            style={{ width: "auto", height: "48px" }}
+          />
         </Link>
 
         {/* Desktop Nav */}

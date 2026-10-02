@@ -18,6 +18,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* ── Design Tokens ───────────────────────────────────────── */
@@ -102,14 +104,22 @@ html {
   --max-width-lg: 1440px;
 }
 
-/* ── Base ────────────────────────────────────────────────── */
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
   position: relative;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body::after {
@@ -155,6 +165,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   letter-spacing: -0.02em;
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 a {

@@ -48,7 +48,14 @@ export default function Footer() {
         <div className={`container ${styles.topInner}`}>
           <div className={styles.topLeft}>
             <div className={styles.logo}>
-              <Image src="/logo-footer.png" alt="Ninety5" width={192} height={96} className={styles.logoImage} />
+              <Image
+                src="/logo-footer.png"
+                alt="Ninety5 Studio — Chennai, India"
+                width={192}
+                height={96}
+                className={styles.logoImage}
+                style={{ width: "auto", height: "96px" }}
+              />
             </div>
             <p className={styles.tagline}>
               Design &amp; development studio crafting remarkable digital

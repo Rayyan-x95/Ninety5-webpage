@@ -2,6 +2,8 @@
   min-height: 100vh;
   background-color: var(--color-bg);
   padding-top: var(--header-height, 80px);
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 .hero {
@@ -220,6 +222,10 @@
   border-radius: 4px;
   font-size: 0.8125rem;
   line-height: 1.6;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 /* Labs Section */
@@ -295,5 +301,17 @@
     grid-template-columns: 1fr;
     padding: 2rem;
     gap: 2rem;
+    box-shadow: 8px 8px 0 var(--color-dark);
+  }
+}
+
+@media (max-width: 480px) {
+  .productCard {
+    padding: 1.25rem;
+    box-shadow: 5px 5px 0 var(--color-dark);
+  }
+  .previewConsole {
+    padding: 0.875rem;
+    font-size: 0.75rem;
   }
 }

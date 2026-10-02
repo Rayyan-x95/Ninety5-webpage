@@ -165,7 +165,7 @@ export default function ServicePageTemplate({ data }: Props) {
             </div>
             <h2 className={styles.sectionTitle}>How We Execute</h2>
             
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "4rem", marginTop: "3rem" }}>
+            <div className={styles.deepDiveGrid}>
               <div>
                 <p style={{ fontFamily: "var(--font-body)", fontSize: "1.25rem", fontWeight: 700, color: "var(--color-brand-blue)", lineHeight: 1.5, marginBottom: "2rem" }}>
                   {data.expandedIntro}

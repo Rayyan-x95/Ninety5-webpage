@@ -79,13 +79,17 @@ export default function BlogPage() {
                       <span
                         style={{
                           fontFamily: "var(--font-display)",
-                          fontSize: "3.5rem",
+                          fontSize: "clamp(2rem, 6vw, 3.5rem)",
                           fontWeight: 900,
                           color: "var(--color-white)",
                           textShadow: "4px 4px 0 var(--color-dark)",
                           textTransform: "uppercase",
                           letterSpacing: "-0.05em",
+                          WebkitUserSelect: "none",
                           userSelect: "none",
+                          maxWidth: "100%",
+                          textAlign: "center",
+                          padding: "0 1rem",
                         }}
                       >
                         {post.slug.split("-")[0]}

@@ -2,10 +2,21 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "../LegalPage.module.css";
 
-export const metadata = {
-  title: "Privacy Policy",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Ninety5 Studio",
   description: "How Ninety5 Studio collects, uses, and protects your personal data.",
+  alternates: {
+    canonical: "https://ninety5.in/legal/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Ninety5 Studio",
+    description: "How Ninety5 Studio collects, uses, and protects your personal data.",
+    url: "https://ninety5.in/legal/privacy-policy",
+  },
 };
+
 
 const TOC = [
   { label: "01. Data Collection", href: "#collection" },

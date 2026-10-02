@@ -3,10 +3,14 @@
 .wrapper {
   position: relative;
   overflow: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
   background: var(--color-brand-blue);
   padding: 2rem 0;
   border-top: 4px solid var(--color-dark);
   border-bottom: 4px solid var(--color-dark);
+  -webkit-user-select: none;
   user-select: none;
 }
 

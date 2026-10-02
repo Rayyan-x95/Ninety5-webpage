@@ -64,28 +64,32 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       );
     });
 
-    // Parallax for ambient glows
-    gsap.to(".glow-blue", {
-      y: () => -window.innerHeight * 0.2,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "body",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true
-      }
-    });
+    // Parallax for ambient glows (if present)
+    if (document.querySelector(".glow-blue")) {
+      gsap.to(".glow-blue", {
+        y: () => -window.innerHeight * 0.2,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true
+        }
+      });
+    }
 
-    gsap.to(".glow-orange", {
-      y: () => -window.innerHeight * 0.4,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "body",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true
-      }
-    });
+    if (document.querySelector(".glow-orange")) {
+      gsap.to(".glow-orange", {
+        y: () => -window.innerHeight * 0.4,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true
+        }
+      });
+    }
 
     // Individual reveals for items not in a stagger grid
     const revealElements = document.querySelectorAll(".reveal:not(.grid-stagger .reveal)");

@@ -5,6 +5,8 @@
 .page {
   background: var(--color-white);
   min-height: 100vh;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* ── PAGE HERO (grid-texture + eyebrow + title) ── */
@@ -689,5 +691,20 @@
 
 @media (max-width: 768px) {
   .caseGrid { grid-template-columns: 1fr; }
+}
+
+/* ── DEEP DIVE SECTION ── */
+.deepDiveGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+  .deepDiveGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
 }
 

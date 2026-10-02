@@ -2,10 +2,21 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "../LegalPage.module.css";
 
-export const metadata = {
-  title: "Cookie Policy",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cookie Policy | Ninety5 Studio",
   description: "How Ninety5 Studio uses cookies and similar tracking technologies.",
+  alternates: {
+    canonical: "https://ninety5.in/legal/cookie-policy",
+  },
+  openGraph: {
+    title: "Cookie Policy | Ninety5 Studio",
+    description: "How Ninety5 Studio uses cookies and similar tracking technologies.",
+    url: "https://ninety5.in/legal/cookie-policy",
+  },
 };
+
 
 const TOC = [
   { label: "01. What Are Cookies", href: "#what" },

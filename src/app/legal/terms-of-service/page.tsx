@@ -2,10 +2,21 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import styles from "../LegalPage.module.css";
 
-export const metadata = {
-  title: "Terms of Service",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Ninety5 Studio",
   description: "The terms and conditions governing your engagement with Ninety5 Studio.",
+  alternates: {
+    canonical: "https://ninety5.in/legal/terms-of-service",
+  },
+  openGraph: {
+    title: "Terms of Service | Ninety5 Studio",
+    description: "The terms and conditions governing your engagement with Ninety5 Studio.",
+    url: "https://ninety5.in/legal/terms-of-service",
+  },
 };
+
 
 const TOC = [
   { label: "01. Acceptance", href: "#acceptance" },
