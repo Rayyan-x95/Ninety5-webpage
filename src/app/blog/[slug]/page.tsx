@@ -106,6 +106,7 @@ function renderMarkdown(md: string) {
       return (
         <div key={idx} style={{ overflowX: "auto", margin: "2.5rem 0" }}>
           <svg
+            role="img"
             viewBox="0 0 800 120"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

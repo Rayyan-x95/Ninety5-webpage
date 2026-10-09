@@ -69,7 +69,7 @@ export default function ContactSection() {
                   ) : (
                     <span className={styles.infoValue}>{row.value}</span>
                   )}
-                  {row.live && <span className={styles.infoDot} aria-label="Currently available" />}
+                  {row.live && <span className={styles.infoDot} role="status" aria-label="Currently available" />}
                 </div>
               ))}
             </div>

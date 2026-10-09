@@ -61,6 +61,7 @@ export default function CaseStudies() {
                 </div>
                 <div 
                   className={styles.metricBadge}
+                  role="group"
                   aria-label={`${p.metricLabel}: ${p.metric}`}
                 >
                   <div className={styles.metricValue}>

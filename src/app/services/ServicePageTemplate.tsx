@@ -262,7 +262,7 @@ export default function ServicePageTemplate({ data }: Props) {
                         ))}
                         <div style={{ width: "20px", height: "20px", borderRadius: "50%", marginTop: "0.5rem", background: p.accent }} />
                       </div>
-                      <div className={styles.caseMetricBadge} aria-label={`${p.metricLabel}: ${p.metric}`}>
+                      <div className={styles.caseMetricBadge} role="group" aria-label={`${p.metricLabel}: ${p.metric}`}>
                         <div className={styles.caseMetricValue}>
                           {p.id === "atlas" || p.id === "forge" ? "↑ " : ""}
                           {p.id === "orbit" ? "⚡ " : ""}

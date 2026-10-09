@@ -81,17 +81,17 @@ export default function TerminalMockup() {
 
         {/* Terminal stats bar */}
         <div className={styles.termStats}>
-          <div className={styles.termStat} aria-label="Retention increase: +280%">
+          <div className={styles.termStat} role="group" aria-label="Retention increase: +280%">
             <span className={styles.termStatVal}>+280%</span>
             <span className={styles.termStatLabel}>RETENTION</span>
           </div>
           <div className={styles.termStatDivider} />
-          <div className={styles.termStat} aria-label="Average Rating: 4.9 out of 5 stars">
+          <div className={styles.termStat} role="group" aria-label="Average Rating: 4.9 out of 5 stars">
             <span className={styles.termStatVal}>4.9★</span>
             <span className={styles.termStatLabel}>RATING</span>
           </div>
           <div className={styles.termStatDivider} />
-          <div className={styles.termStat} aria-label="Shipped projects: 100+">
+          <div className={styles.termStat} role="group" aria-label="Shipped projects: 100+">
             <span className={styles.termStatVal}>100+</span>
             <span className={styles.termStatLabel}>SHIPPED</span>
           </div>
