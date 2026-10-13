@@ -27,6 +27,12 @@
   z-index: 2;
 }
 
+@media (max-width: 768px) {
+  .noiseLayer {
+    display: none;
+  }
+}
+
 /* Semi-transparent grid overlay */
 .gridOverlay {
   position: absolute;
@@ -43,17 +49,20 @@
   z-index: 1;
 }
 
-/* Dynamic glow elements */
+/* Dynamic glow elements (Hardware-accelerated on GPU compositor) */
 .orbBlue {
   position: absolute;
   top: 15%;
   right: 10%;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(27, 79, 255, 0.28) 0%, rgba(27, 79, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(31, 116, 186, 0.28) 0%, rgba(31, 116, 186, 0) 70%);
   filter: blur(40px);
   pointer-events: none;
   z-index: 1;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  animation: floatOrbBlue 12s ease-in-out infinite alternate;
 }
 
 .orbOrange {
@@ -62,10 +71,23 @@
   left: 5%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 91, 0, 0.18) 0%, rgba(255, 91, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(232, 96, 61, 0.22) 0%, rgba(232, 96, 61, 0) 70%);
   filter: blur(50px);
   pointer-events: none;
   z-index: 1;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  animation: floatOrbOrange 14s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrbBlue {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(20px, -15px, 0); }
+}
+
+@keyframes floatOrbOrange {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-15px, 20px, 0); }
 }
 
 /* Tech-style vertical guide lines */
@@ -145,7 +167,7 @@
 
 .headlineOutline:hover {
   -webkit-text-stroke: 1.5px var(--color-brand-blue);
-  color: rgba(27, 79, 255, 0.05);
+  color: rgba(45, 128, 195, 0.05);
 }
 
 .headlineHighlight {
@@ -346,7 +368,7 @@
 .termTitle {
   font-family: monospace;
   font-size: 0.6875rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: lowercase;
@@ -469,7 +491,7 @@
   font-family: monospace;
   font-size: 0.5625rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.08em;
 }
 
@@ -489,6 +511,7 @@
   right: 0;
   background: rgba(8, 8, 6, 0.85);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   padding: 1.25rem 0;
   z-index: 5;
@@ -613,7 +636,7 @@
   font-size: 0.5625rem;
   font-weight: 700;
   letter-spacing: 0.25em;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
 }
 

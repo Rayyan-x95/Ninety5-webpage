@@ -255,12 +255,12 @@ export default function ScrollExperience() {
                       type="button"
                       className={styles.tokenSwatch}
                       style={{ background: "var(--color-brand-blue)" }}
-                      onClick={() => handleCopy("blue", "#1B4FFF")}
+                      onClick={() => handleCopy("blue", "#2D80C3")}
                       title="Click to copy CSS token"
                     >
-                      <span className={styles.tokenHex}>#1B4FFF</span>
+                      <span className={styles.tokenHex}>#2D80C3</span>
                       <span className={styles.tokenName}>--color-brand-blue</span>
-                      <span className={styles.tokenContrast}>WCAG AAA (21:1)</span>
+                      <span className={styles.tokenContrast}>STUDIO BLUE</span>
                       {copiedToken === "blue" && <span className={styles.copiedBadge}>COPIED!</span>}
                     </button>
 
@@ -268,26 +268,52 @@ export default function ScrollExperience() {
                       type="button"
                       className={styles.tokenSwatch}
                       style={{ background: "var(--color-brand-orange)" }}
-                      onClick={() => handleCopy("orange", "#FF5B00")}
+                      onClick={() => handleCopy("orange", "#E8603D")}
                       title="Click to copy CSS token"
                     >
-                      <span className={styles.tokenHex}>#FF5B00</span>
+                      <span className={styles.tokenHex}>#E8603D</span>
                       <span className={styles.tokenName}>--color-brand-orange</span>
-                      <span className={styles.tokenContrast}>WCAG AA PASS</span>
+                      <span className={styles.tokenContrast}>TERRACOTTA</span>
                       {copiedToken === "orange" && <span className={styles.copiedBadge}>COPIED!</span>}
                     </button>
 
                     <button
                       type="button"
                       className={styles.tokenSwatch}
-                      style={{ background: "#0C0C0A", border: "2px solid #444" }}
-                      onClick={() => handleCopy("dark", "#0C0C0A")}
+                      style={{ background: "#232323", border: "2px solid #444" }}
+                      onClick={() => handleCopy("dark", "#232323")}
                       title="Click to copy CSS token"
                     >
-                      <span className={styles.tokenHex}>#0C0C0A</span>
-                      <span className={styles.tokenName}>--color-dark-slate</span>
-                      <span className={styles.tokenContrast}>PRIMARY CANVAS</span>
+                      <span className={styles.tokenHex}>#232323</span>
+                      <span className={styles.tokenName}>--color-dark</span>
+                      <span className={styles.tokenContrast}>JET CHARCOAL</span>
                       {copiedToken === "dark" && <span className={styles.copiedBadge}>COPIED!</span>}
+                    </button>
+
+                    <button
+                      type="button"
+                      className={styles.tokenSwatch}
+                      style={{ background: "#E9D8C4", color: "#232323" }}
+                      onClick={() => handleCopy("sand", "#E9D8C4")}
+                      title="Click to copy CSS token"
+                    >
+                      <span className={styles.tokenHex} style={{ color: "#232323" }}>#E9D8C4</span>
+                      <span className={styles.tokenName} style={{ color: "#232323" }}>--color-bg-alt</span>
+                      <span className={styles.tokenContrast} style={{ color: "#555" }}>WARM SAND</span>
+                      {copiedToken === "sand" && <span className={styles.copiedBadge}>COPIED!</span>}
+                    </button>
+
+                    <button
+                      type="button"
+                      className={styles.tokenSwatch}
+                      style={{ background: "#F9F6EF", color: "#232323", border: "1px solid #ccc" }}
+                      onClick={() => handleCopy("bg", "#F9F6EF")}
+                      title="Click to copy CSS token"
+                    >
+                      <span className={styles.tokenHex} style={{ color: "#232323" }}>#F9F6EF</span>
+                      <span className={styles.tokenName} style={{ color: "#232323" }}>--color-bg</span>
+                      <span className={styles.tokenContrast} style={{ color: "#555" }}>ALABASTER</span>
+                      {copiedToken === "bg" && <span className={styles.copiedBadge}>COPIED!</span>}
                     </button>
                   </div>
 
@@ -308,7 +334,7 @@ export default function ScrollExperience() {
                     <div className={styles.specimenRow}>
                       <span className={styles.specimenLabel}>SHADOW</span>
                       <span className={styles.specimenValue} style={{ fontFamily: "monospace" }}>
-                        --shadow-brutal: 10px 10px 0 #0C0C0A
+                        --shadow-brutal: 10px 10px 0 #232323
                       </span>
                     </div>
                   </div>

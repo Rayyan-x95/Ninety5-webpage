@@ -12,48 +12,24 @@ export default function HeroSection() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
 
-      // Entrance sequence
+      // Entrance sequence (Preserve SSR paint visibility for instant LCP)
       tl.fromTo(
         `.${styles.gridOverlay}`,
         { opacity: 0 },
-        { opacity: 1, duration: 1.2 }
+        { opacity: 1, duration: 1.0 }
       )
         .fromTo(
-          headlineRef.current,
-          { opacity: 0, y: 40, rotateX: 10 },
-          { opacity: 1, y: 0, rotateX: 0, duration: 1.2 },
-          0.3
-        )
-        .fromTo(
           `.${styles.orbBlue}`,
-          { scale: 0, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 1.5, ease: "elastic.out(1, 0.5)" },
-          0.4
+          { scale: 0.5, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 1.2 },
+          0.1
         )
         .fromTo(
           `.${styles.orbOrange}`,
-          { scale: 0, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 1.5, ease: "elastic.out(1, 0.5)" },
-          0.6
+          { scale: 0.5, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 1.2 },
+          0.2
         );
-
-      // Slow orbit for glows
-      gsap.to(`.${styles.orbBlue}`, {
-        x: 20,
-        y: -15,
-        duration: 6,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
-      gsap.to(`.${styles.orbOrange}`, {
-        x: -15,
-        y: 20,
-        duration: 7,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
     }, sectionRef);
 
     return () => ctx.revert();

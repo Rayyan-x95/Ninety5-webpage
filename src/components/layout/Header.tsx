@@ -38,11 +38,11 @@ export default function Header() {
           <Image
             src="/logo-header.png"
             alt="Ninety5 Studio — High-Performance Product Design & Engineering"
-            width={140}
+            width={168}
             height={48}
             className={styles.logoImage}
             priority
-            style={{ width: "auto", height: "48px" }}
+            style={{ width: "auto", height: "48px", objectFit: "contain" }}
           />
         </Link>
 

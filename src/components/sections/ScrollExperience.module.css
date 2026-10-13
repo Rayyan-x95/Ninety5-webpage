@@ -208,7 +208,7 @@
   background: #444;
 }
 
-.controlDot:nth-child(1) { background: #FF5B00; }
+.controlDot:nth-child(1) { background: var(--color-brand-orange); }
 .controlDot:nth-child(2) { background: #FFB800; }
 .controlDot:nth-child(3) { background: #34D399; }
 
@@ -541,7 +541,7 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background: #0C0C0A;
+  background: var(--color-dark);
   border: 1px solid #333;
 }
 
@@ -571,7 +571,7 @@
 }
 
 .ideTabActive {
-  background: #0C0C0A;
+  background: var(--color-dark);
   color: #FFF;
   font-weight: 700;
   border-top: 2px solid var(--color-brand-blue);

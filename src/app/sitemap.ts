@@ -15,6 +15,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      // High-priority local SEO landing page — targets "top graphic design companies Chennai"
+      url: `${baseUrl}/top-graphic-design-companies-chennai`,
+      lastModified: new Date('2026-10-12T00:00:00Z'),
+      changeFrequency: 'monthly',
+      priority: 0.98,
+    },
+    {
       url: `${baseUrl}/products`,
       lastModified: siteLastUpdated,
       changeFrequency: 'weekly',
@@ -107,6 +114,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: post.coverImage ? [`${baseUrl}${post.coverImage}`] : undefined,
   }));
 
+  // Subdomain Routes (*.ninety5.in: rayyan, ujrat, titan)
+  const subdomainRoutes: MetadataRoute.Sitemap = [
+    // Founder Subdomain — rayyan.ninety5.in
+    {
+      url: 'https://rayyan.ninety5.in',
+      lastModified: new Date('2026-06-20T00:00:00Z'),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: 'https://rayyan.ninety5.in/about',
+      lastModified: new Date('2026-06-20T00:00:00Z'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://rayyan.ninety5.in/work',
+      lastModified: new Date('2026-06-20T00:00:00Z'),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: 'https://rayyan.ninety5.in/blogs',
+      lastModified: new Date('2026-06-20T00:00:00Z'),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: 'https://rayyan.ninety5.in/labs',
+      lastModified: new Date('2026-06-18T00:00:00Z'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://rayyan.ninety5.in/uses',
+      lastModified: new Date('2026-06-15T00:00:00Z'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    // Product Subdomains
+    {
+      url: 'https://ujrat.ninety5.in',
+      lastModified: siteLastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: 'https://titan.ninety5.in',
+      lastModified: siteLastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+  ];
+
   return [
     ...coreRoutes,
     ...serviceRoutes,
@@ -114,5 +175,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogRoutes,
     ...projectRoutes,
     ...legalRoutes,
+    ...subdomainRoutes,
   ];
 }

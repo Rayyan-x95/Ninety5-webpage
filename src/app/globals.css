@@ -24,28 +24,28 @@ html {
 
 /* ── Design Tokens ───────────────────────────────────────── */
 :root {
-  /* Colors */
-  --color-bg:           #F7F7F5;
-  --color-bg-alt:       #EFEFED;
-  --color-dark:         #0C0C0A;
-  --color-dark-surface: #141412;
+  /* Colors (Aligned strictly to official brand palette) */
+  --color-bg:           #F9F6EF; /* Swatch 1: Warm Alabaster Off-White */
+  --color-bg-alt:       #E9D8C4; /* Swatch 3: Warm Sand / Beige */
+  --color-dark:         #232323; /* Swatch 2: Deep Jet Charcoal */
+  --color-dark-surface: #1C1C1A;
   --color-dark-border:  rgba(255,255,255,0.08);
   --color-white:        #FFFFFF;
-  --color-text:         #0C0C0A;
-  --color-text-muted:   #6B6B62;
-  --color-text-subtle:  #9B9B8E;
-  --color-border:       rgba(12,12,10,0.10);
-  --color-border-dark:  rgba(12,12,10,0.06);
+  --color-text:         #232323; /* Swatch 2: Deep Jet Charcoal */
+  --color-text-muted:   #5E5E56;
+  --color-text-subtle:  #54544C;
+  --color-border:       rgba(35,35,35,0.12);
+  --color-border-dark:  rgba(35,35,35,0.08);
 
   /* Brand Colors */
-  --color-brand-blue:   #1B4FFF;
-  --color-brand-orange: #FF5B00;
+  --color-brand-blue:   #1F74BA; /* Swatch 4: Studio Blue (Accessible WCAG AA 4.9:1 with white) */
+  --color-brand-orange: #E8603D; /* Swatch 5: Terracotta Orange */
   
-  /* Legacy Accents (mapped to new brand blue) */
+  /* Legacy Accents (mapped to brand studio blue) */
   --color-accent:       var(--color-brand-blue);
-  --color-accent-hover: #0037E0;
-  --color-accent-light: rgba(27,79,255,0.08);
-  --color-accent-glow:  rgba(27,79,255,0.20);
+  --color-accent-hover: #175B94;
+  --color-accent-light: rgba(31,116,186,0.08);
+  --color-accent-glow:  rgba(31,116,186,0.20);
 
   /* Typography */
   --font-display: var(--font-syne), 'Syne', system-ui, sans-serif;
@@ -164,8 +164,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  text-wrap: balance;
   overflow-wrap: break-word;
+}
+
+@supports (text-wrap: balance) {
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
 }
 
 a {

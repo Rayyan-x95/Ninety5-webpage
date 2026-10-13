@@ -96,7 +96,7 @@ export default function AnalyticsShowcase() {
                 <span className={styles.swatch} style={{ backgroundColor: "var(--color-brand-blue)" }}></span>
                 <span className={styles.swatch} style={{ backgroundColor: "var(--color-brand-orange)" }}></span>
                 <span className={styles.swatch} style={{ backgroundColor: "var(--color-dark)" }}></span>
-                <span className={styles.hexCode}>#1B4FFF</span>
+                <span className={styles.hexCode}>#2D80C3</span>
               </div>
               <div className={styles.dimensionX}>800px</div>
             </div>

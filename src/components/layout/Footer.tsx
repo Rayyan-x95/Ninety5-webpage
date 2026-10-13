@@ -51,10 +51,10 @@ export default function Footer() {
               <Image
                 src="/logo-footer.png"
                 alt="Ninety5 Studio — Chennai, India"
-                width={192}
-                height={96}
+                width={224}
+                height={64}
                 className={styles.logoImage}
-                style={{ width: "auto", height: "96px" }}
+                style={{ width: "auto", height: "64px", objectFit: "contain" }}
               />
             </div>
             <p className={styles.tagline}>

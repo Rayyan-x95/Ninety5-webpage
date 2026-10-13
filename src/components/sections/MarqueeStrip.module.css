@@ -39,6 +39,7 @@
   align-items: center;
   gap: 0;
   width: max-content;
+  will-change: transform;
   animation: marquee 30s linear infinite;
 }
 

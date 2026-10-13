@@ -11,7 +11,7 @@ const TESTIMONIALS = [
     quote: "Ninety5 didn't just design our product — they fundamentally reshaped how we think about our users. The new dashboard reduced support tickets by 60% in the first month. Absolutely unmatched execution.",
     rating: 5,
     avatar: "AM",
-    color: "#1B4FFF",
+    color: "#2D80C3",
     featured: true,
   },
   {

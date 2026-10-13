@@ -40,7 +40,7 @@ export default function CaseStudies() {
               {/* Visual */}
               <div className={styles.cardVisual} style={{ background: p.color }}>
                 {p.inHouse && (
-                  <span className={`${styles.badgePill} ${p.accent === "#1B4FFF" ? styles.badgePillBlue : ""}`}>
+                  <span className={`${styles.badgePill} ${p.accent === "#2D80C3" ? styles.badgePillBlue : ""}`}>
                     {p.badge || "In-House Product"}
                   </span>
                 )}

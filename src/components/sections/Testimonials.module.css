@@ -119,6 +119,7 @@
   font-weight: 800;
   color: var(--color-brand-orange);
   line-height: 0.7;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -192,7 +193,7 @@
 }
 
 .cardFeatured .meta {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* ── RESPONSIVE ── */

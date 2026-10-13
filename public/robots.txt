@@ -24,3 +24,7 @@ Disallow: /tmp/
 Disallow: /api/
 
 Sitemap: https://ninety5.in/sitemap.xml
+Sitemap: https://ninety5.in/sitemap-index.xml
+Sitemap: https://rayyan.ninety5.in/sitemap.xml
+Sitemap: https://ujrat.ninety5.in/sitemap.xml
+Sitemap: https://titan.ninety5.in/sitemap.xml
