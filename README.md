@@ -26,7 +26,7 @@ We have executed a comprehensive enhancement of the platform's visual hierarchy,
 * **Service Page Deep-Dive**: Expanded all 6 service sub-pages with detailed copy (300-500 words each), detailed engagement process walkthroughs, timelines, deliverables checklists, case study references, and custom FAQPage JSON-LD schemas.
 * **Interactive FAQs**: Implemented accordion elements on each service page to make FAQs easy to browse.
 * **The Ninety5 Blog**: Launched a `/blog` section with 3 highly optimized articles targeting relevant search terms like "UI/UX design cost in India", "brand identity designer Chennai", and "product design process". Each post features Article JSON-LD, keywords in headers, internal links, and a newsletter CTA.
-* **Chennai NAP & Maps**: Added plain-text Local NAP (`Ninety5 Studio • Chennai, India • hello@ninety5.in • +91 63696 12671`) in the footer and contact page. Generated and embedded a brutalist map graphic linked to Google Maps.
+* **Studio Details**: Displayed plain-text studio info (`Ninety5 Studio • Chennai, India • hello@ninety5.in`) in the footer.
 * **Sitemap & Robots**: Dynamically registered all static pages, case studies, and blog posts inside `sitemap.ts` and confirmed `robots.ts` allows indexation.
 * **Asynchronous Deferral**: Deferred loading of the complex terminal code simulation in the Hero using `next/dynamic` with `ssr: false` to reduce initial JS payload and maximize Lighthouse performance.
 

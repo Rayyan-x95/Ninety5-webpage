@@ -157,7 +157,7 @@ export default function TermsOfServicePage() {
                 <div className={styles.ctaTitle}>Questions about our terms?</div>
                 <p className={styles.ctaSub}>We&apos;re happy to clarify anything before you engage.</p>
               </div>
-              <a href="mailto:ninety5.designs.95@gmail.com" className="btn btn-primary" id="terms-cta-btn"
+              <a href="mailto:hello@ninety5.in" className="btn btn-primary" id="terms-cta-btn"
                 style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "8px 8px 0 var(--color-brand-orange)" }}>
                 Contact Us ↗
               </a>

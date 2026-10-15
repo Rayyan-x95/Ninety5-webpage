@@ -271,14 +271,12 @@ const jsonLd = {
         "https://ninety5.in/logo-header.png"
       ],
       "url": "https://ninety5.in",
-      "telephone": "+91 6369612671",
       "email": "hello@ninety5.in",
       "priceRange": "₹₹₹",
       "currenciesAccepted": "INR, USD, GBP, AED",
       "paymentAccepted": "Bank Transfer, PayPal, Stripe",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Chennai",
         "addressLocality": "Chennai",
         "addressRegion": "Tamil Nadu",
         "postalCode": "600001",
@@ -289,7 +287,6 @@ const jsonLd = {
         "latitude": 13.0827,
         "longitude": 80.2707
       },
-      "hasMap": "https://maps.google.com/?q=Chennai,+Tamil+Nadu,+India",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",

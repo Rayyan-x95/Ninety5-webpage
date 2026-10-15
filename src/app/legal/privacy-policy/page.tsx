@@ -69,7 +69,7 @@ const SECTIONS = [
     num: "04",
     id: "rights",
     title: "Your Rights",
-    body: "Under GDPR, CCPA, and equivalent global frameworks, you have the following rights regarding your personal data. To exercise any of these rights, contact us at <a href='mailto:ninety5.designs.95@gmail.com' style='color: inherit; text-decoration: underline;'>hello@ninety5.in</a>:",
+    body: "Under GDPR, CCPA, and equivalent global frameworks, you have the following rights regarding your personal data. To exercise any of these rights, contact us at <a href='mailto:hello@ninety5.in' style='color: inherit; text-decoration: underline;'>hello@ninety5.in</a>:",
     items: [
       "Right of access — Request a copy of all data we hold on you",
       "Right to rectification — Correct inaccurate or incomplete data",
@@ -98,7 +98,7 @@ const SECTIONS = [
     title: "Contact Us",
     body: "For any privacy-related enquiries, data subject requests, or to exercise your rights, please contact our data controller directly:",
     items: [
-      "Email: <a href='mailto:ninety5.designs.95@gmail.com'>hello@ninety5.in</a>",
+      "Email: <a href='mailto:hello@ninety5.in'>hello@ninety5.in</a>",
       "Response time: within 72 hours as required by GDPR",
       "Registered entity: Ninety5 Studio, Chennai, India",
     ],
@@ -169,7 +169,7 @@ export default function PrivacyPolicyPage() {
                 <div className={styles.ctaTitle}>Questions about your data?</div>
                 <p className={styles.ctaSub}>We&apos;ll respond within 72 hours.</p>
               </div>
-              <a href="mailto:ninety5.designs.95@gmail.com" className="btn btn-primary" id="privacy-cta-btn"
+              <a href="mailto:hello@ninety5.in" className="btn btn-primary" id="privacy-cta-btn"
                 style={{ padding: "1.125rem 2.25rem", fontWeight: 800, boxShadow: "8px 8px 0 var(--color-brand-orange)" }}>
                 Contact Us ↗
               </a>

@@ -104,7 +104,7 @@ export default function Footer() {
               Start a project
             </a>
             <div className={styles.email}>
-              <a href="mailto:ninety5.designs.95@gmail.com">hello@ninety5.in</a>
+              <a href="mailto:hello@ninety5.in">hello@ninety5.in</a>
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Ninety5 Studio. All rights reserved.
           </span>
           <span className={styles.copyright} style={{ textTransform: "none" }}>
-            Ninety5 Studio • Chennai, India • hello@ninety5.in • +91 63696 12671
+            Ninety5 Studio • Chennai, India • hello@ninety5.in
           </span>
         </div>
       </div>

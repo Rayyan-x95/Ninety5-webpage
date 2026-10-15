@@ -5,7 +5,7 @@ import { useReveal } from "@/hooks/useReveal";
 import styles from "./ContactSection.module.css";
 
 const INFO = [
-  { label: "UPLINK", value: "hello@ninety5.in", href: "mailto:ninety5.designs.95@gmail.com", live: false },
+  { label: "UPLINK", value: "hello@ninety5.in", href: "mailto:hello@ninety5.in", live: false },
   { label: "AVAILABILITY", value: "OPEN — MAY 2026", href: null, live: true },
   { label: "RESPONSE", value: "Within 24 hours", href: null, live: false },
   { label: "LOCATION", value: "Chennai, India (Remote)", href: null, live: false },
