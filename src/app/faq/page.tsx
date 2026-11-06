@@ -4,24 +4,17 @@ import FAQClient from "./FAQClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Product Design, UI/UX & Web Development FAQ | Ninety5 Studio",
+  title: "Product Design, UI/UX & Web Development FAQ",
   description:
     "Everything you need to know about Ninety5 Studio: UI/UX product design, investor pitch decks, tech stacks (Next.js/React Native), project pricing, and delivery timelines.",
-  keywords: [
-    "UI/UX agency FAQ",
-    "Product design studio pricing India",
-    "Next.js web development agency questions",
-    "Pitch deck design turnaround",
-    "Design systems agency FAQ",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/faq",
+    canonical: "https://www.ninety5.in/faq",
   },
   openGraph: {
     title: "FAQ & Agency Capabilities | Ninety5 Studio",
     description:
       "Answers to common questions regarding our product design, graphic design, pricing models, tech stack, and 4-phase delivery process.",
-    url: "https://ninety5.in/faq",
+    url: "https://www.ninety5.in/faq",
     type: "website",
   },
 };
@@ -29,7 +22,7 @@ export const metadata: Metadata = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://ninety5.in/faq#faq",
+  "@id": "https://www.ninety5.in/faq#faq",
   "mainEntity": [
     {
       "@type": "Question",

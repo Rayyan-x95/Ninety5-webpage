@@ -19,6 +19,7 @@ const FOOTER_LINKS = {
   ],
   Company: [
     { label: "Products of Ninety5", href: "/products" },
+    { label: "Ujrat — Free Invoicing SaaS", href: "https://ujrat.ninety5.in" },
     { label: "About us", href: "/about" },
     { label: "Our process", href: "/process" },
     { label: "Selected work", href: "/work" },

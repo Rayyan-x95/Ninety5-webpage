@@ -2,24 +2,17 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Next.js Web Development & Full-Stack Frontend Agency | Ninety5 Studio",
+  title: "Next.js Web Development & Full-Stack Frontend Agency",
   description:
     "Engineering blazing-fast, sub-second Next.js web applications, React Server Components, and Technical SEO architectures for high-growth tech startups.",
-  keywords: [
-    "Next.js web development agency",
-    "React frontend engineering India",
-    "Technical SEO Next.js agency",
-    "Sub-second web performance",
-    "Headless CMS Next.js developers",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services/web-development",
+    canonical: "https://www.ninety5.in/services/web-development",
   },
   openGraph: {
     title: "Next.js Web Development Services | Ninety5 Studio",
     description:
       "Building blazing-fast, SEO-optimized, and highly secure web applications using modern React and Next.js frontend frameworks.",
-    url: "https://ninety5.in/services/web-development",
+    url: "https://www.ninety5.in/services/web-development",
     type: "website",
   },
 };

@@ -2,24 +2,17 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "B2B SaaS Product Design (UI/UX) Agency | Ninety5 Studio",
+  title: "B2B SaaS Product Design (UI/UX) Agency",
   description:
     "End-to-end UX/UI product design that transforms complex B2B workflows into intuitive, high-converting digital interfaces. Production-ready Figma specs to code.",
-  keywords: [
-    "B2B SaaS product design",
-    "UI UX design agency Chennai",
-    "Product design studio India",
-    "SaaS dashboard UX design",
-    "Figma UI UX designers",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services/product-design",
+    canonical: "https://www.ninety5.in/services/product-design",
   },
   openGraph: {
     title: "Product Design (UI/UX) Services | Ninety5 Studio",
     description:
       "End-to-end UX/UI product design that transforms complex problems into elegant, high-converting digital experiences.",
-    url: "https://ninety5.in/services/product-design",
+    url: "https://www.ninety5.in/services/product-design",
     type: "website",
   },
 };

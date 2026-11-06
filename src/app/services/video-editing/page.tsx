@@ -2,24 +2,17 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Video Editing & Motion Graphics for Tech Startups | Ninety5 Studio",
+  title: "Video Editing & Motion Graphics for Tech Startups",
   description:
     "High-retention video editing, SaaS product demos, kinetic typography, and viral short-form motion design engineered to maximize watch time and conversion.",
-  keywords: [
-    "Video editing agency tech startups",
-    "SaaS product walkthrough video",
-    "Motion graphics studio Chennai",
-    "High retention video editing",
-    "B2B video marketing retainers",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services/video-editing",
+    canonical: "https://www.ninety5.in/services/video-editing",
   },
   openGraph: {
     title: "Video Editing & Motion Graphics Services | Ninety5 Studio",
     description:
       "High-retention video editing, motion design, product demos, and viral social cuts engineered for engagement.",
-    url: "https://ninety5.in/services/video-editing",
+    url: "https://www.ninety5.in/services/video-editing",
     type: "website",
   },
 };

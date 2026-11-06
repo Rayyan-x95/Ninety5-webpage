@@ -21,21 +21,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) {
     return {
-      title: "Article Not Found | Ninety5 Studio",
+      title: "Article Not Found",
     };
   }
   return {
-    title: `${post.title} | Ninety5 Studio Blog`,
+    title: `${post.title}`,
     description: post.description,
     keywords: post.tags.join(", "),
     alternates: {
-      canonical: `https://ninety5.in/blog/${post.slug}`,
+      canonical: `https://www.ninety5.in/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
-      url: `https://ninety5.in/blog/${post.slug}`,
+      url: `https://www.ninety5.in/blog/${post.slug}`,
       publishedTime: post.publishDate,
       authors: [post.author.name],
       tags: post.tags,
@@ -253,26 +253,31 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const relatedPosts = [
+    ...BLOG_POSTS.filter((p) => p.slug !== post.slug && p.tags.some((t) => post.tags.includes(t))),
+    ...BLOG_POSTS.filter((p) => p.slug !== post.slug && !p.tags.some((t) => post.tags.includes(t))),
+  ].slice(0, 3);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Article",
-        "@id": `https://ninety5.in/blog/${post.slug}#article`,
+        "@id": `https://www.ninety5.in/blog/${post.slug}#article`,
         "headline": post.title,
         "description": post.description,
-        "image": `https://ninety5.in${post.coverImage}`,
+        "image": `https://www.ninety5.in${post.coverImage}`,
         "inLanguage": "en-US",
         "keywords": post.tags.join(", "),
         "datePublished": post.publishDate,
         "dateModified": post.publishDate,
         "wordCount": post.wordCount ?? Math.round(post.contentMarkdown.length / 5),
-        "mainEntityOfPage": `https://ninety5.in/blog/${post.slug}`,
+        "mainEntityOfPage": `https://www.ninety5.in/blog/${post.slug}`,
         "isPartOf": {
           "@type": "Blog",
-          "@id": "https://ninety5.in/blog#collection",
+          "@id": "https://www.ninety5.in/blog#collection",
           "name": "Ninety5 Studio Blog",
-          "url": "https://ninety5.in/blog"
+          "url": "https://www.ninety5.in/blog"
         },
         "speakable": {
           "@type": "SpeakableSpecification",
@@ -286,24 +291,24 @@ export default async function BlogPostPage({ params }: Props) {
           "url": "https://rayyan.ninety5.in",
           "image": "https://rayyan.ninety5.in/profile.webp",
           "sameAs": [
-            "https://linkedin.com/in/rayyan-ninety5",
+            "https://www.linkedin.com/in/mohammed-rayyan1948",
             "https://twitter.com/ninety5studio",
             "https://dribbble.com/ninety5"
           ]
         },
         "publisher": {
           "@type": "Organization",
-          "@id": "https://ninety5.in/#organization",
+          "@id": "https://www.ninety5.in/#organization",
           "name": "Ninety5 Studio",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://ninety5.in/logo-header.png"
+            "url": "https://www.ninety5.in/logo-header.png"
           }
         }
       },
       ...(post.faqs && post.faqs.length > 0 ? [{
         "@type": "FAQPage",
-        "@id": `https://ninety5.in/blog/${post.slug}#faq`,
+        "@id": `https://www.ninety5.in/blog/${post.slug}#faq`,
         "mainEntity": post.faqs.map(faq => ({
           "@type": "Question",
           "name": faq.question,
@@ -315,25 +320,25 @@ export default async function BlogPostPage({ params }: Props) {
       }] : []),
       {
         "@type": "BreadcrumbList",
-        "@id": `https://ninety5.in/blog/${post.slug}#breadcrumb`,
+        "@id": `https://www.ninety5.in/blog/${post.slug}#breadcrumb`,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://ninety5.in"
+            "item": "https://www.ninety5.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://ninety5.in/blog"
+            "item": "https://www.ninety5.in/blog"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": post.title,
-            "item": `https://ninety5.in/blog/${post.slug}`
+            "item": `https://www.ninety5.in/blog/${post.slug}`
           }
         ]
       }
@@ -376,7 +381,8 @@ export default async function BlogPostPage({ params }: Props) {
                     M Mohammed Rayyan is the Founder of Ninety5 Studio with 5+ years designing high-performance SaaS products and brand systems for 30+ global clients across the US, UK, and MENA.
                   </p>
                   <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                    <a href="https://linkedin.com/in/rayyan-ninety5" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">LinkedIn ↗</a>
+                    <a href="https://rayyan.ninety5.in" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="url">Portfolio ↗</a>
+                    <a href="https://www.linkedin.com/in/mohammed-rayyan1948" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">LinkedIn ↗</a>
                     <a href="https://twitter.com/ninety5studio" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">Twitter ↗</a>
                     <a href="https://dribbble.com/ninety5" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">Dribbble ↗</a>
                   </div>
@@ -388,6 +394,24 @@ export default async function BlogPostPage({ params }: Props) {
           <div className={styles.content}>
             {renderMarkdown(post.contentMarkdown)}
           </div>
+
+          <section style={{ marginTop: "4rem", paddingTop: "3rem", borderTop: "1px solid var(--color-border, rgba(255,255,255,0.1))" }} aria-label="Related articles">
+            <h2 style={{ fontSize: "1.4rem", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "1.5rem", color: "var(--color-light, #fff)" }}>
+              Related Guides
+            </h2>
+            <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
+              {relatedPosts.map((rel) => (
+                <a key={rel.slug} href={`/blog/${rel.slug}`} style={{ display: "block", padding: "1.25rem", borderRadius: "12px", background: "var(--color-surface, rgba(255,255,255,0.04))", textDecoration: "none", transition: "background 0.2s" }}>
+                  <span style={{ display: "block", fontSize: "0.7rem", color: "var(--color-muted, #888)", marginBottom: "0.5rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    {rel.publishDate} · {rel.readTime}
+                  </span>
+                  <span style={{ display: "block", fontSize: "0.95rem", fontWeight: 700, lineHeight: 1.35, color: "var(--color-light, #fff)" }}>
+                    {rel.title}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
 
           <div style={{ borderTop: "8px solid var(--color-dark)", marginTop: "5rem", paddingTop: "4rem" }}>
             <section className={styles.newsletter}>

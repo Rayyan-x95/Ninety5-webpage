@@ -2,24 +2,17 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Design Systems Architecture & Tokenized UI Engineering | Ninety5 Studio",
+  title: "Design Systems Architecture & Tokenized UI Engineering",
   description:
     "Engineering unified UI component libraries, Figma variable tokens, and Storybook React design systems that scale your SaaS product teams without design debt.",
-  keywords: [
-    "Design systems agency India",
-    "Figma design tokens architecture",
-    "Storybook component library development",
-    "Design systems ROI SaaS",
-    "Tokenized UI engineering",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services/design-systems",
+    canonical: "https://www.ninety5.in/services/design-systems",
   },
   openGraph: {
     title: "Design Systems Engineering Services | Ninety5 Studio",
     description:
       "Engineering unified UI component libraries and tokenized design systems that scale your design language across platforms.",
-    url: "https://ninety5.in/services/design-systems",
+    url: "https://www.ninety5.in/services/design-systems",
     type: "website",
   },
 };

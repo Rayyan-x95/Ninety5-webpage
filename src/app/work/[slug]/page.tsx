@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!project) {
     return {
-      title: "Project Not Found | Ninety5 Studio",
+      title: "Project Not Found",
     };
   }
 
   return {
-    title: `${project.title} — Case Study | Ninety5 Studio`,
+    title: `${project.title} — Case Study`,
     description: project.description,
     keywords: [
       project.category,
@@ -39,16 +39,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${project.title} — Ninety5 Case Study`,
       description: project.description,
       type: "article",
-      url: `https://ninety5.in/work/${project.id}`,
+      url: `https://www.ninety5.in/work/${project.id}`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} — Case Study | Ninety5 Studio`,
+      title: `${project.title} — Case Study`,
       description: project.description,
       creator: "@ninety5studio",
     },
     alternates: {
-      canonical: `https://ninety5.in/work/${project.id}`,
+      canonical: `https://www.ninety5.in/work/${project.id}`,
     },
   };
 }
@@ -66,7 +66,7 @@ export default async function CaseStudyPage({ params }: Props) {
     "@graph": [
       {
         "@type": project.inHouse ? "SoftwareApplication" : "CreativeWork",
-        "@id": `https://ninety5.in/work/${project.id}#work`,
+        "@id": `https://www.ninety5.in/work/${project.id}#work`,
         "name": project.title,
         "headline": project.title,
         "description": project.longDescription,
@@ -75,37 +75,37 @@ export default async function CaseStudyPage({ params }: Props) {
         ...(project.liveUrl ? { "url": project.liveUrl } : {}),
         "author": {
           "@type": "Organization",
-          "@id": "https://ninety5.in/#organization",
+          "@id": "https://www.ninety5.in/#organization",
           "name": "Ninety5 Studio",
-          "url": "https://ninety5.in"
+          "url": "https://www.ninety5.in"
         },
         "publisher": {
-          "@id": "https://ninety5.in/#organization"
+          "@id": "https://www.ninety5.in/#organization"
         },
         "dateCreated": project.year,
         "about": project.category,
       },
       {
         "@type": "BreadcrumbList",
-        "@id": `https://ninety5.in/work/${project.id}#breadcrumb`,
+        "@id": `https://www.ninety5.in/work/${project.id}#breadcrumb`,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://ninety5.in"
+            "item": "https://www.ninety5.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Work",
-            "item": "https://ninety5.in/work"
+            "item": "https://www.ninety5.in/work"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": project.title,
-            "item": `https://ninety5.in/work/${project.id}`
+            "item": `https://www.ninety5.in/work/${project.id}`
           }
         ]
       }

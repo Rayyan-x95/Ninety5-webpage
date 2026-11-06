@@ -6,27 +6,17 @@ import AuditBanner from "@/components/sections/AuditBanner";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Full-Stack Design, Pitch Decks & Web Engineering Services | Ninety5 Studio",
+  title: "Full-Stack Design, Pitch Decks & Web Engineering Services",
   description:
     "Explore Ninety5 Studio's comprehensive capabilities: Graphic Design & Investor Pitch Decks, UI/UX Product Design, Video Editing, Design Systems, and Next.js Web Development.",
-  keywords: [
-    "Graphic design services India",
-    "Investor pitch deck design agency",
-    "UI/UX product design studio",
-    "Next.js web development agency",
-    "Video editing and motion graphics studio",
-    "Branded content creation retainers",
-    "Design systems architecture",
-    "Full stack digital agency Chennai",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services",
+    canonical: "https://www.ninety5.in/services",
   },
   openGraph: {
     title: "Services & Capabilities | Ninety5 Studio",
     description:
       "Graphic Design, Investor Pitch Decks, UI/UX Systems, Video Editing, and High-Performance Next.js Engineering.",
-    url: "https://ninety5.in/services",
+    url: "https://www.ninety5.in/services",
     type: "website",
   },
 };

@@ -5,23 +5,23 @@ import { PROJECTS } from "@/data/projects";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Selected Work & Case Studies | Ninety5 Studio",
+  title: "Selected Work & Case Studies",
   description:
     "A curated archive of our most impactful digital products, design systems, and web applications — from SaaS platforms to high-converting brand identities.",
   alternates: {
-    canonical: "https://ninety5.in/work",
+    canonical: "https://www.ninety5.in/work",
   },
   openGraph: {
-    title: "Selected Work & Case Studies | Ninety5 Studio",
+    title: "Selected Work & Case Studies",
     description:
       "A curated archive of our most impactful digital products, design systems, and web applications.",
-    url: "https://ninety5.in/work",
+    url: "https://www.ninety5.in/work",
     type: "website",
     images: [{ url: "/og-image.jpg", width: 1024, height: 682, alt: "Ninety5 Studio Selected Work" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Selected Work & Case Studies | Ninety5 Studio",
+    title: "Selected Work & Case Studies",
     description:
       "A curated archive of our most impactful digital products, design systems, and web applications.",
     images: ["/og-image.jpg"],

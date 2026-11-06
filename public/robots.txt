@@ -1,30 +1,58 @@
 User-agent: *
 Allow: /
-Disallow: /tmp/
+Allow: /llms.txt
+Allow: /pricing.md
 Disallow: /api/
+Disallow: /tmp/
 
 User-agent: GPTBot
 Allow: /
-Disallow: /tmp/
 Disallow: /api/
+Disallow: /tmp/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /tmp/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /tmp/
 
 User-agent: ClaudeBot
 Allow: /
-Disallow: /tmp/
 Disallow: /api/
+Disallow: /tmp/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /tmp/
 
 User-agent: PerplexityBot
 Allow: /
-Disallow: /tmp/
 Disallow: /api/
+Disallow: /tmp/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/
+Disallow: /tmp/
 
 User-agent: Google-Extended
 Allow: /
-Disallow: /tmp/
 Disallow: /api/
+Disallow: /tmp/
 
-Sitemap: https://ninety5.in/sitemap.xml
-Sitemap: https://ninety5.in/sitemap-index.xml
-Sitemap: https://rayyan.ninety5.in/sitemap.xml
-Sitemap: https://ujrat.ninety5.in/sitemap.xml
-Sitemap: https://titan.ninety5.in/sitemap.xml
+User-agent: meta-webindexer
+Allow: /
+Disallow: /api/
+Disallow: /tmp/
+
+User-agent: meta-externalfetcher
+Allow: /
+Disallow: /api/
+Disallow: /tmp/
+
+Sitemap: https://www.ninety5.in/sitemap.xml

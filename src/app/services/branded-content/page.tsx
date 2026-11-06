@@ -2,24 +2,17 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Branded Content Creation & Social Design Retainers | Ninety5 Studio",
+  title: "Branded Content Creation & Social Design Retainers",
   description:
     "Turnkey branded content engine for tech startups and executives: high-density LinkedIn slide carousels, custom newsletter design, and viral visual data storytelling.",
-  keywords: [
-    "Branded content agency India",
-    "LinkedIn carousel design service",
-    "Newsletter design agency Beehiiv Substack",
-    "Visual content retainers tech startups",
-    "B2B social media graphic design",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services/branded-content",
+    canonical: "https://www.ninety5.in/services/branded-content",
   },
   openGraph: {
     title: "Branded Content Creation Suite | Ninety5 Studio",
     description:
       "End-to-end branded content engine. High-impact carousels, thought leadership assets, newsletter design, and omni-channel creative.",
-    url: "https://ninety5.in/services/branded-content",
+    url: "https://www.ninety5.in/services/branded-content",
     type: "website",
   },
 };

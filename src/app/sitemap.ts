@@ -3,8 +3,8 @@ import { PROJECTS } from '@/data/projects';
 import { BLOG_POSTS } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ninety5.in';
-  const siteLastUpdated = new Date('2026-08-20T00:00:00Z');
+  const baseUrl = 'https://www.ninety5.in';
+  const siteLastUpdated = new Date('2026-11-06T00:00:00Z');
 
   // Core Landing Pages (Priority 1.0 & 0.9)
   const coreRoutes: MetadataRoute.Sitemap = [
@@ -114,59 +114,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: post.coverImage ? [`${baseUrl}${post.coverImage}`] : undefined,
   }));
 
-  // Subdomain Routes (*.ninety5.in: rayyan, ujrat, titan)
-  const subdomainRoutes: MetadataRoute.Sitemap = [
-    // Founder Subdomain — rayyan.ninety5.in
-    {
-      url: 'https://rayyan.ninety5.in',
-      lastModified: new Date('2026-06-20T00:00:00Z'),
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: 'https://rayyan.ninety5.in/about',
-      lastModified: new Date('2026-06-20T00:00:00Z'),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: 'https://rayyan.ninety5.in/work',
-      lastModified: new Date('2026-06-20T00:00:00Z'),
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: 'https://rayyan.ninety5.in/blogs',
-      lastModified: new Date('2026-06-20T00:00:00Z'),
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: 'https://rayyan.ninety5.in/labs',
-      lastModified: new Date('2026-06-18T00:00:00Z'),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: 'https://rayyan.ninety5.in/uses',
-      lastModified: new Date('2026-06-15T00:00:00Z'),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    // Product Subdomains
-    {
-      url: 'https://ujrat.ninety5.in',
-      lastModified: siteLastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: 'https://titan.ninety5.in',
-      lastModified: siteLastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-  ];
+  // Subdomain sitemaps are separate (rayyan/ujrat/titan) — not mixed into main sitemap
 
   return [
     ...coreRoutes,
@@ -175,6 +123,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogRoutes,
     ...projectRoutes,
     ...legalRoutes,
-    ...subdomainRoutes,
   ];
 }

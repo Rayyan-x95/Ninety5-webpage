@@ -5,24 +5,17 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Client Testimonials & Case Reviews — UI/UX & Next.js Results | Ninety5 Studio",
+  title: "Client Testimonials & Case Reviews — UI/UX & Next.js Results",
   description:
     "Read real reviews and client feedback from venture-backed tech founders, CTOs, and product leaders who partnered with Ninety5 Studio for product design and engineering.",
-  keywords: [
-    "Ninety5 Studio client reviews",
-    "Product design agency testimonials",
-    "UI/UX studio case studies",
-    "Next.js agency feedback",
-    "Design studio ratings India",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/testimonials",
+    canonical: "https://www.ninety5.in/testimonials",
   },
   openGraph: {
     title: "Client Testimonials & Reviews | Ninety5 Studio",
     description:
       "What B2B SaaS founders and product leaders say about Ninety5 Studio's execution velocity and design craft.",
-    url: "https://ninety5.in/testimonials",
+    url: "https://www.ninety5.in/testimonials",
     type: "website",
   },
 };
@@ -30,13 +23,13 @@ export const metadata: Metadata = {
 const testimonialsSchema = {
   "@context": "https://schema.org",
   "@type": "ItemPage",
-  "@id": "https://ninety5.in/testimonials#webpage",
-  "url": "https://ninety5.in/testimonials",
+  "@id": "https://www.ninety5.in/testimonials#webpage",
+  "url": "https://www.ninety5.in/testimonials",
   "name": "Ninety5 Studio Client Testimonials",
   "description": "Client reviews and feedback for Ninety5 Studio design and engineering services.",
   "mainEntity": {
     "@type": "ProfessionalService",
-    "@id": "https://ninety5.in/#service",
+    "@id": "https://www.ninety5.in/#service",
     "name": "Ninety5 Studio",
     "review": [
       {

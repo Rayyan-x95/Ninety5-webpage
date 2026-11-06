@@ -5,24 +5,17 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Ninety5 Studio — UI/UX Design & Next.js Engineering Collective, Chennai",
+  title: "About Ninety5 Studio — UI/UX & Next.js Engineering, Chennai",
   description:
     "Ninety5 is a brutalist design and engineering collective founded by M Mohammed Rayyan in Chennai. We design high-converting SaaS products, pitch decks, and digital experiences.",
-  keywords: [
-    "About Ninety5 Studio",
-    "Mohammed Rayyan designer",
-    "UI UX design collective Chennai",
-    "Full stack design studio India",
-    "Brutalist web design agency",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/about",
+    canonical: "https://www.ninety5.in/about",
   },
   openGraph: {
     title: "About Ninety5 Studio | Design & Engineering Collective",
     description:
       "Stripping away unnecessary agency bureaucracy to deliver high-performance digital products with speed and precision.",
-    url: "https://ninety5.in/about",
+    url: "https://www.ninety5.in/about",
     type: "website",
   },
 };
@@ -30,13 +23,13 @@ export const metadata: Metadata = {
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "@id": "https://ninety5.in/about#webpage",
-  "url": "https://ninety5.in/about",
+  "@id": "https://www.ninety5.in/about#webpage",
+  "url": "https://www.ninety5.in/about",
   "name": "About Ninety5 Studio",
   "description": "Ninety5 is a design and engineering collective delivering high-performance digital products.",
   "mainEntity": {
     "@type": "Organization",
-    "@id": "https://ninety5.in/#organization",
+    "@id": "https://www.ninety5.in/#organization",
     "name": "Ninety5 Studio",
     "founder": {
       "@type": "Person",

@@ -8,23 +8,14 @@ export const metadata: Metadata = {
   title: "Products of Ninety5 — In-House Digital Products & SaaS Tools",
   description:
     "Explore in-house digital products, SaaS tools, and open-source engines built by Ninety5 Studio — including Ujrat (freelance invoicing) and Titan (performance canvas).",
-  keywords: [
-    "Products of Ninety5",
-    "Ninety5 in-house products",
-    "Ujrat freelance calculator",
-    "Titan portfolio engine",
-    "Ninety5 SaaS tools",
-    "Open source developer tools India",
-    "Next.js web applications",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/products",
+    canonical: "https://www.ninety5.in/products",
   },
   openGraph: {
     title: "Products of Ninety5 — In-House Digital Products & SaaS Tools",
     description:
       "Explore in-house digital products, SaaS tools, and open-source engines built by Ninety5 Studio — including Ujrat and Titan.",
-    url: "https://ninety5.in/products",
+    url: "https://www.ninety5.in/products",
     type: "website",
   },
 };
@@ -92,13 +83,13 @@ export default function ProductsPage() {
     "@graph": [
       {
         "@type": "CollectionPage",
-        "@id": "https://ninety5.in/products#webpage",
-        "url": "https://ninety5.in/products",
+        "@id": "https://www.ninety5.in/products#webpage",
+        "url": "https://www.ninety5.in/products",
         "name": "Products of Ninety5 — In-House Digital Products & SaaS Tools",
         "description":
           "In-house digital products, SaaS tools, and open-source engines built by Ninety5 Studio.",
         "isPartOf": {
-          "@id": "https://ninety5.in/#website",
+          "@id": "https://www.ninety5.in/#website",
         },
         "breadcrumb": {
           "@type": "BreadcrumbList",
@@ -107,13 +98,13 @@ export default function ProductsPage() {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://ninety5.in",
+              "item": "https://www.ninety5.in",
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Products of Ninety5",
-              "item": "https://ninety5.in/products",
+              "item": "https://www.ninety5.in/products",
             },
           ],
         },
@@ -129,7 +120,7 @@ export default function ProductsPage() {
         "codeRepository": prod.githubUrl,
         "author": {
           "@type": "Organization",
-          "@id": "https://ninety5.in/#organization",
+          "@id": "https://www.ninety5.in/#organization",
           "name": "Ninety5 Studio",
         },
       })),

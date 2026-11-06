@@ -5,15 +5,15 @@ import styles from "../LegalPage.module.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Ninety5 Studio",
+  title: "Cookie Policy",
   description: "How Ninety5 Studio uses cookies and similar tracking technologies.",
   alternates: {
-    canonical: "https://ninety5.in/legal/cookie-policy",
+    canonical: "https://www.ninety5.in/legal/cookie-policy",
   },
   openGraph: {
-    title: "Cookie Policy | Ninety5 Studio",
+    title: "Cookie Policy",
     description: "How Ninety5 Studio uses cookies and similar tracking technologies.",
-    url: "https://ninety5.in/legal/cookie-policy",
+    url: "https://www.ninety5.in/legal/cookie-policy",
   },
 };
 

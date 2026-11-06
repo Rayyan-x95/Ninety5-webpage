@@ -5,15 +5,15 @@ import styles from "../LegalPage.module.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Ninety5 Studio",
+  title: "Terms of Service",
   description: "The terms and conditions governing your engagement with Ninety5 Studio.",
   alternates: {
-    canonical: "https://ninety5.in/legal/terms-of-service",
+    canonical: "https://www.ninety5.in/legal/terms-of-service",
   },
   openGraph: {
-    title: "Terms of Service | Ninety5 Studio",
+    title: "Terms of Service",
     description: "The terms and conditions governing your engagement with Ninety5 Studio.",
-    url: "https://ninety5.in/legal/terms-of-service",
+    url: "https://www.ninety5.in/legal/terms-of-service",
   },
 };
 

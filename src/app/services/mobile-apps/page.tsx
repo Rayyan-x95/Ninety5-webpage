@@ -2,24 +2,17 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "React Native Mobile App Development Studio | Ninety5 Studio",
+  title: "React Native Mobile App Development Studio",
   description:
     "Engineering 60fps native-performance cross-platform iOS and Android mobile apps using React Native, Expo, and offline-first local database architectures.",
-  keywords: [
-    "React Native mobile app agency",
-    "Cross-platform app development India",
-    "iOS and Android app developers Chennai",
-    "Expo mobile app studio",
-    "Offline-first mobile apps",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services/mobile-apps",
+    canonical: "https://www.ninety5.in/services/mobile-apps",
   },
   openGraph: {
     title: "React Native Mobile App Development Services | Ninety5 Studio",
     description:
       "Deploying native-quality, high-performance cross-platform iOS and Android applications with React Native and Expo.",
-    url: "https://ninety5.in/services/mobile-apps",
+    url: "https://www.ninety5.in/services/mobile-apps",
     type: "website",
   },
 };

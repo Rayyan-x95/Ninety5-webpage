@@ -2,24 +2,17 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Brand Identity Design & Visual Systems Studio | Ninety5 Studio",
+  title: "Brand Identity Design & Visual Systems Studio",
   description:
     "Forging iconic, brutalist brand identities, typography guidelines, and design systems for tech startups and digital-first brands globally.",
-  keywords: [
-    "Brand identity designer Chennai",
-    "Tech startup branding agency",
-    "Visual identity systems India",
-    "Brutalist logo design studio",
-    "B2B brand design",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services/brand-identity",
+    canonical: "https://www.ninety5.in/services/brand-identity",
   },
   openGraph: {
     title: "Brand Identity Design Services | Ninety5 Studio",
     description:
       "Forging iconic, high-contrast visual brand systems that resonance and dominate in crowded markets.",
-    url: "https://ninety5.in/services/brand-identity",
+    url: "https://www.ninety5.in/services/brand-identity",
     type: "website",
   },
 };

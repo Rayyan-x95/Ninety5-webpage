@@ -5,24 +5,17 @@ import styles from "./page.module.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our 4-Phase Product Design & Engineering Process | Ninety5 Studio",
+  title: "Our 4-Phase Product Design & Engineering Process",
   description:
     "Explore Ninety5 Studio's structured product design and Next.js engineering process: Discovery, UX Strategy, Sprint Execution, Launch, and Ongoing Growth.",
-  keywords: [
-    "Product design process",
-    "UI UX design methodology",
-    "Next.js engineering workflow",
-    "Figma to code process",
-    "SaaS design agency sprints",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/process",
+    canonical: "https://www.ninety5.in/process",
   },
   openGraph: {
     title: "Our Design & Engineering Process | Ninety5 Studio",
     description:
       "A systematic, battle-tested methodology for delivering exceptional digital products at extreme velocity.",
-    url: "https://ninety5.in/process",
+    url: "https://www.ninety5.in/process",
     type: "website",
   },
 };
@@ -30,7 +23,7 @@ export const metadata: Metadata = {
 const processSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "@id": "https://ninety5.in/process#howto",
+  "@id": "https://www.ninety5.in/process#howto",
   "name": "Ninety5 Studio Product Design and Engineering Process",
   "description": "A 5-phase methodology for designing, building, and scaling high-performance digital products.",
   "step": [

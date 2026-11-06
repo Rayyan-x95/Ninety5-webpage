@@ -2,28 +2,17 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Graphic Design & Pitch Deck Agency | Ninety5 Studio",
+  title: "Graphic Design & Pitch Deck Agency",
   description:
     "Bold, aggressive, statement-making graphic design studio. High-converting investor pitch decks, marketing collateral kits, packaging design, and 3D brand visuals for ambitious tech startups.",
-  keywords: [
-    "Graphic design studio India",
-    "Investor pitch deck design agency",
-    "Fundraising slide deck designer",
-    "Brand collateral design services",
-    "B2B SaaS marketing graphic design",
-    "Packaging and print design India",
-    "Infographic and data visualization design",
-    "Series A pitch deck design agency",
-    "Chennai graphic design collective",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services/graphic-design",
+    canonical: "https://www.ninety5.in/services/graphic-design",
   },
   openGraph: {
     title: "Graphic Design & Investor Pitch Deck Studio | Ninety5",
     description:
       "We design aggressive, statement-making brand collateral, investor pitch decks, packaging, and high-converting marketing assets for tech startups.",
-    url: "https://ninety5.in/services/graphic-design",
+    url: "https://www.ninety5.in/services/graphic-design",
     type: "website",
   },
 };

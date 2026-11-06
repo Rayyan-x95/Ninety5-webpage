@@ -5,29 +5,29 @@ import styles from "./blog.module.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Product Design & Engineering Blog — Expert Guides | Ninety5 Studio",
+  title: "Product Design & Engineering Blog — Expert Guides",
   description: "Expert guides on UI/UX design costs in India, design system ROI, Core Web Vitals, SaaS dashboard UX, and Next.js engineering — from the Ninety5 Studio team.",
   alternates: {
-    canonical: "https://ninety5.in/blog",
+    canonical: "https://www.ninety5.in/blog",
   },
   openGraph: {
     title: "Product Design & Engineering Blog | Ninety5 Studio",
     description: "Tactical guides on product design, design systems, and frontend engineering for SaaS founders and tech startups.",
     type: "website",
-    url: "https://ninety5.in/blog",
+    url: "https://www.ninety5.in/blog",
   },
 };
 
 const blogCollectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "@id": "https://ninety5.in/blog#collection",
+  "@id": "https://www.ninety5.in/blog#collection",
   "name": "Ninety5 Studio Blog — Product Design & Engineering Guides",
   "description": "Expert long-form guides on UI/UX design, design systems, Core Web Vitals, and SaaS engineering from the Ninety5 Studio team.",
-  "url": "https://ninety5.in/blog",
+  "url": "https://www.ninety5.in/blog",
   "publisher": {
     "@type": "Organization",
-    "@id": "https://ninety5.in/#organization",
+    "@id": "https://www.ninety5.in/#organization",
     "name": "Ninety5 Studio"
   }
 };

@@ -5,15 +5,15 @@ import styles from "../LegalPage.module.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Ninety5 Studio",
+  title: "Privacy Policy",
   description: "How Ninety5 Studio collects, uses, and protects your personal data.",
   alternates: {
-    canonical: "https://ninety5.in/legal/privacy-policy",
+    canonical: "https://www.ninety5.in/legal/privacy-policy",
   },
   openGraph: {
-    title: "Privacy Policy | Ninety5 Studio",
+    title: "Privacy Policy",
     description: "How Ninety5 Studio collects, uses, and protects your personal data.",
-    url: "https://ninety5.in/legal/privacy-policy",
+    url: "https://www.ninety5.in/legal/privacy-policy",
   },
 };
 

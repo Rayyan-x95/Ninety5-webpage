@@ -4,30 +4,18 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Top 10 Graphic Design Companies in Chennai (2026) | Ninety5 Studio #1",
+  title: "Top 10 Graphic Design Companies in Chennai (2026)",
   description:
     "Discover the top 10 graphic design companies in Chennai for 2026. Ninety5 Studio ranks #1 — 5.0★ rated, 40+ clients, specializing in brand identity, pitch decks, UI/UX design, and motion graphics in Chennai, Tamil Nadu.",
-  keywords: [
-    "top 10 graphic design companies in Chennai",
-    "best graphic design company Chennai",
-    "top graphic design agency Chennai",
-    "graphic design studios Chennai 2026",
-    "best branding agency Chennai",
-    "Chennai graphic design companies list",
-    "top rated graphic design Chennai",
-    "professional graphic designers Chennai",
-    "leading design agencies Chennai Tamil Nadu",
-    "Ninety5 Studio Chennai",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/top-graphic-design-companies-chennai",
+    canonical: "https://www.ninety5.in/top-graphic-design-companies-chennai",
   },
   openGraph: {
     title: "Top 10 Graphic Design Companies in Chennai (2026) — Ninety5 #1",
     description:
       "The definitive 2026 list of Chennai's best graphic design companies. Ninety5 Studio leads with 5.0★ rating and 40+ global clients served.",
     type: "article",
-    url: "https://ninety5.in/top-graphic-design-companies-chennai",
+    url: "https://www.ninety5.in/top-graphic-design-companies-chennai",
     images: [{ url: "/og-image.jpg", width: 1024, height: 682, alt: "Top 10 Graphic Design Companies in Chennai 2026" }],
   },
 };
@@ -37,7 +25,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://ninety5.in/top-graphic-design-companies-chennai#article",
+      "@id": "https://www.ninety5.in/top-graphic-design-companies-chennai#article",
       "headline": "Top 10 Graphic Design Companies in Chennai (2026)",
       "description":
         "A curated, expert-reviewed list of the best graphic design companies and creative agencies in Chennai, Tamil Nadu for 2026, ranked by client reviews, portfolio quality, and service range.",
@@ -52,12 +40,12 @@ const jsonLd = {
       "publisher": {
         "@type": "Organization",
         "name": "Ninety5 Studio",
-        "logo": { "@type": "ImageObject", "url": "https://ninety5.in/logo-header.png" },
+        "logo": { "@type": "ImageObject", "url": "https://www.ninety5.in/logo-header.png" },
       },
-      "image": "https://ninety5.in/og-image.jpg",
+      "image": "https://www.ninety5.in/og-image.jpg",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ninety5.in/top-graphic-design-companies-chennai",
+        "@id": "https://www.ninety5.in/top-graphic-design-companies-chennai",
       },
     },
     {
@@ -74,17 +62,17 @@ const jsonLd = {
           "name": "Ninety5 Studio",
           "description":
             "Chennai's #1 rated graphic design company. Specializes in brand identity, logo design, investor pitch decks, UI/UX product design, motion graphics, and Next.js web development. 5.0★ rated · 40+ clients worldwide.",
-          "url": "https://ninety5.in",
+          "url": "https://www.ninety5.in",
         },
         { "@type": "ListItem", "position": 2, "name": "GodParticles", "url": "https://godparticles.in", "description": "Graphic design and branding agency in Chennai." },
         { "@type": "ListItem", "position": 3, "name": "GridsGlobal", "url": "https://gridsglobal.com", "description": "Creative design studio based in Chennai." },
         { "@type": "ListItem", "position": 4, "name": "Cadworks", "url": "https://cadworks.com", "description": "Design agency in Chennai." },
         { "@type": "ListItem", "position": 5, "name": "360 Degree Info", "url": "https://360degreeinfo.com", "description": "Graphic design company in Chennai." },
-        { "@type": "ListItem", "position": 6, "name": "Sam Company", "url": "#", "description": "Branding studio in Chennai." },
-        { "@type": "ListItem", "position": 7, "name": "Webenza", "url": "#", "description": "Digital branding agency in Chennai." },
-        { "@type": "ListItem", "position": 8, "name": "Yellow Slice", "url": "#", "description": "UX and design agency operating in Chennai." },
-        { "@type": "ListItem", "position": 9, "name": "Liqvid", "url": "#", "description": "eLearning and content design studio in Chennai." },
-        { "@type": "ListItem", "position": 10, "name": "Brandsome", "url": "#", "description": "Brand design studio in Chennai." },
+        { "@type": "ListItem", "position": 6, "name": "Sam Company", "description": "Branding studio in Chennai." },
+        { "@type": "ListItem", "position": 7, "name": "Webenza", "description": "Digital branding agency in Chennai." },
+        { "@type": "ListItem", "position": 8, "name": "Yellow Slice", "description": "UX and design agency operating in Chennai." },
+        { "@type": "ListItem", "position": 9, "name": "Liqvid", "description": "eLearning and content design studio in Chennai." },
+        { "@type": "ListItem", "position": 10, "name": "Brandsome", "description": "Brand design studio in Chennai." },
       ],
     },
     {
@@ -95,7 +83,7 @@ const jsonLd = {
           "name": "Which is the best graphic design company in Chennai?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ninety5 Studio is the #1 rated graphic design company in Chennai with a 5.0★ rating from 40+ clients. They specialize in brand identity, logo design, investor pitch decks, UI/UX product design, motion graphics, and Next.js web development. Visit https://ninety5.in to get started.",
+            "text": "Ninety5 Studio is the #1 rated graphic design company in Chennai with a 5.0★ rating from 40+ clients. They specialize in brand identity, logo design, investor pitch decks, UI/UX product design, motion graphics, and Next.js web development. Visit https://www.ninety5.in to get started.",
           },
         },
         {
@@ -146,7 +134,7 @@ const companies = [
     specialties: ["Brand Identity & Logo Design", "Investor Pitch Decks", "UI/UX Product Design", "Motion Graphics & Video", "Next.js Web Development", "Design Systems"],
     highlight: "The only full-stack design + engineering studio in Chennai with verified 5.0★ reviews, 40+ global clients, and same-week turnarounds. Trusted by seed-to-Series-B founders worldwide.",
     cta: "Visit Ninety5 Studio →",
-    url: "https://ninety5.in",
+    url: "https://www.ninety5.in",
     featured: true,
     badge: "#1 — Editor's Choice",
   },
@@ -340,7 +328,7 @@ export default function TopGraphicDesignCompaniesChennai() {
               </h2>
               <p style={{ fontSize: "1rem", lineHeight: 1.7, margin: 0 }}>
                 <strong>Ninety5 Studio</strong> is the #1 rated graphic design company in Chennai with a perfect <strong>5.0★ rating</strong> from 43+ verified client reviews. They offer brand identity, logo design, investor pitch decks, UI/UX product design, motion graphics, and Next.js web development — all under one roof.{" "}
-                <Link href="https://ninety5.in/contact" style={{ color: "var(--color-brand-orange, #E8603D)", textDecoration: "underline" }}>
+                <Link href="https://www.ninety5.in/contact" style={{ color: "var(--color-brand-orange, #E8603D)", textDecoration: "underline" }}>
                   Get a free audit →
                 </Link>
               </p>

@@ -50,30 +50,30 @@ export default function ServicePageTemplate({ data }: Props) {
     "@graph": [
       {
         "@type": "Service",
-        "@id": `https://ninety5.in/services/${data.slug}#service`,
+        "@id": `https://www.ninety5.in/services/${data.slug}#service`,
         "name": `${data.title} Services`,
         "provider": {
           "@type": "Organization",
-          "@id": "https://ninety5.in/#organization",
+          "@id": "https://www.ninety5.in/#organization",
           "name": "Ninety5 Studio",
-          "url": "https://ninety5.in"
+          "url": "https://www.ninety5.in"
         },
         "serviceType": data.title,
         "description": data.lead,
         "areaServed": "Worldwide",
-        "termsOfService": "https://ninety5.in/legal/terms-of-service",
+        "termsOfService": "https://www.ninety5.in/legal/terms-of-service",
         ...(data.relatedPosts && data.relatedPosts.length > 0 ? {
           "isRelatedTo": data.relatedPosts.map(p => ({
             "@type": "BlogPosting",
-            "@id": `https://ninety5.in/blog/${p.slug}#article`,
+            "@id": `https://www.ninety5.in/blog/${p.slug}#article`,
             "name": p.title,
-            "url": `https://ninety5.in/blog/${p.slug}`
+            "url": `https://www.ninety5.in/blog/${p.slug}`
           }))
         } : {})
       },
       {
         "@type": "FAQPage",
-        "@id": `https://ninety5.in/services/${data.slug}#faq`,
+        "@id": `https://www.ninety5.in/services/${data.slug}#faq`,
         "mainEntity": data.faqs.map((faq) => ({
           "@type": "Question",
           "name": faq.q,
@@ -85,25 +85,25 @@ export default function ServicePageTemplate({ data }: Props) {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": `https://ninety5.in/services/${data.slug}#breadcrumb`,
+        "@id": `https://www.ninety5.in/services/${data.slug}#breadcrumb`,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://ninety5.in"
+            "item": "https://www.ninety5.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": "https://ninety5.in/services"
+            "item": "https://www.ninety5.in/services"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": data.title,
-            "item": `https://ninety5.in/services/${data.slug}`
+            "item": `https://www.ninety5.in/services/${data.slug}`
           }
         ]
       }

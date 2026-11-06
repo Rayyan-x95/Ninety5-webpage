@@ -2,24 +2,17 @@ import ServicePageTemplate, { ServicePageData } from "../ServicePageTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "UX Research, Usability Auditing & User Testing Agency | Ninety5 Studio",
+  title: "UX Research, Usability Auditing & User Testing Agency",
   description:
     "Replacing subjective assumptions with empirical user validation data via qualitative user interviews, heuristic usability teardowns, and conversion audits.",
-  keywords: [
-    "UX research agency India",
-    "Usability testing studio Chennai",
-    "SaaS UX audit services",
-    "Heuristic evaluation agency",
-    "User journey mapping consultants",
-  ],
   alternates: {
-    canonical: "https://ninety5.in/services/ux-research",
+    canonical: "https://www.ninety5.in/services/ux-research",
   },
   openGraph: {
     title: "UX Research & Usability Auditing Services | Ninety5 Studio",
     description:
       "Replacing intuition with empirical data via user interviews, cognitive walkthroughs, and quantitative conversion audits.",
-    url: "https://ninety5.in/services/ux-research",
+    url: "https://www.ninety5.in/services/ux-research",
     type: "website",
   },
 };
