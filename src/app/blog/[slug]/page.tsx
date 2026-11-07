@@ -395,17 +395,17 @@ export default async function BlogPostPage({ params }: Props) {
             {renderMarkdown(post.contentMarkdown)}
           </div>
 
-          <section style={{ marginTop: "4rem", paddingTop: "3rem", borderTop: "1px solid var(--color-border, rgba(255,255,255,0.1))" }} aria-label="Related articles">
-            <h2 style={{ fontSize: "1.4rem", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "1.5rem", color: "var(--color-light, #fff)" }}>
+          <section style={{ marginTop: "4rem", paddingTop: "3rem", borderTop: "1px solid var(--color-border)" }} aria-label="Related articles">
+            <h2 style={{ fontSize: "1.4rem", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "1.5rem", color: "var(--color-dark)" }}>
               Related Guides
             </h2>
             <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
               {relatedPosts.map((rel) => (
-                <a key={rel.slug} href={`/blog/${rel.slug}`} style={{ display: "block", padding: "1.25rem", borderRadius: "12px", background: "var(--color-surface, rgba(255,255,255,0.04))", textDecoration: "none", transition: "background 0.2s" }}>
-                  <span style={{ display: "block", fontSize: "0.7rem", color: "var(--color-muted, #888)", marginBottom: "0.5rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                <a key={rel.slug} href={`/blog/${rel.slug}`} style={{ display: "block", padding: "1.25rem", borderRadius: "12px", background: "var(--color-bg-alt)", border: "2px solid var(--color-dark)", textDecoration: "none", transition: "background 0.2s" }}>
+                  <span style={{ display: "block", fontSize: "0.7rem", color: "var(--color-text-muted)", marginBottom: "0.5rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     {rel.publishDate} · {rel.readTime}
                   </span>
-                  <span style={{ display: "block", fontSize: "0.95rem", fontWeight: 700, lineHeight: 1.35, color: "var(--color-light, #fff)" }}>
+                  <span style={{ display: "block", fontSize: "0.95rem", fontWeight: 700, lineHeight: 1.35, color: "var(--color-dark)" }}>
                     {rel.title}
                   </span>
                 </a>

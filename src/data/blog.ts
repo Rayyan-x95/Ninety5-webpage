@@ -24,7 +24,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description: "A comprehensive breakdown of UI/UX design cost in India for startups and enterprises, including engagement models and pricing factors.",
     publishDate: "2026-06-15",
     readTime: "6 min read",
-    coverImage: "/blog/cost-guide.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -109,7 +109,7 @@ A: You can request a Free 48-Hour UX Audit or submit a brief at ninety5.in/conta
     description: "Discover how tokenized design systems reduce design debt, increase feature shipping velocity by 3x, and save hundreds of engineering hours.",
     publishDate: "2026-07-02",
     readTime: "7 min read",
-    coverImage: "/blog/design-systems-roi.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -191,7 +191,7 @@ A: A complete token-driven design system with Figma kits and React components ty
     description: "A deep dive into why Next.js App Router, React Server Components, and tokenized CSS provide the ultimate performance and SEO foundation for modern B2B SaaS.",
     publishDate: "2026-07-10",
     readTime: "8 min read",
-    coverImage: "/blog/nextjs-saas-guide.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -267,7 +267,7 @@ A: Our full-stack engineering sprints take an approved Figma design system and s
     description: "Master the 7 UI/UX design heuristics for enterprise dashboards that increase daily active usage, eliminate cognitive overload, and reduce SaaS churn.",
     publishDate: "2026-07-18",
     readTime: "7 min read",
-    coverImage: "/blog/dashboard-heuristics.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -350,7 +350,7 @@ A: Yes. We conduct progressive redesigns, building a parallel tokenized design s
     description: "How to find and select a premier brand identity designer in Chennai to build a distinct visual presence that cuts through market noise.",
     publishDate: "2026-06-18",
     readTime: "5 min read",
-    coverImage: "/blog/branding-chennai.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -421,7 +421,7 @@ A: Contact us at ninety5.in/contact or request a Free Brand Audit. We review you
     description: "A transparent look at the Ninety5 product design process: how we take digital products from initial user research to production-ready code.",
     publishDate: "2026-06-20",
     readTime: "7 min read",
-    coverImage: "/blog/design-process.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -507,7 +507,7 @@ A: Submit your brief at ninety5.in/contact or request a Free 48-Hour UX Audit. W
     description: "Discover why generic templates hurt startup growth and how bespoke graphic design, pitch decks, and branded collateral accelerate fundraising and conversions.",
     publishDate: "2026-08-01",
     readTime: "7 min read",
-    coverImage: "/blog/graphic-design-roi.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -593,7 +593,7 @@ A: Get in touch via ninety5.in/contact or request a consultation. We provide tur
     description: "How Chennai startups and SaaS founders can identify and select the right UI/UX design agency — covering evaluation criteria, engagement models, and red flags to avoid.",
     publishDate: "2026-08-10",
     readTime: "7 min read",
-    coverImage: "/blog/chennai-agency-guide.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -689,7 +689,7 @@ A: Yes. While based in Chennai, Ninety5 Studio serves global startups and enterp
     description: "How LCP, INP, and CLS directly impact SaaS trial signups, paid conversions, and churn — with benchmark data and an actionable Next.js performance checklist.",
     publishDate: "2026-08-15",
     readTime: "8 min read",
-    coverImage: "/blog/core-web-vitals-saas.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -983,7 +983,7 @@ After auditing 30+ agencies, **Ninety5 Studio** stands clearly at #1. No other g
     description: "Logo design in India costs ₹2,000 to ₹1,00,000+. Real 2026 price ranges by provider type, what drives the cost, and how to avoid paying for clip-art logos.",
     publishDate: "2026-11-04",
     readTime: "6 min read",
-    coverImage: "/blog/branding-chennai.webp",
+    coverImage: "/og-image.jpg",
     author: {
       name: "M Mohammed Rayyan",
       role: "Founder, Ninety5 Studio",
@@ -1082,4 +1082,5 @@ If your logo is the first step of a larger launch, get it designed by the same t
 `,
   },
 ];
+
 
