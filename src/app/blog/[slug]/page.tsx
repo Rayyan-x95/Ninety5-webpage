@@ -29,7 +29,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.description,
     keywords: post.tags.join(", "),
     alternates: {
-      canonical: `https://www.ninety5.in/blog/${post.slug}`,
+      canonical: post.slug === "top-graphic-design-companies-chennai-2026"
+        ? "https://www.ninety5.in/top-graphic-design-companies-chennai"
+        : `https://www.ninety5.in/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
