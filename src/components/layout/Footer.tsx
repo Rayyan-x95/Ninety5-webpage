@@ -23,9 +23,12 @@ const FOOTER_LINKS = {
     { label: "About us", href: "/about" },
     { label: "Our process", href: "/process" },
     { label: "Selected work", href: "/work" },
+    { label: "Blog", href: "/blog" },
+    { label: "Top 10 Chennai", href: "/top-graphic-design-companies-chennai" },
     { label: "Testimonials", href: "/testimonials" },
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
+    { label: "Pricing", href: "/pricing.md" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/legal/privacy-policy" },

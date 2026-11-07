@@ -52,7 +52,7 @@ export default function CaseStudies() {
                       style={{
                         width: `${55 + (j % 3) * 25}%`,
                         background: p.accent,
-                        opacity: 0.15 + j * 0.1,
+                        opacity: [0.15, 0.25, 0.35, 0.45][j],
                         height: j === 0 ? "10px" : "6px",
                       }}
                     />

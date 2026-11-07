@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ninety5.in"),
   title: {
-    default: "Graphic Design Company in Chennai | Ninety5 Studio",
+    default: "Graphic Design Company in Chennai | 4.9★, Free 48h Audit",
     template: "%s | Ninety5 Studio",
   },
   description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "Graphic Design Company in Chennai | Ninety5 Studio",
+    title: "Graphic Design Company in Chennai | 4.9★, Free 48h Audit",
     description:
       "Brand identity, pitch decks, UI/UX & Next.js builds for SaaS founders. 100% design-to-code, no handoff. Free 48h UX audit.",
     type: "website",

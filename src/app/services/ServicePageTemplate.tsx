@@ -225,6 +225,25 @@ export default function ServicePageTemplate({ data }: Props) {
           </div>
         </section>
 
+        {/* PRICING */}
+        <section style={{ padding: "5rem 0", borderBottom: "4px solid var(--color-dark)", backgroundColor: "var(--color-white)" }}>
+          <div className="container">
+            <div className={styles.sectionLabel}>
+              <span className={styles.sectionLabelLine} />
+              <span className={styles.sectionLabelText}>TRANSPARENT PRICING</span>
+            </div>
+            <h2 className={styles.sectionTitle}>How Much Does It Cost?</h2>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "1.0625rem", color: "var(--color-text-muted)", lineHeight: 1.75, maxWidth: "760px", marginBottom: "2rem" }}>
+              Projects run ₹2.5L–₹12L ($3k–$15k) depending on scope. Retainers are custom monthly with dedicated senior hours.
+              Free 48-hour UX audit included with every enquiry — no pitch, just a 5-minute video teardown.
+            </p>
+            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+              <a href="/pricing.md" className="btn btn-secondary">View full pricing (AI-readable)</a>
+              <a href="/contact" className="btn btn-primary">Get a 48h proposal</a>
+            </div>
+          </div>
+        </section>
+
         {/* EMBEDDED CASE STUDIES */}
         {caseStudies.length > 0 && (
           <section className={styles.caseStudiesSection}>
@@ -256,7 +275,7 @@ export default function ServicePageTemplate({ data }: Props) {
                               height: j === 0 ? "10px" : "6px",
                               width: `${55 + (j % 3) * 25}%`,
                               background: p.accent,
-                              opacity: 0.15 + j * 0.1,
+                              opacity: [0.15, 0.25, 0.35, 0.45][j],
                             }}
                           />
                         ))}

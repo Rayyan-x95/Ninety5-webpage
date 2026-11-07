@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/blog`,
       lastModified: siteLastUpdated,
-      changeFrequency: 'daily',
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
   ];
@@ -99,10 +99,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic Case Studies (Priority 0.8)
   const projectRoutes: MetadataRoute.Sitemap = PROJECTS.map((project) => ({
     url: `${baseUrl}/work/${project.id}`,
-    lastModified: new Date(`${project.year}-06-01T00:00:00Z`),
+    lastModified: siteLastUpdated,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
-    images: [`${baseUrl}/og-image.jpg`],
   }));
 
   // Dynamic Blog Articles (Priority 0.85)

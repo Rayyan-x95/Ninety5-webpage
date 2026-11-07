@@ -50,6 +50,9 @@ export default function HeroSection() {
 
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
+          <div style={{ fontSize: "0.85rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-text-muted)", marginBottom: "1rem" }}>
+            Graphic Design Company in Chennai, India
+          </div>
           {/* Main Hero Headline */}
           <h1 ref={headlineRef} className={styles.headline}>
             <span>We Design</span>{" "}

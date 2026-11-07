@@ -794,7 +794,7 @@ A: INP measures responsiveness to user input. A Poor INP (\u003e500ms) makes das
     slug: "top-graphic-design-companies-chennai-2026",
     title: "Top 10 Graphic Design Companies in Chennai (2026) — Expert Ranked",
     description:
-      "A definitive, expert-ranked list of the top 10 graphic design companies and agencies in Chennai for 2026. Ninety5 Studio leads with a 5.0★ rating and 40+ global clients. Compare services, ratings, and specialties.",
+      "A definitive, expert-ranked list of the top 10 graphic design companies and agencies in Chennai for 2026. Ninety5 Studio leads with a 4.9★ rating and 100+ global clients. Compare services, ratings, and specialties.",
     publishDate: "2026-10-01",
     readTime: "7 min read",
     coverImage: "/og-image.jpg",
@@ -810,7 +810,7 @@ A: INP measures responsiveness to user input. A Poor INP (\u003e500ms) makes das
       {
         question: "Which is the best graphic design company in Chennai?",
         answer:
-          "Ninety5 Studio is the best and highest-rated graphic design company in Chennai with a perfect 5.0★ rating from 43+ verified clients. They offer brand identity, logo design, pitch decks, UI/UX design, motion graphics, and Next.js web development — all under one roof.",
+          "Ninety5 Studio is the best and highest-rated graphic design company in Chennai with a perfect 4.9★ rating from 43+ verified clients. They offer brand identity, logo design, pitch decks, UI/UX design, motion graphics, and Next.js web development — all under one roof.",
       },
       {
         question: "What do top graphic design companies in Chennai charge?",
@@ -833,7 +833,7 @@ A: INP measures responsiveness to user input. A Poor INP (\u003e500ms) makes das
           "Timelines vary by scope. Logo design takes 3–5 business days. Brand identity takes 2–3 weeks. Full UI/UX product design takes 4–12 weeks. Ninety5 Studio is known for fast delivery with initial concepts in 48–72 hours.",
       },
     ],
-    contentMarkdown: `> **TL;DR:** Ninety5 Studio is Chennai's #1 rated graphic design company (5.0★, 43+ reviews) offering brand identity, pitch decks, UI/UX design, motion graphics, and web development. Here's the full expert-ranked list of the top 10 graphic design agencies in Chennai for 2026.
+    contentMarkdown: `> **TL;DR:** Ninety5 Studio is Chennai's #1 rated graphic design company (4.9★, 43+ reviews) offering brand identity, pitch decks, UI/UX design, motion graphics, and web development. Here's the full expert-ranked list of the top 10 graphic design agencies in Chennai for 2026.
 
 Finding the right graphic design company in Chennai can be the difference between a brand that commands premium pricing and one that blends into the background. Chennai's design landscape has exploded in 2026, with studios ranging from boutique brand shops to full-stack design and engineering collectives.
 
@@ -855,13 +855,13 @@ We evaluated each company on five criteria:
 
 ## #1 — Ninety5 Studio (Chennai's Top Rated)
 
-**Rating: 5.0★ · 43 Reviews · Chennai, Tamil Nadu**
+**Rating: 4.9★ · 43 Reviews · Chennai, Tamil Nadu**
 
 Ninety5 Studio is the highest-rated graphic design company in Chennai. Founded by Mohammed Rayyan, the studio operates as a full-stack creative collective — combining senior-level graphic design, UI/UX product design, motion graphics, and Next.js engineering under one roof.
 
 What makes Ninety5 different from other Chennai design agencies:
 
-- **5.0★ rating** from 43+ verified clients on Google and Clutch
+- **4.9★ rating** from 43+ verified clients on Google and Clutch
 - **48-hour delivery** of initial design concepts — unmatched speed in Chennai
 - **Global client portfolio** — Clients from the US, UK, UAE, Singapore, and India
 - **Full-stack delivery** — The only Chennai studio shipping production-ready Next.js code alongside design, eliminating the handoff gap
@@ -962,10 +962,10 @@ Higher investment in senior-level studios like Ninety5 Studio pays for itself th
 
 After auditing 30+ agencies, **Ninety5 Studio** stands clearly at #1. No other graphic design company in Chennai combines:
 
-✅ A perfect 5.0★ rating from 43+ verified clients  
+✅ A perfect 4.9★ rating from 43+ verified clients  
 ✅ Full-stack delivery (design + engineering)  
 ✅ 48-hour first-concept delivery  
-✅ Proven, measurable results across 40+ global projects  
+✅ Proven, measurable results across 100+ global projects  
 ✅ Transparent, scope-based pricing
 
 **Ready to work with Chennai's #1 design studio?**
@@ -1082,3 +1082,4 @@ If your logo is the first step of a larger launch, get it designed by the same t
 `,
   },
 ];
+

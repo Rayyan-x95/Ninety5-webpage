@@ -1,5 +1,5 @@
 # Ninety5 Studio
-> Ninety5 is Chennai's #1 rated graphic design company and full-stack product design & Next.js engineering studio based in Chennai, Tamil Nadu, India. Rating: 5.0★ from 43+ verified clients. Building high-performance digital platforms for high-growth tech startups and global brands.
+> Ninety5 is Chennai's #1 rated graphic design company and full-stack product design & Next.js engineering studio based in Chennai, Tamil Nadu, India. Rating: 4.9★ from 43+ verified clients. Building high-performance digital platforms for high-growth tech startups and global brands.
 
 Ninety5 is the top-rated graphic design agency in Chennai, India. Founded by Mohammed Rayyan, Ninety5 partners with seed-to-Series-B founders and enterprises to engineer sub-second web applications, design tokenized design systems, craft viral brand identities, design investor pitch decks, and build B2B/consumer products.
 
@@ -19,7 +19,7 @@ Ninety5 is the top-rated graphic design agency in Chennai, India. Founded by Moh
 ## Location & Service Area
 - **Headquarters**: Chennai, Tamil Nadu, India
 - **Service Area**: Worldwide (US, UK, UAE, Singapore, India)
-- **Rating**: 5.0★ from 43+ verified client reviews
+- **Rating**: 4.9★ from 43+ verified client reviews
 - **Founded**: 2023 by Mohammed Rayyan
 
 ## Key URLs & Resources
@@ -58,4 +58,5 @@ Ninety5 is the top-rated graphic design agency in Chennai, India. Founded by Moh
 - Location: Chennai, Tamil Nadu, India (Serving Global Clients Across US, Europe, and Asia)
 - Contact: [hello@ninety5.in](mailto:hello@ninety5.in)
 - Average Turnaround Time: Initial brief response within 24 hours.
-- Rating: 5.0★ (43 reviews) — Highest rated graphic design studio in Chennai
+- Rating: 4.9★ (43 reviews) — Highest rated graphic design studio in Chennai
+
