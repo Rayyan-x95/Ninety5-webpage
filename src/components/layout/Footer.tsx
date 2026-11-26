@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Twitter, Linkedin, Dribbble, Github } from "lucide-react";
+import { Instagram, Linkedin, Github, Globe } from "lucide-react";
 import styles from "./Footer.module.css";
 
 const FOOTER_LINKS = {
@@ -21,6 +21,7 @@ const FOOTER_LINKS = {
     { label: "Products of Ninety5", href: "/products" },
     { label: "Ujrat — Free Invoicing SaaS", href: "https://ujrat.ninety5.in" },
     { label: "About us", href: "/about" },
+    { label: "Founder — Mohammed Rayyan", href: "https://rayyan.ninety5.in" },
     { label: "Our process", href: "/process" },
     { label: "Selected work", href: "/work" },
     { label: "Blog", href: "/blog" },
@@ -38,10 +39,10 @@ const FOOTER_LINKS = {
 };
 
 const SOCIALS = [
-  { label: "X / Twitter", href: "https://twitter.com/ninety5studio", icon: Twitter },
-  { label: "LinkedIn", href: "https://linkedin.com/company/ninety5", icon: Linkedin },
-  { label: "Dribbble", href: "https://dribbble.com/ninety5", icon: Dribbble },
-  { label: "GitHub", href: "https://github.com/ninety5", icon: Github },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/ninety5.in/", icon: Linkedin },
+  { label: "Instagram", href: "https://www.instagram.com/ninety5.in/", icon: Instagram },
+  { label: "GitHub", href: "https://github.com/rayyan-x95", icon: Github },
+  { label: "Peerlist", href: "https://peerlist.io/ninety5", icon: Globe },
 ];
 
 export default function Footer() {

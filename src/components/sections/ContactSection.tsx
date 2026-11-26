@@ -24,7 +24,7 @@ export default function ContactSection() {
     const formData = new FormData(e.currentTarget);
     try {
       const response = await fetch(
-        "https://forms-backend.coeffx.tech/api/v1/submit/8fc70538-36ee-4aff-bc24-8b1a52112ee4",
+        "https://formspree.io/f/myzpekgq",
         { method: "POST", body: formData, headers: { Accept: "application/json" } }
       );
       if (response.ok) {

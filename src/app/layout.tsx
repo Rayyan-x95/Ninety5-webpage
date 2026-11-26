@@ -58,7 +58,6 @@ export const metadata: Metadata = {
     title: "Graphic Design Company in Chennai | Ninety5 Studio",
     description:
       "Product design & graphic design studio in Chennai. Brand identity, pitch decks, UI/UX & Next.js. Free 48h audit.",
-    creator: "@ninety5studio",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -102,17 +101,16 @@ const jsonLd = {
         "url": "https://rayyan.ninety5.in",
         "jobTitle": "Founder & Design Lead",
         "sameAs": [
-          "https://twitter.com/ninety5studio",
-          "https://linkedin.com/company/ninety5",
-          "https://dribbble.com/ninety5",
-          "https://github.com/ninety5"
+          "https://www.linkedin.com/in/mohrayyan/",
+          "https://github.com/rayyan-x95",
+          "https://www.instagram.com/rayyan.x95"
         ]
       },
       "sameAs": [
-        "https://twitter.com/ninety5studio",
-        "https://linkedin.com/company/ninety5",
-        "https://dribbble.com/ninety5",
-        "https://github.com/ninety5"
+        "https://www.linkedin.com/company/ninety5.in/",
+        "https://www.instagram.com/ninety5.in/",
+        "https://github.com/rayyan-x95",
+        "https://peerlist.io/ninety5"
       ],
       "knowsAbout": [
         "Graphic Design",
@@ -272,10 +270,10 @@ const jsonLd = {
         "geoRadius": "50000"
       },
       "sameAs": [
-        "https://twitter.com/ninety5studio",
-        "https://linkedin.com/company/ninety5",
-        "https://dribbble.com/ninety5",
-        "https://github.com/ninety5"
+        "https://www.linkedin.com/company/ninety5.in/",
+        "https://www.instagram.com/ninety5.in/",
+        "https://github.com/rayyan-x95",
+        "https://peerlist.io/ninety5"
       ],
       "founder": {
         "@type": "Person",

@@ -38,7 +38,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: `${project.title} — Case Study`,
       description: project.description,
-      creator: "@ninety5studio",
     },
     alternates: {
       canonical: `https://www.ninety5.in/work/${project.id}`,

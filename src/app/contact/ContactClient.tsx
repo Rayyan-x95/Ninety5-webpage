@@ -55,10 +55,26 @@ function ContactFormInner() {
   const isAudit = searchParams.get("audit") === "true";
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError(null);
+    const formData = new FormData(e.currentTarget);
+    try {
+      const response = await fetch(
+        "https://formspree.io/f/myzpekgq",
+        { method: "POST", body: formData, headers: { Accept: "application/json" } }
+      );
+      if (!response.ok) throw new Error("submit failed");
+      setSubmitted(true);
+    } catch {
+      setError("Failed to send message. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -119,22 +135,22 @@ function ContactFormInner() {
               </p>
             </div>
           ) : (
-            <form className={styles.form} onSubmit={handleSubmit} noValidate>
+            <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label className={styles.formLabel} htmlFor="contact-name">Full Name *</label>
-                  <input className={styles.formInput} id="contact-name" type="text" required placeholder="Jane Smith" />
+                  <input className={styles.formInput} id="contact-name" name="name" type="text" required placeholder="Jane Smith" />
                 </div>
                 <div className={styles.formGroup}>
                   <label className={styles.formLabel} htmlFor="contact-email">Email *</label>
-                  <input className={styles.formInput} id="contact-email" type="email" required placeholder="jane@company.com" />
+                  <input className={styles.formInput} id="contact-email" name="email" type="email" required placeholder="jane@company.com" />
                 </div>
               </div>
 
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label className={styles.formLabel} htmlFor="contact-service">Service *</label>
-                  <select className={styles.formSelect} id="contact-service" required defaultValue={isAudit ? "Free 48h UX & Speed Audit" : (serviceParam || "")}>
+                  <select className={styles.formSelect} id="contact-service" name="service" required defaultValue={isAudit ? "Free 48h UX & Speed Audit" : (serviceParam || "")}>
                     <option value="" disabled>Select a service</option>
                     {SERVICE_OPTIONS.map((o) => (
                       <option key={o} value={o}>{o}</option>
@@ -143,7 +159,7 @@ function ContactFormInner() {
                 </div>
                 <div className={styles.formGroup}>
                   <label className={styles.formLabel} htmlFor="contact-budget">Budget Range</label>
-                  <select className={styles.formSelect} id="contact-budget" defaultValue={isAudit ? "Free Audit Request" : ""}>
+                  <select className={styles.formSelect} id="contact-budget" name="budget" defaultValue={isAudit ? "Free Audit Request" : ""}>
                     <option value="" disabled>Select budget</option>
                     {BUDGET_OPTIONS.map((o) => (
                       <option key={o} value={o}>{o}</option>
@@ -154,7 +170,7 @@ function ContactFormInner() {
 
               <div className={styles.formGroup}>
                 <label className={styles.formLabel} htmlFor="contact-company">Website URL / Project Name</label>
-                <input className={styles.formInput} id="contact-company" type="text" placeholder="https://yourcompany.com" />
+                <input className={styles.formInput} id="contact-company" name="company" type="text" placeholder="https://yourcompany.com" />
               </div>
 
               <div className={styles.formGroup}>
@@ -162,15 +178,17 @@ function ContactFormInner() {
                 <textarea
                   className={styles.formTextarea}
                   id="contact-message"
+                  name="message"
                   required
                   rows={5}
                   placeholder="What are you building or optimizing? What are your target metrics?"
                 />
               </div>
 
-              <button type="submit" className={styles.formSubmit} id="contact-submit-btn">
-                {isAudit ? "Claim Free 48h Audit ↗" : "Send Brief ↗"}
+              <button type="submit" className={styles.formSubmit} id="contact-submit-btn" disabled={isSubmitting}>
+                {isSubmitting ? "Sending…" : isAudit ? "Claim Free 48h Audit ↗" : "Send Brief ↗"}
               </button>
+              {error && <p className={styles.formNote} role="alert" style={{ color: "var(--color-brand-orange)" }}>{error}</p>}
               <p className={styles.formNote}>
                 We respond within 24 hours • 100% confidential
               </p>

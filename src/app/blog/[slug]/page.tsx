@@ -55,7 +55,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       images: [post.coverImage],
-      creator: "@ninety5studio",
     },
   };
 }
@@ -293,9 +292,9 @@ export default async function BlogPostPage({ params }: Props) {
           "url": "https://rayyan.ninety5.in",
           "image": "https://rayyan.ninety5.in/profile.webp",
           "sameAs": [
-            "https://www.linkedin.com/in/mohammed-rayyan1948",
-            "https://twitter.com/ninety5studio",
-            "https://dribbble.com/ninety5"
+            "https://www.linkedin.com/in/mohrayyan/",
+            "https://github.com/rayyan-x95",
+            "https://www.instagram.com/rayyan.x95"
           ]
         },
         "publisher": {
@@ -384,9 +383,9 @@ export default async function BlogPostPage({ params }: Props) {
                   </p>
                   <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
                     <a href="https://rayyan.ninety5.in" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="url">Portfolio ↗</a>
-                    <a href="https://www.linkedin.com/in/mohammed-rayyan1948" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">LinkedIn ↗</a>
-                    <a href="https://twitter.com/ninety5studio" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">Twitter ↗</a>
-                    <a href="https://dribbble.com/ninety5" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">Dribbble ↗</a>
+                    <a href="https://www.linkedin.com/in/mohrayyan/" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">LinkedIn ↗</a>
+                    <a href="https://github.com/rayyan-x95" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">GitHub ↗</a>
+                    <a href="https://www.instagram.com/rayyan.x95" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.72rem", color: "var(--color-brand-blue)", textDecoration: "none", fontWeight: 700, letterSpacing: "0.04em" }} itemProp="sameAs">Instagram ↗</a>
                   </div>
                 </div>
               </div>

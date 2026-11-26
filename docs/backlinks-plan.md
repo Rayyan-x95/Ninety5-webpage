@@ -7,7 +7,7 @@ Goal: 10 quality referring domains. No paid PBNs.
 - [ ] Google Business Profile — Chennai, Tamil Nadu, link www.ninety5.in
 - [ ] Clutch — same name, tagline, pricing ₹2.5L–₹12L, link /services/graphic-design
 - [ ] Sortlist + DesignRush — identical positioning
-- [ ] LinkedIn Company: linkedin.com/company/ninety5 (already in schema sameAs)
+- [ ] LinkedIn Company: www.linkedin.com/company/ninety5.in (already in schema sameAs)
 
 Description to copy-paste everywhere:
 "Ninety5 Studio — Chennai graphic design company (4.9★) for brand identity, pitch decks, UI/UX & Next.js builds. 100+ projects, free 48h UX audit. hello@ninety5.in"
