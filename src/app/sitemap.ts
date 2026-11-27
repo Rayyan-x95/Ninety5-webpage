@@ -4,7 +4,7 @@ import { BLOG_POSTS } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.ninety5.in';
-  const siteLastUpdated = new Date('2026-11-06T00:00:00Z');
+  const siteLastUpdated = new Date('2026-11-27T00:00:00Z');
 
   // Core Landing Pages (Priority 1.0 & 0.9)
   const coreRoutes: MetadataRoute.Sitemap = [
@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       // High-priority local SEO landing page — targets "top graphic design companies Chennai"
       url: `${baseUrl}/top-graphic-design-companies-chennai`,
-      lastModified: new Date('2026-10-12T00:00:00Z'),
+      lastModified: siteLastUpdated,
       changeFrequency: 'monthly',
       priority: 0.98,
     },

@@ -2,6 +2,7 @@
 
 import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import { track } from "@vercel/analytics/react";
 import styles from "./page.module.css";
 
 const INFO_CARDS = [
@@ -70,6 +71,7 @@ function ContactFormInner() {
       );
       if (!response.ok) throw new Error("submit failed");
       setSubmitted(true);
+      track("contact_submit", { location: "contact_page", form: "main" });
     } catch {
       setError("Failed to send message. Please check your connection.");
     } finally {

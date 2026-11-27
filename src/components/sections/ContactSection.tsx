@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useReveal } from "@/hooks/useReveal";
+import { track } from "@vercel/analytics/react";
 import styles from "./ContactSection.module.css";
 
 const INFO = [
@@ -29,6 +30,7 @@ export default function ContactSection() {
       );
       if (response.ok) {
         setSubmitted(true);
+        track("contact_submit", { location: "homepage", form: "main" });
       } else {
         setError("Something went wrong. Please try again.");
       }
