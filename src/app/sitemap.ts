@@ -105,7 +105,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Dynamic Blog Articles (Priority 0.85)
-  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+  // This slug is a duplicate of /top-graphic-design-companies-chennai and already canonicalizes there.
+  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.filter(
+    (post) => post.slug !== "top-graphic-design-companies-chennai-2026"
+  ).map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(`${post.publishDate}T00:00:00Z`),
     changeFrequency: 'monthly' as const,
